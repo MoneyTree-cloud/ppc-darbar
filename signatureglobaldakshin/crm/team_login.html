@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | Dashboard</title>
+    <link rel="stylesheet" href="admin.css" />
+    <!-- ion-icons link -->
+    <script type='module' src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
+    <script nomodule src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script>
+    <style>
+      .notice_text{
+  margin: 20px 10px;
+  padding: 10px 20px;
+  background-color: #f4ab36;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+#notificationContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f4ab36;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.success{
+  background-color: #0dcb75;
+}
+
+.error{
+  background-color: #f43636;
+}
+
+.notification .message {
+  font-size: 14px;
+  flex: 1;
+}
+
+.notification .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.notification .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  animation: progress 5s linear;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="assets/imgs/logo.png" alt="">
+      </div>
+    </header>
+    <div class="box">
+      <form action="team/php/login.php" method="post">
+        <h2>Team Access</h2>
+        <div class="inputBx">
+          <span></span>
+          <input type="number" name="employId" id="employId" placeholder="Employ Id" min="1000" max="9999"  />
+        </div>
+        <div class="inputBx">
+          <span></span>
+          <input type="password" name="password" id="password" placeholder="Password" />
+          <ion-icon name="eye-outline" id="eye"></ion-icon>
+        </div>
+        <div class="inputBx">
+          <input type="submit" value="Access" />
+        </div>
+        <!--<div class="link">-->
+        <!--  <a>Are You Admin?</a>-->
+        <!--  <a href="login.html">Login Here</a>-->
+        <!--</div>-->
+      </form>
+    </div>
+
+    <div id="notificationContainer"></div>
+
+<script>
+   var eye = document.getElementById('eye');
+   var password = document.getElementById('password');
+
+eye.addEventListener("click", () => {
+  if (eye.getAttribute("name") === "eye-outline") {
+    eye.setAttribute("name", "eye-off-outline");
+    password.setAttribute("type", "text")
+  } else {
+    eye.setAttribute("name", "eye-outline");
+    password.setAttribute("type", "password")
+  }
+});
+
+</script>
+
+<script src="main.js"></script>
+
+  </body>
+</html>

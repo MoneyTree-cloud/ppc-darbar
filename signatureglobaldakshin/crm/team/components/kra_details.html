@@ -1,0 +1,118 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | KRA's Details</title>
+
+  <!-- ======= Styles ====== -->
+  <!--<link rel="stylesheet" href="../style.css">-->
+  <link rel="../stylesheet" href="style.css?v=<?= filemtime('../style.css'); ?>">
+</head>
+
+<body>
+
+    
+    <div class="form-container">
+        <h2>KRA's Detail</h2>
+        <form action="php/add_kra.php" method="post">
+            <input type="hidden" id="id" name="id">
+            <div class="form-group" style="width: 100%;">
+                <input type="text" id="name" style="font-size: 14px; width: 100%;" name="name" placeholder="Name" autocomplete="off" required>
+                <label for="name">Name</label>
+                <div id="nameSuggestions" class="autocomplete-suggestions"></div>
+            </div>
+            <!-- <div class="row"> -->
+                <!-- </div> -->
+            <div class="col">
+
+                <div class="row">
+                    <div class="form-group">
+                        <input type="number" id="callyzer_2pm" name="callyzer_2pm" placeholder="2 PM" required>
+                        <label for="callyzer_2pm">2 PM</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="callyzer_5pm" name="callyzer_5pm" placeholder="5 PM" required>
+                        <label for="callyzer_5pm">5 PM</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="callyzer_8pm" name="callyzer_8pm" placeholder="8 PM" required>
+                        <label for="callyzer_8pm">8 PM</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <input type="number" id="totalCalling" name="totalCalling" placeholder="Total Calling" disabled required>
+                        <label for="EmployId">Total Calling</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="prospect" name="prospect" placeholder="Prospect" required>
+                        <label for="prospect">Prospect</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="meetings" name="meetings" placeholder="No. of Meetings" required>
+                        <label for="meetings">No. of Meetings</label>
+                    </div>
+                    <!-- <div class="form-group">
+                        <input type="number" id="not_sale" name="not_sale" placeholder="No Sale Days" required>
+                        <label for="not_sale">No Sale Days</label>
+                    </div> -->
+                </div>
+            </div>    
+            <button class="btn">Submit</button> 
+        </form>
+    </div>
+    
+
+    <!-- time schedule for disabling fiields -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const input2pm = document.getElementById('callyzer_2pm');
+            const input5pm = document.getElementById('callyzer_5pm');
+            const input8pm = document.getElementById('callyzer_8pm');
+        
+            function controlFieldAccessByTime() {
+                const now = new Date();
+                const hour = now.getHours();
+        
+                // Disable all by default
+                input2pm.disabled = true;
+                input5pm.disabled = true;
+                input8pm.disabled = true;
+        
+                // Logic to enable based on time ranges
+                if (hour >= 14 && hour < 17) {
+                    // 2pm to 5pm → enable only 2PM field
+                    input2pm.disabled = false;
+                } else if (hour >= 17 && hour < 20) {
+                    // 5pm to 8pm → enable only 5PM field
+                    input5pm.disabled = false;
+                } else if (hour >= 20 && hour < 24) {
+                    // 8pm to 12am → enable only 8PM field
+                    input8pm.disabled = false;
+                }
+                // else between 12am to 2pm all remain disabled
+            }
+        
+            controlFieldAccessByTime(); // Run on load
+        
+            // Optional: re-check every 5 minutes
+            setInterval(controlFieldAccessByTime, 12000); // 5 mins = 300,000 ms
+        });
+        </script>
+        
+    
+    <!-- <button id="toggleFormBtn">Show Form</button> -->
+
+<!-- =========== Scripts =========  -->
+
+<!-- ====== ionicons ======= -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

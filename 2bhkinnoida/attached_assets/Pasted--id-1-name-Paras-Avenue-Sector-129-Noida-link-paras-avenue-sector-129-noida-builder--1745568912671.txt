@@ -1,0 +1,32 @@
+"id": 1,
+"name": "Paras Avenue Sector 129 Noida",
+"link": "paras-avenue-sector-129-noida",
+"builder": "Paras Buildtech",
+"location": [
+"Noida",
+"Sector 129",
+"201304",
+"Yamuna Expressway/Jewar Airport"
+],
+"images": [
+"assets/img/projectdetails/parasavenue1.webp",
+"assets/img/projectdetails/parasavenue2.webp",
+"assets/img/projectdetails/parasavenue3.webp"
+],
+"price": "60 Lac+",
+"possession": "September 2027",
+"area": "3000 sq ft",
+"type": [
+"Commercial"
+],
+"typeDetail": [
+"Commercial Spaces"
+],
+"rera": [
+"UPRERAPRJ297873",
+"https://up-rera.in/Projectsummary?UI0aPA1ISD=JhSgDBuQtpY=&hfFlag=9emr4VdBw22M7BGjKtJWMPDI4s5cHQZP&NPJ6RAme=mTQA7518KvsmPG82YovObQ==&PaURJEMAN4=ZL9MNERkNdac+WWRlUhmAA==&IRSAHEB=D6PY3lyims8="
+],
+"shortDescription": "",
+"keywords": "commercial property/properties, office spaces, retail spaces/shops, Luxury apartment, showrooms, noida expressway, paras avenue, paras avenue noida, paras avenue sector 129, paras avenue sector 129 noida, paras avenue price, paras avenue floor plan, paras avenue price list, paras avenue reviews, paras avenue brochure, paras avenue construction update, paras avenue location, paras avenue resale, paras avenue noida floor plan, paras avenue noida price, paras avenue possession date, paras avenue launch date, paras avenue contact number, paras avenue rera number, paras avenue booking, paras avenue retail shops, paras avenue retail shop price, best real estate company, best property consultant, real estate company, india's best real estate consultant, best property dealers, property websites, real estate website, property consultant in noida, real estate consultants noida, real estate advisory firms in india, real estate advisory services, real estate advisory firms in noida, real estate property consultants noida, real estate advisory services in noida, real estate consultant company noida, real estate advisory firms, real estate advisory company, real estate consultants in noida, real estate consultant company, best property deal in Noida, Office Space price in Paras Avenue, Commercial Property in Noida, Property in Noida, Paras Noida, Office space in Paras 129 Noida, Retail Shops in Paras Avenue, Investment in Noida, Office space in Noida, Paras projects in Noida, Commercial space in Noida, Retail shops in Noida, Food courts in Noida, Commercial shops in Noida, Buy property in Noida",
+"created_at": "2025-04-04T12:44:35.000000Z",
+"updated_at": "2025-04-04T12:44:35.000000Z"

@@ -1,0 +1,357 @@
+*{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --primary-color: #28a745;
+            --primary-dark-color: #218838;
+            --secondary-color: #4297ec;
+            --secondary-dark-color: #004992;
+            --text-color: #333;
+            --background-color: #f4f4f4;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form h2{
+            margin-bottom: 20px;
+        }
+        .eodForm{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .eodForm input{
+            width: calc(100% - 20px);
+            padding: 10px;
+            /* margin: 10px 0; */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .eodForm input[type="number"]{
+            /* width: calc(50% - 20px); */
+             width: calc(100% - 20px);
+            display: inline-block;
+        }
+        .eodForm input[type="text"]{
+            width: calc(100% - 20px);
+        }
+        .eodForm label{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .eodForm input[type="radio"]{
+            margin-right: 5px;
+            width: 20px;
+        }
+        .eodForm h2{
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .eodForm input[type="submit"]{
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .eodForm input[type="submit"]:hover{
+            background-color: #218838;
+        }
+
+        .btn{
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .btn:hover{
+            background-color: var(--secondary-dark-color);
+        }
+
+        /* Show full block only for active sale */
+        .sale{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .sale .input-group{
+            width: 100%;
+        }
+
+.sale .details {
+  display: none;
+}
+.sale.active-sale .details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+/* Style for collapsed client name */
+.compact-client {
+  /* background-color: #007bff !important; */
+  /* color: white !important; */
+  /* border-color: white !important; */
+}
+
+            .client-name.locked-client {
+  /* background-color: #007bff; */
+  /* color: white; */
+  /* border: 1px solid white; */
+}
+.edit-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.sale-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.sale-header .input-group{
+    margin-bottom: 0;
+}
+
+.sale-header .input-group input{
+    width: 100%;
+}
+
+.sale-header .input-group i{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: var(--secondary-color);
+    font-size: 18px;
+}
+
+.sale-number {
+  font-weight: bold;
+}
+
+.remove-sale {
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 18px;
+  color: red;
+  padding: 4px;
+}
+
+
+
+            .sale.locked-sale {
+  /* background-color: #007bff; */
+  /* color: white; */
+  border-radius: 5px;
+  padding: 10px;
+}
+.sale.locked-sale input {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  pointer-events: none;
+}
+.sale.locked-sale .edit-icon {
+  pointer-events: auto;
+  cursor: pointer;
+  color: white;
+}
+
+.client-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.edit-icon {
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input-group label {
+  position: absolute;
+  top: -18px;
+  left: 10px;
+  background: #fff;
+  padding: 0 5px;
+  font-size: 12px;
+  color: var(--text-color);
+  z-index: 1;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  padding-top: 18px; /* To prevent overlap */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+
+.notice_text{
+    margin: 20px 10px;
+    padding: 10px 20px;
+    background-color: #f4ab36;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  #notificationContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .notification {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f4ab36;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+.processing{
+      background-color: #f4ab36;
+  }
+
+  .success{
+    background-color: #0dcb75;
+  }
+
+  .error{
+    background-color: #f43636;
+  }
+  
+  .notification .message {
+    font-size: 14px;
+    flex: 1;
+  }
+  
+  .notification .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .notification .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation: progress 5s linear;
+  }
+
+.notification.slide-out {
+  animation: slideOut 0.4s ease forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes progress {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+  
+
+
+        @media (max-width: 600px) {
+            .eodForm input[type="number"]{
+                width: calc(100% - 20px);
+                display: block;
+            }
+        }
+        @media (max-width: 400px) {
+            .eodForm{
+                padding: 15px;
+            }
+            .eodForm input{
+                width: calc(100% - 10px);
+            }
+        }
+        @media (max-width: 300px) {
+            .eodForm input{
+                width: calc(100% - 5px);
+            }
+        }

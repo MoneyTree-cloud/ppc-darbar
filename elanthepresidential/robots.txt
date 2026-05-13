@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.elanthepresidential.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /process-form.php
+
+# Allow CSS, JS, and images
+Allow: /css/
+Allow: /js/
+Allow: /assets/

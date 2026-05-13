@@ -1,0 +1,333 @@
+
+        /* --- Google Font Imports --- */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Great+Vibes&family=Montserrat:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --saffron: #FF9933;
+            --white: #FFFFFF;
+            --green: #138808;
+            --navy: #000080;
+            --dark-text: #333;
+            --light-gray: #f4f4f4;
+            --gradient-color: linear-gradient(45deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+        }
+
+        /* --- Basic Setup --- */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            background: url('assets/img/mt-bg-desktop.webp') no-repeat center center;
+            background-size: cover;
+        }
+
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .logo{
+            width: 250px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 550px;
+            background-color: rgba(0, 88, 79, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 20px 40px;
+            z-index: 1;
+            position: relative;
+            border-top: 5px solid #bf953f;
+            border-bottom: 5px solid #bf953f;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .form-header h3 {
+            font-family: 'Teko', sans-serif;
+            font-size: 2rem;
+            background: var(--gradient-color);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 0;
+            line-height: 1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .form-header p {
+            color: #0e0e0e;
+            margin: 5px 0 10px;
+            font-weight: 700;
+        }
+
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 10px;
+        }
+
+        @media(max-width: 440px) {
+            .row {
+             gap: 0;
+            }
+        }
+
+        .row .form-group{
+            flex: 1;
+            /* margin-right: 10px; */
+            min-width: 180px;
+            width: 100%;
+        }
+
+        .row .form-group input, .row .form-group select{
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color:#fbf5b7;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            /* background: rgba(0, 88, 79, 1); */
+            padding: 0px 5px;
+            z-index: 2;
+        }
+
+        .form-group label::before{
+          content: "";
+          display: block;
+          height: 2px;
+          width: 100%;
+          background: rgba(0, 88, 79, 1);
+          /* border-radius: 50%; */
+          position: absolute;
+          top: 10px;
+          left: 0px;
+          z-index: -1;
+        }
+
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #fbf5b7;
+            color: #fbf5b7;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            min-height: 51px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s ease;
+            background-color: transparent;
+        }
+
+        .form-group select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            /* Updated the SVG fill color to match the theme */
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23fbf5b7%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 10px;
+            cursor: pointer;
+            min-height: 52px;
+        }
+
+        /* Updated option styling for better consistency and readability */
+        .form-group select option{
+            color: var(--white);
+            background: var(--dark-text);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #fbf5b7;
+            box-shadow: 0 0 10px rgba(255, 242, 124, 0.563), inset 0 0 10px rgba(255, 242, 124, 0.563);
+        }
+
+        .form-group input::placeholder {
+          color: rgba(243, 210, 112, 0.634);
+          opacity: 0.9;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: var(--gradient-color);
+            color: var(--dark-text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            /* box-shadow: 0 4px 15px rgba(255, 153, 51, 0.4); */
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 153, 51, 0.6);
+        }
+        
+        /* Date input field now uses a pointer cursor to indicate it's clickable */
+        .form-group input[type="date"] {
+            cursor: pointer;
+        }
+
+        /* Styles the calendar icon to match the theme (for WebKit browsers) */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            filter: invert(1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            .form-container {
+                padding: 25px;
+            }
+            .form-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* --- Notification Styling --- */
+        .notice_text{
+          margin: 20px 10px;
+          padding: 10px 20px;
+          background-color: #f4ab36;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        #notificationContainer {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 1000;
+        }
+
+        .notification {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 300px;
+          padding: 15px;
+          margin-bottom: 10px;
+          background-color: #f4ab36;
+          color: white;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          animation: slideIn 0.5s ease-out;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .success{
+          background-color: #0dcb75;
+        }
+
+        .processing{
+          background-color: #f4ab36;
+        }
+
+        .error{
+          background-color: #f43636;
+        }
+
+        .notification .message {
+          font-size: 14px;
+          flex: 1;
+        }
+
+        .notification .close-btn {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 20px;
+          cursor: pointer;
+        }
+
+        .notification .progress-bar {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 5px;
+          background-color: rgba(255, 255, 255, 0.7);
+          animation: progress 5s linear;
+        }
+
+        .notification.slide-out {
+          animation: slideOut 0.4s ease forwards;
+        }
+
+        @keyframes slideOut {
+          from {
+            transform: translateX(0%);
+            opacity: 1;
+          }
+          to {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+        }
+
+        @keyframes slideIn {
+          from {
+            transform: translateX(100%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes progress {
+          from {
+            width: 100%;
+          }
+          to {
+            width: 0;
+          }
+        }

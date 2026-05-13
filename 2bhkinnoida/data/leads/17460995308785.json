@@ -1,0 +1,51 @@
+{
+    "name": "chetuuuuu",
+    "phone": "9999999999",
+    "requirements": "iubib",
+    "chat_history": [
+        {
+            "role": "user",
+            "content": "i need option in 3 bhk"
+        },
+        {
+            "role": "assistant",
+            "content": "For 3 BHK options, we have some great residential properties like Godrej Miraya in Sector 43, Gurgaon, and RG Mirage in Sector 120, Noida. You can find more details about these properties on our website."
+        },
+        {
+            "role": "user",
+            "content": "in noida"
+        },
+        {
+            "role": "assistant",
+            "content": "In Noida, you might be interested in Godrej Riverine in Sector 44, Noida, which offers spacious residential units. Another option is Mahagun Medalleo in Sector 107, Noida. You can check out more details about these properties on our website."
+        },
+        {
+            "role": "user",
+            "content": "godrej"
+        },
+        {
+            "role": "assistant",
+            "content": "Great choice! Godrej properties are known for their quality and luxury. In Noida, you can explore Godrej Riverine in Sector 44 or Godrej Tropical Isle in Sector 146. For more information on these properties, feel free to visit our website."
+        },
+        {
+            "role": "user",
+            "content": "tropical"
+        },
+        {
+            "role": "assistant",
+            "content": "Godrej Tropical Isle in Sector 146, Noida, is a premium residential property by Godrej Properties. It offers luxurious living spaces in a well-planned community. You can find more details about this property on our website: https:\/\/moneytreerealty.com\/propertydetail\/godrej-tropical-isle-sector-146-noida"
+        },
+        {
+            "role": "user",
+            "content": "connect me with yoyr agent"
+        },
+        {
+            "role": "assistant",
+            "content": "Certainly! To connect with our property expert, please provide your name and phone number so we can assist you further. You can also reach us directly at +91 97323 00007."
+        }
+    ],
+    "website_id": "default",
+    "created_at": "2025-05-01 11:38:50",
+    "status": "new",
+    "id": "17460995308785"
+}

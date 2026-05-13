@@ -1,0 +1,4 @@
+sudo chown www-data:www-data "$TARGET" 2>/dev/null || true
+echo "VPS size: $(sudo wc -c < "$TARGET") bytes"
+echo "Contains new path: $(sudo grep -c "'/api/submit-lead.php'" "$TARGET")"
+echo "Contains OLD wamp path: $(sudo grep -c "'/ppc-darbar/trehaniris/api/submit-lead.php'" "$TARGET")"

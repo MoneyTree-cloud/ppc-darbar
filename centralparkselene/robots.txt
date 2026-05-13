@@ -1,0 +1,29 @@
+# Block website copier tools
+User-agent: HTTrack
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: Wget
+Disallow: /
+
+User-agent: SiteSucker
+Disallow: /
+
+# Block all common offline downloaders
+User-agent: WebZIP
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+# Allow normal search engines
+User-agent: *
+Disallow:
+
+# Block cgi-bin folder
+Disallow: /cgi-bin/
+
+# Sitemap location
+Sitemap: https://centralparkselene.com/sitemap.xml

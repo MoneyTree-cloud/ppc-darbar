@@ -1,0 +1,899 @@
+/* ============================================
+   Trehan Iris Broadway — Omara-Inspired Design
+   Non-critical styles (deferred load)
+   ============================================ */
+
+/* ── Section Titles (serif, centered, elegant) ── */
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+.section-title em { font-style: italic; color: var(--accent); }
+.section-subtitle {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 56px;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Trust Grid (clean, minimal cards) ── */
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border-light);
+    margin-bottom: 64px;
+}
+.trust-card {
+    background: var(--bg-cream);
+    padding: 40px 32px;
+    text-align: center;
+}
+.trust-icon {
+    font-size: 24px;
+    margin-bottom: 16px;
+    opacity: 0.6;
+}
+.trust-number {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+    line-height: 1;
+}
+.trust-number sup {
+    font-size: 16px;
+    vertical-align: super;
+    color: var(--accent);
+}
+.trust-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+.trust-label small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--text-light);
+    margin-top: 2px;
+}
+
+/* ── Testimonials (editorial quote style) ── */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border-light);
+}
+.testimonial-card {
+    background: var(--bg-cream);
+    padding: 40px 32px;
+    position: relative;
+}
+.testimonial-card::before {
+    content: '\201C';
+    font-family: var(--font-serif);
+    font-size: 64px;
+    color: var(--accent-light);
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+    opacity: 0.5;
+}
+.testimonial-stars {
+    color: var(--accent);
+    font-size: 14px;
+    margin-bottom: 16px;
+    letter-spacing: 3px;
+}
+.testimonial-card p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-body);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+.testimonial-author {
+    padding-top: 16px;
+    border-top: 1px solid var(--border-light);
+}
+.testimonial-author strong {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 0.5px;
+}
+.testimonial-author span {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ── Pain Points (editorial cards) ── */
+.pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border-light);
+    margin-top: 48px;
+}
+.pain-card {
+    background: var(--bg-cream);
+    padding: 40px 32px;
+    text-align: center;
+    transition: background 0.3s;
+}
+.pain-card:hover { background: var(--bg-warm); }
+.pain-card .icon {
+    font-size: 28px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+.pain-card h3 {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+.pain-card p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ── Benefits / Solution (alternating editorial grid) ── */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border-light);
+    margin-top: 48px;
+}
+.benefit-card {
+    display: flex;
+    gap: 20px;
+    background: var(--bg-cream);
+    padding: 40px 32px;
+    align-items: flex-start;
+}
+.benefit-card .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    color: var(--accent);
+    border: 1px solid var(--border-light);
+    border-radius: 50%;
+}
+.benefit-card h3 {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+.benefit-card p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ── Highlights (icon-based feature grid) ── */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border-light);
+    margin-top: 48px;
+}
+.highlight-card {
+    background: var(--bg-cream);
+    padding: 40px 32px;
+    text-align: center;
+}
+.highlight-card .icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    opacity: 0.6;
+}
+.highlight-card h3 {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+.highlight-card p {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ── Full-Bleed Quote Section ── */
+.quote-section {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+.quote-section .bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    background-color: #8B6F4E;
+    background-image: linear-gradient(145deg, #8B6F4E 0%, #6B5540 100%);
+}
+.quote-section .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(42,42,42,0.7);
+}
+.quote-section .content {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+    padding: 48px 24px;
+    color: #fff;
+}
+.quote-section blockquote {
+    font-family: var(--font-serif);
+    font-size: 26px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 16px;
+}
+.quote-section cite {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-style: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+}
+
+/* ── FAQ Accordion (refined, minimal) ── */
+.faq-list { max-width: 720px; margin: 0 auto; }
+.faq-item {
+    border-bottom: 1px solid var(--border-light);
+}
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    background: none;
+    border: none;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-dark);
+    cursor: pointer;
+    text-align: left;
+    gap: 16px;
+    transition: color 0.3s;
+    letter-spacing: 0.3px;
+}
+.faq-question:hover { color: var(--accent); }
+.faq-icon {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--accent);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+.faq-item.active .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.faq-answer p {
+    padding: 0 0 24px;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* ── CTA Section (warm dark) ── */
+.cta-section {
+    background: var(--bg-dark);
+    color: #fff;
+    text-align: center;
+}
+.cta-big-headline {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: #fff;
+    line-height: 1.25;
+}
+.cta-big-headline em { font-style: italic; color: var(--accent-light); }
+.cta-big-text {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+}
+
+/* ── WhatsApp Float ── */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 98;
+    width: 52px;
+    height: 52px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    transition: transform 0.3s;
+}
+.whatsapp-float:hover { transform: scale(1.08); }
+
+/* ── Pricing / Details Table ── */
+.price-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 32px;
+    border: 1px solid var(--border-light);
+}
+.price-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    background: var(--bg-cream);
+}
+.price-table th {
+    background: var(--bg-dark);
+    color: rgba(255,255,255,0.9);
+    padding: 16px 24px;
+    text-align: left;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.price-table td {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-body);
+}
+.price-table tr:last-child td { border-bottom: none; }
+.price-table tr:hover td { background: var(--bg-warm); }
+
+/* ── SEO Content Block ── */
+.seo-content { max-width: 720px; margin: 0 auto; }
+.seo-content h2 {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+.seo-content h3 {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin: 32px 0 12px;
+}
+.seo-content p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+.seo-content ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 20px;
+}
+.seo-content li {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.7;
+}
+.seo-content li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 5px;
+    height: 5px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+/* ── Editorial Image+Text Blocks (Omara alternating layout) ── */
+.editorial-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+}
+.editorial-row.reverse .editorial-image { order: 2; }
+.editorial-row.reverse .editorial-text { order: 1; }
+.editorial-image {
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    background-color: var(--bg-sand);
+    /* Elegant placeholder gradient when no image loaded */
+    background-image: linear-gradient(145deg, #D4C9B8 0%, #C2B5A1 50%, #B8A990 100%);
+}
+.editorial-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px 56px;
+    background: var(--bg-cream);
+}
+.editorial-row:nth-child(even) .editorial-image {
+    background-image: linear-gradient(145deg, #C2B5A1 0%, #AFA290 50%, #9D9080 100%);
+}
+.editorial-row:nth-child(odd):not(:first-child) .editorial-image {
+    background-image: linear-gradient(145deg, #BCC5BA 0%, #A8B3A5 50%, #96A394 100%);
+}
+.editorial-text .label-sm { margin-bottom: 12px; }
+.editorial-text h3 {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+.editorial-text p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+/* ── Horizontal Rule (thin accent) ── */
+.hr-accent {
+    border: none;
+    height: 1px;
+    background: var(--border-light);
+    margin: 0;
+}
+
+/* ── Image Gallery (show the product) ── */
+.gallery-section {
+    background: var(--bg-dark);
+    padding: 0 0 40px;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 3px;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+.gallery-large {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .gallery-large {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+    .gallery-label { font-size: 10px; padding: 8px 12px; }
+}
+
+/* ── Editorial CTA links ── */
+.editorial-cta {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: 8px;
+    transition: color 0.3s;
+}
+.editorial-cta:hover { color: var(--accent-hover); }
+
+/* ── Urgency Ribbon (FOMO) ── */
+.urgency-ribbon {
+    background: var(--bg-dark);
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.urgency-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+.urgency-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+}
+.urgency-item strong { color: #fff; font-weight: 600; }
+.urgency-icon { font-size: 14px; }
+.urgency-pulse {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse-glow 2s infinite;
+    flex-shrink: 0;
+}
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+    50% { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+}
+.urgency-cta {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bg-dark);
+    background: var(--accent-light);
+    padding: 8px 20px;
+    transition: background 0.3s;
+}
+.urgency-cta:hover { background: var(--accent); color: #fff; }
+
+/* ── Inline CTA Block (between sections) ── */
+.inline-cta {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-light);
+}
+.inline-cta-text {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+.inline-cta-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ── CTA Strip (full-width between sections) ── */
+.cta-strip {
+    background: var(--bg-warm);
+    padding: 20px 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+.cta-strip-dark {
+    background: var(--bg-dark);
+    border-color: rgba(255,255,255,0.06);
+}
+.cta-strip-dark span { color: rgba(255,255,255,0.7); }
+.cta-strip-dark strong { color: #fff; }
+.cta-strip-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.cta-strip-inner span {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-body);
+}
+
+/* ── Form Trust Badges ── */
+.form-trust-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+.form-trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+.form-trust-badge svg { color: var(--secondary); }
+
+/* ── Form WhatsApp Alternative ── */
+.form-whatsapp-alt {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--text-light);
+}
+.form-whatsapp-alt span { margin-right: 8px; }
+.form-whatsapp-alt a {
+    color: #25D366;
+    font-weight: 600;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+.form-whatsapp-alt a:hover { color: #1da851; }
+
+/* ── Exit-Intent Popup ── */
+.exit-popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(42,42,42,0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.exit-popup-overlay.active { display: flex; }
+.exit-popup {
+    background: #fff;
+    max-width: 440px;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    animation: popup-in 0.35s ease-out;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+@keyframes popup-in {
+    from { opacity: 0; transform: translateY(20px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.exit-popup-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--text-muted);
+    cursor: pointer;
+    z-index: 2;
+    line-height: 1;
+    transition: color 0.2s;
+}
+.exit-popup-close:hover { color: var(--text-dark); }
+.exit-popup-body {
+    padding: 40px 32px;
+    text-align: center;
+}
+.exit-popup-body .lead-form-card {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin-top: 0;
+    background: transparent;
+}
+.exit-popup-body .form-urgency { margin-top: 16px; }
+
+/* ── Social Proof Toast Notification ── */
+.toast-notification {
+    position: fixed;
+    bottom: 90px;
+    left: 24px;
+    z-index: 97;
+    background: #fff;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 340px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+.toast-notification.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.toast-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+.toast-text { line-height: 1.4; }
+.toast-text strong {
+    display: block;
+    font-size: 13px;
+    color: var(--text-dark);
+}
+.toast-text span {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+.toast-text small {
+    display: block;
+    font-size: 10px;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+/* ── Sticky Desktop CTA Bar ── */
+.sticky-cta-bar {
+    position: fixed;
+    top: -80px;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    background: rgba(250,248,245,0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-light);
+    padding: 10px 0;
+    transition: top 0.3s ease;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+}
+.sticky-cta-bar.visible { top: 0; }
+.sticky-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sticky-cta-text strong {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-right: 12px;
+}
+.sticky-cta-text span {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+.sticky-cta-btns {
+    display: flex;
+    gap: 8px;
+}
+
+/* ── Tablet ── */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+    .pain-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials { grid-template-columns: repeat(2, 1fr); }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .editorial-text { padding: 40px 32px; }
+    .editorial-text h3 { font-size: 24px; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .section-title { font-size: 28px; }
+    .section-subtitle { margin-bottom: 40px; }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials { grid-template-columns: 1fr; }
+    .pain-grid { grid-template-columns: 1fr; }
+    .benefits-grid { grid-template-columns: 1fr; }
+    .highlights-grid { grid-template-columns: 1fr; }
+    .cta-big-headline { font-size: 26px; }
+    .whatsapp-float { bottom: 78px; }
+    .price-table th, .price-table td { padding: 12px 14px; font-size: 13px; }
+    .editorial-row { grid-template-columns: 1fr; }
+    .editorial-row.reverse .editorial-image { order: 1; }
+    .editorial-row.reverse .editorial-text { order: 2; }
+    .editorial-image { min-height: 280px; }
+    .editorial-text { padding: 40px 24px; }
+    .editorial-text h3 { font-size: 24px; }
+    .quote-section { min-height: 320px; }
+    .quote-section blockquote { font-size: 20px; }
+
+    /* Conversion elements mobile */
+    .urgency-inner { gap: 12px; font-size: 12px; }
+    .urgency-cta-wrap { display: none; }
+    .inline-cta-text { font-size: 16px; }
+    .cta-strip-inner { text-align: center; flex-direction: column; gap: 12px; }
+    .form-trust-row { gap: 10px; }
+    .form-trust-badge { font-size: 9px; }
+    .toast-notification { left: 12px; right: 12px; max-width: none; bottom: 78px; }
+    .sticky-cta-bar { display: none; }
+    .exit-popup-body { padding: 32px 20px; }
+    .exit-popup-body h3 { font-size: 22px !important; }
+}

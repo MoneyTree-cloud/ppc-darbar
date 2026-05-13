@@ -1,0 +1,858 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap');
+
+@font-face {
+  font-family: 'LibreBaskerville-Regular';
+  src: url(../font/LibreBaskerville-Regular.woff) format('woff'),
+       url(../font/LibreBaskerville-Regular.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url(../font/Montserrat-Regular.woff) format('woff'),
+       url(../font/Montserrat-Regular.woff2) format('woff2');
+}
+/* HEADER CSS STARTS */
+header {
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    z-index: 99;
+    background-color: #1c3c99;
+    padding: 15px 0;
+    -moz--webkit-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    transform: translate(-50%);
+  }
+  .newClass {
+    background-color: #000;
+    box-shadow: 0 0 1px #f5f5f5;
+    z-index: 999;
+
+}
+  .inner-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .logo {
+    max-width: 135px;
+}
+  .menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-section{
+    background:url('../images/amenities.html');
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    display: block;
+  }
+  p.banner-inner.price-info {
+    font-family: 'Lato-LightItalic';
+    font-size: 25px;
+}
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 0px 15px;
+    text-transform: uppercase;
+    -moz--webkit-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    letter-spacing: 1px;
+    font-family: 'Montserrat-Regular';
+  }
+  .project-overview-section .know-more {
+    text-align: left;
+  }
+  .contact-number {
+    display: flex;
+  }
+  .contact-number a {
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    -moz--webkit-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .responsiv-mobile {
+    display: none;
+}
+.logo img {
+    filter: brightness(17.5);
+}
+  /* HEADER CSS ENDS */
+.banner-section{
+    position:relative;
+    overflow:hidden;
+}
+.banner-section .container-fluid{
+ padding:0;
+}
+.banner-section-information {
+  top: 30%;
+  position: absolute;
+  background: #000000bd;
+  color: #fff;
+  padding: 20px 20px 20px 25px;
+  left: 50%;
+  border-radius: 8px;
+  transform: translate(-50%);
+  text-align: center;
+  z-index:9;
+}
+.banner-section-info h1 {
+  font-family: 'LibreBaskerville-Regular';
+  font-size: 30px;
+}
+.banner-section-info p{
+    font-family: 'Montserrat-Regular';
+}
+p.banner-location {
+    margin-bottom: 5px;
+}
+p.project-price b {
+  color: #89a4f5;
+  font-size: 29px;
+  letter-spacing: 1px;
+}
+p.project-configuration {
+    font-weight: 600;
+    font-size: 24px;
+    /* background: #c16656; */
+}
+.project-configuration a{
+  color:#fff;
+}
+.overview-section{
+    font-family: 'Montserrat-Regular';
+    text-align: center;
+}
+.padding-space-extra{
+    padding:50px 0;
+}
+.section-title{
+    text-align: center;
+    font-family: 'Montserrat-Regular';
+}
+.section-title h2 {
+  font-family: 'LibreBaskerville-Regular';
+  font-size: 23px;
+}
+.section-title P{
+    text-align: center;
+}
+.download-brochure {
+    color: #fff;
+    background: #1c3c99;
+}
+.bg-color{
+    background: #1c3c99; 
+}
+.bg-flower{
+  position:relative;
+}
+.bg-flower::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.text-color{
+    color:#fff;
+}
+.banner-section-infos{
+    padding:20px;
+    border:1px dotted #1c3c99;
+}
+.banner-section-infos img{
+  position:relative;
+  z-index:9;
+}
+.brochure{
+    background:#fff;
+    color:#000;
+    font-family: 'Montserrat-Regular';
+    margin-top:20px;    
+}
+.gallery-section{
+    text-align: center;
+}
+.higlight-section-info{
+  text-align: left;
+  font-family: 'Montserrat-Regular';  
+}
+.higlight-section-info .section-title{
+  text-align: left;
+}
+.higlight-section-info .section-title p{
+  text-align: left;
+}
+.higlight-section-info ul{
+  padding-left:18px;
+}
+.higlight-section-info ul li{
+  margin-bottom:10px;
+  padding-bottom:10px;
+  border-bottom:1px dotted #000;
+}
+.price-section-information {
+  background: #fff;
+  box-shadow: 0 0 3px #000;
+  text-align: center;
+  padding-bottom:10px;
+}
+.project-type {
+  color: #fff;
+  font-family: 'Montserrat-Regular';
+  padding: 20px 0;
+  background: #1c3c99;
+}
+
+.project-type p {
+  margin-bottom: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size:20px;
+}
+.project-size{
+  margin-top:15px;
+  color:#000;
+  border-bottom:1px dotted #000;
+  padding-bottom:10px;
+  margin-bottom:10px;
+}
+.size{
+  margin-bottom:5px;
+  font-family: 'Montserrat-Regular';  
+}
+.project-sizes{
+margin-bottom:0px;
+font-family: 'Montserrat-Regular'; 
+font-size:20px;
+font-weight:500;
+}
+.project-prices{
+  color:#000;
+  font-family: 'Montserrat-Regular';
+  border-bottom:1px dotted #000;
+  margin-bottom:10px;
+}
+p.starting-price{
+  margin-bottom:5px;
+}
+.price-start{
+  margin-bottom:0px;
+}
+p.starting-price b {
+  color: #1c3c99;
+  font-size: 28px;
+  font-weight: 900;
+  font-family: 'LibreBaskerville-Regular';
+}
+.btn{
+  font-family: 'Montserrat-Regular';
+}
+.highlight-section-img {
+  position: relative;
+  box-shadow: 0 0 3px #695858;
+  z-index: 9;
+}
+.highlight-section-img img {
+  box-shadow: 0 0 3px #fff;
+}
+.highlight-section-img::before {
+  position: absolute;
+  top: 14px;
+  left: -19px;
+  width: 100%;
+  height: 100%;
+  background: #1c3c99;
+  z-index: -1;
+  content: "";
+  box-shadow: 0 0 5px #000;
+}
+.floor-plan-info {
+  position: relative;
+  padding: 10px;
+  border: 1px dotted;
+}
+.floor-plan-info p {
+  color: #000;
+  background: #fff;
+  text-align: center;
+  font-family: 'Montserrat-Regular';
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  box-shadow: 0 0 3px #000;
+}
+.floor-plan-img img{
+  box-shadow:0 0 3px #000;
+  filter: blur(6px);
+}
+.location-section .section-title{
+text-align: left;
+}
+.location-section .section-title p{
+  text-align: left;
+}
+.location-advantages-information ul{
+  padding-left:15px;
+}
+.location-advantages-information ul li {
+  font-family: 'Montserrat-Regular';
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #020202;
+}
+.location-advantages-img {
+  border: 1px dotted #1c3c99;
+  padding: 10px;
+}
+.location-advantages-img img{
+  box-shadow:0 0 3px #000;
+}
+.amenities-section-img {
+  padding: 10px;
+  border: 1px dotted #000;
+}
+.amenities-section-info{
+  position:relative;
+}
+.amenities-section-info p {
+  font-family: 'Montserrat-Regular';
+  background: #1c3c99;
+  color: #fff;
+  padding: 10px;
+  position: absolute;
+  width: 88%;
+  text-align: center;
+  bottom: -29px;
+  box-shadow: 0 0 3px #cfcccc;
+  border-radius: 4px;
+  left: -15px;
+}
+.amenities-section-img img{
+  box-shadow:0 0 3px #000;
+}
+.footer-section {
+  text-align: center;
+  font-family: 'Montserrat-Regular';
+}
+.footer-inner h5 {
+  margin-bottom: 20px;
+  color:#fff;
+}
+.footer-inner form .form-group {
+  margin-bottom: 20px;
+}
+.footer-privacy{
+  font-family: 'Montserrat-Regular';
+  text-align: center;
+  padding:20px 0;
+}
+.enquire-outer{
+  display:none;
+}
+.desktop-banner{
+  display:block;
+}
+.tab-banner{
+  display:none;
+}
+.mobile-banner{
+  display:none;
+}
+p.project-price {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.faq-section .card-header-title > a {
+  display: block;
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+}
+.faq-section .card-header-title > a:after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+}
+.faq-section .card-header-title > a[aria-expanded="true"]:after {
+  content: "\f077";
+}
+.faq-section .card-body {
+  font-size: 14px;
+  color:#000;
+  text-align: left;
+}
+.faq-section .section-title h2{
+color:#fff;
+}
+.auto-popup-right h3 {
+  font-family: 'LibreBaskerville-Regular';
+  font-size: 25px;
+}
+.auto-popup-right p {
+  font-size: 15px;
+  font-family: 'Montserrat-Regular';
+}
+.ct-tag {
+  font-family: 'Montserrat-Regular';
+  font-size: 15px;
+  margin-bottom:10px;
+}
+.auto-popup-right form {
+  font-family: 'Montserrat-Regular';
+}
+.highlight-fert {
+  background: #f7f7f7;
+  color: #000000;
+  font-family: 'Montserrat-Regular';
+  position: relative;
+  box-shadow:0 0 3px #000;
+}
+.highlight-fert p{
+  padding:20px;
+  margin-bottom:0;
+}
+.overview-section-information .section-title p{
+  text-align: center;
+}
+.overview-section-information p {
+  text-align: justify;
+}
+.gallery-section .download-brochure {
+  margin-top: 10px;
+}
+.highlight-section {
+  text-align: center;
+}
+@media only screen and (max-width: 1295px) {
+  .banner-section-information {
+    width: 50%;
+}
+}
+@media only screen and (max-width: 1199px) {
+  .menu ul li a {
+    font-size: 13px;
+}
+.banner-section-info h1 {
+  font-size: 29px;
+}
+.banner-section-information {
+  width: 56%;
+}
+.highlight-fert p {
+  font-size: 15px;
+}
+p.project-price b {
+  font-size: 23px;
+}
+p.project-configuration {
+  font-size: 22px;
+}
+p.project-price {
+  margin-bottom: 10px;
+}
+.section-title h2 {
+  font-size: 25px;
+}
+}
+@media only screen and (max-width: 991px) {
+  .banner-section-information {
+    width: 62%;
+}
+  .button_container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 29px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity 0.25s ease;
+    transform: translateY(-50%);
+}
+.button_container span {
+    background: #fff;
+    border: none;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    border-radius: 31px;
+}
+.overlay {
+    position: fixed;
+    background: #000;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    max-height: 0;
+    -webkit-transition: max-height .3s, -webkit-transform .3s;
+    transition: max-height .3s, -webkit-transform .3s;
+    -o-transition: max-height .3s, transform .3s;
+    transition: max-height .3s, transform .3s;
+    transition: max-height .3s, transform .3s, -webkit-transform .3s;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    overflow: auto;
+}
+.overlay.open {
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    max-height: 100vh;
+}
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+.overlay nav {
+    text-align: center;
+}
+.overlay.open li {
+    opacity: 1;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.button_container.active .bottom {
+    transform: translateY(-11px) translateX(0) rotate(-45deg);
+    background: #fff;
+}
+.button_container.active .top {
+    transform: translateY(11px) translateX(0) rotate(45deg);
+    background: #fff;
+}
+.button_container.active .middle {
+    opacity: 0;
+    background: #fff;
+}
+
+.button_container span:nth-of-type(2) {
+    top: 11px;
+    width: 61%;
+    height: 3px;
+    right: 0;
+    left: auto;
+}
+.button_container span:nth-of-type(3) {
+    top: 22px;
+}
+.desktop-banner{
+  display:none;
+}
+.tab-banner{
+  display:block;
+}
+.mobile-banner{
+  display:none;
+}
+.overview-section-information p {
+  text-align: justify;
+}
+.overview-section-information .section-title p{
+  text-align: center !important;
+}
+.highlight-section-img {
+  display: none;
+}
+.amenities-section-info {
+  margin-bottom: 25px;
+}
+.footer-inner h5 {
+  font-size: 17px;
+}
+p.market-privacy {
+  font-size: 15px;
+}
+.floor-plan-info {
+  margin-bottom: 12px;
+}
+.location-advantages-img {
+  margin-top: 20px;
+}
+.footer-inner form .form-group {
+  margin-bottom: 10px;
+}
+p.footer-disclaimer {
+  text-align: justify;
+  font-size: 15px;
+}
+.amenities-section-info p {
+  font-size: 15px;
+}
+.project-type p {
+  font-size: 18px;
+}
+p.starting-price b {
+  font-size: 23px;
+}
+.price-start {
+  font-size: 15px;
+}
+.section-title h2 {
+  font-size: 22px;
+}
+.footer-inner form .form-group {
+  margin-bottom: 0px;
+}
+.footer-inner {
+  margin-top: 25px;
+}
+}
+@media only screen and (max-width: 767px) {
+  .banner-section-info h1 {
+    font-size: 28px;
+}
+.banner-section-information {
+  width: 80%;
+}
+.footer-inner form .form-group {
+  margin-bottom: 20px;
+}
+}
+@media only screen and (max-width: 575px) {
+.desktop-banner{
+  display:none;
+}
+.tab-banner{
+  display:none;
+}
+.mobile-banner{
+  display:block;
+}
+.banner-section-info h1 {
+  font-size: 26px;
+}
+.highlight-fert p {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px;
+}
+.overview-hidden{
+  display:none;
+}
+header {
+  padding: 15px 0;
+}
+.auto-popup-right h3 {
+  font-size: 18px;
+}
+p.banner-location {
+  font-size: 14px;
+}
+p.project-price {
+  font-size: 17px;
+  border-bottom: 1px dotted #000;
+  margin-bottom: 0;
+}
+p.project-configuration {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.banner-section-information {
+  width: 90%;
+  top: 10%;
+  padding: 20px 10px 20px 16px;
+}
+.section-title h2 {
+  font-size: 20px;
+}
+.higlight-section-info ul li {
+  font-size: 14px;
+}
+.higlight-section-info .section-title p {
+  font-size: 14px;
+}
+.price-section-information {
+  margin-bottom: 20px;
+}
+p.project-price b {
+  font-size: 24px;
+  color: #fff;
+}
+.location-section .section-title p {
+  font-size: 14px;
+}
+.location-advantages-information ul li {
+  font-size: 15px;
+}
+.amenities-section-info p {
+  bottom: -31px;
+  left: -7px;
+  font-size: 13px;
+}
+.project-type {
+  padding: 10px 0;
+}
+.section-title p {
+  font-size: 14px;
+}
+p.project-configuration {
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+.download-brochure {
+  font-size: 14px;
+}
+.overview-section-information p {
+  font-size: 13px;
+}
+.bg-flower::before {
+  background-size: 100% 100%;
+  opacity: 0.2;
+}
+header {
+  width: 100%;
+  top: 0px;
+  border-radius: 0;
+  padding: 12px 0;
+}
+.newClass {
+  border-radius:0;
+}
+.banner-section {
+  margin-top: 60px;
+}
+.enquire-outer {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  background: #1c3c99;
+  box-shadow: 0 0 2px #ededed;
+}
+.enquire-outer ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom:0;
+  padding-left: 0;
+}
+.enquire-outer ul li {
+  width: 100%;
+}
+.enquire-outer ul li .enquire-form-fit {
+  width: 100%;
+  border-radius: 0;
+  font-size: 14px;
+  font-family: 'Montserrat-Regular';
+  color: #fff;
+  background-color: #1c3c99;
+}
+.fit-ext{
+  border-right:2px solid #fff;
+}
+p.footer-disclaimer {
+  font-size: 13px;
+}
+p.market-privacy {
+  font-size: 13px;
+}
+.contact-brochure {
+  margin-top: 0;
+}
+}
+@media only screen and (max-width: 429px) {
+  .banner-section-information {
+    top: 21%;
+    padding: 20px 0 20px 0;
+    background:none;
+}
+.banner-section::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000054;
+  content: "";
+}
+.download-brochure {
+  font-size: 13px;
+}
+.banner-section-info h1 {
+  font-size: 22px;
+  padding: 10px 0;
+  background: linear-gradient(45deg, #0000008f, #00000047, #0000008f);
+}
+p.project-price {
+  border-bottom: 1px dotted #ffffff;
+}
+}
+@media only screen and (max-width: 404px) {
+  .banner-section-info h1 {
+    font-size: 24px;
+}
+.contact-brochure{
+  margin-top:0;
+}
+.banner-btn .download-brochure {
+  padding: 5px;
+}
+.overview-section .project-btn .brochure {
+  font-size: 13px;
+  margin-top:0;
+}
+}
+@media only screen and (max-width: 377px) {
+  .banner-section-info h1 {
+    font-size: 22px;
+}
+.banner-section-information {
+  top: 12%;
+}
+.section-title h2 {
+  font-size: 18px;
+}
+.project-btn .brochure{
+  font-size:13px;
+}
+}
+@media only screen and (max-width: 346px) {
+  .banner-section-info h1 {
+    font-size: 20px;
+}
+p.project-price b {
+  font-size: 22px;
+}
+.download-brochure {
+  font-size: 14px;
+}
+.contact-brochure{
+  margin-top: 10px;
+}
+}

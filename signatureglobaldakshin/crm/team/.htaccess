@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Internally rewrite eod.html to eod.php (URL stays eod.html)
+RewriteRule ^eod\.html$ eod.php [L]
+
+# Internally rewrite leader_eod.html to leader_eod.php
+RewriteRule ^leader_eod\.html$ leader_eod.php [L]

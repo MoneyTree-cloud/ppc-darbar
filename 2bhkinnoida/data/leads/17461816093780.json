@@ -1,0 +1,51 @@
+{
+    "name": "paras",
+    "phone": "9999999999",
+    "requirements": "hfchg",
+    "chat_history": [
+        {
+            "role": "user",
+            "content": "connect me with agent"
+        },
+        {
+            "role": "assistant",
+            "content": "You can reach our property experts at +91 97323 00007. How can I assist you today?"
+        },
+        {
+            "role": "user",
+            "content": "give me form to fill"
+        },
+        {
+            "role": "assistant",
+            "content": "I can share more specific details about properties that match your requirements. Would you mind sharing your name and phone number so our property expert can contact you?"
+        },
+        {
+            "role": "user",
+            "content": "deepanshu 9599840723"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you, Deepanshu. How can I assist you with your property search today?"
+        },
+        {
+            "role": "user",
+            "content": "acha"
+        },
+        {
+            "role": "assistant",
+            "content": "If you have any more questions or need assistance, feel free to ask. Have a great day!"
+        },
+        {
+            "role": "user",
+            "content": "give me form"
+        },
+        {
+            "role": "assistant",
+            "content": "I can share more specific details about properties that match your requirements. Would you mind sharing your name and phone number so our property expert can contact you?"
+        }
+    ],
+    "website_id": "default",
+    "created_at": "2025-05-02 10:26:49",
+    "status": "new",
+    "id": "17461816093780"
+}

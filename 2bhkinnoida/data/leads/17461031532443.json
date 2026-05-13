@@ -1,0 +1,51 @@
+{
+    "name": "deepanshu",
+    "phone": "9999999999",
+    "requirements": "obubub",
+    "chat_history": [
+        {
+            "role": "user",
+            "content": "hi"
+        },
+        {
+            "role": "assistant",
+            "content": "Hello! How can I assist you today?"
+        },
+        {
+            "role": "user",
+            "content": "i need 2 bhk"
+        },
+        {
+            "role": "assistant",
+            "content": "We have various 2 BHK options available. Are you looking for a 2 BHK apartment or villa in a specific location?"
+        },
+        {
+            "role": "user",
+            "content": "in noida"
+        },
+        {
+            "role": "assistant",
+            "content": "Great! In Noida, we have residential properties like Paras Avenue in Sector 129. Would you like more details about Paras Avenue or any other specific requirements for your 2 BHK search in Noida?"
+        },
+        {
+            "role": "user",
+            "content": "yes"
+        },
+        {
+            "role": "assistant",
+            "content": "Sure! For more details on Paras Avenue in Noida Sector 129, you can visit https:\/\/moneytreerealty.com\/propertydetail\/paras-avenue-sector-129-noida. If you'd like assistance with anything else, feel free to ask!"
+        },
+        {
+            "role": "user",
+            "content": "moneytree address"
+        },
+        {
+            "role": "assistant",
+            "content": "Our office address in Noida is: 2nd Floor, Tower B, Tapasya Corp Heights, Subarea, Sector-126, Noida, Uttar Pradesh - 201303. You can reach us at +91 97323 00007. If you have any more questions or need assistance, feel free to ask!"
+        }
+    ],
+    "website_id": "default",
+    "created_at": "2025-05-01 12:39:13",
+    "status": "new",
+    "id": "17461031532443"
+}

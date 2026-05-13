@@ -1,0 +1,3 @@
+sudo chown www-data:www-data "$TARGET" 2>/dev/null || true
+echo "VPS size: $(sudo wc -c < "$TARGET") bytes"
+echo "Contains new synthesized email line: $(sudo grep -c "lead+" "$TARGET")"

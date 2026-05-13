@@ -1,0 +1,51 @@
+{
+    "id": "lead_680b4af73284d",
+    "name": "deepanshu",
+    "phone": "959984072",
+    "requirements": "yuyyugg",
+    "chat_history": [
+        {
+            "role": "user",
+            "content": "hello"
+        },
+        {
+            "role": "assistant",
+            "content": "Hello! How can I assist you today?"
+        },
+        {
+            "role": "user",
+            "content": "i am looking for investment"
+        },
+        {
+            "role": "assistant",
+            "content": "Sure, for investment options, we have premium properties like Paras Avenue in Noida Sector 129 with commercial spaces starting at 60 Lac+. Would you like more details about this property?"
+        },
+        {
+            "role": "user",
+            "content": "another option"
+        },
+        {
+            "role": "assistant",
+            "content": "Another option for investment is M3M The Cullinan in Noida Sector 94, offering residential and commercial spaces starting at 1 Cr+. Would you like more details about this property?"
+        },
+        {
+            "role": "user",
+            "content": "option in gurugram"
+        },
+        {
+            "role": "assistant",
+            "content": "In Gurugram, you can consider Elan Town Centre in Sector 67, offering commercial spaces starting at \u20b937.52 Lac. Would you like more information about this property or any other specific requirements you have?"
+        },
+        {
+            "role": "user",
+            "content": "give me project detail"
+        },
+        {
+            "role": "assistant",
+            "content": "Sure, here are the details for Elan Town Centre in Gurugram:\n\nLocation: Gurugram, Sector 67, 122001, Main Sohna Road\nPrice: \u20b937.52 Lac\nPossession: Ready for possession\nCategory: Commercial\nBuilder: Elan Group\nRERA: GRG-367-2019\n\nFor more details, you can visit the property detail page: [Elan Town Centre Sector 67 Gurugram](https:\/\/moneytreerealty.com\/propertydetail\/elan-town-centre-sector-67-gurugram)"
+        }
+    ],
+    "website_id": "default",
+    "created_at": "2025-04-25 08:42:31",
+    "status": "new"
+}

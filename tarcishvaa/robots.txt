@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /process-form.php
+Disallow: /env.php
+Disallow: /connection.php
+Disallow: /.env
+Disallow: /leads.log
+
+Sitemap: https://tarcishvaa.in/sitemap.xml

@@ -1,0 +1,8 @@
+# Enable the rewrite engine
+RewriteEngine On
+
+# --- Custom 404 Error Redirect ---
+# This line tells the server that for any 404 (Not Found) error,
+# it should send the user to your specified 404 page.
+# Using an absolute URL (https://...) will cause an external redirect.
+ErrorDocument 404 https://crm.signatureglobaldakshin.in/404.php

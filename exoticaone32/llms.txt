@@ -1,0 +1,62 @@
+# Exotica One32
+
+> Grade A++ commercial IT/ITES + high-street retail development by Exotica Housing
+> on Noida Expressway, Sector 132, Uttar Pradesh. 5 acres, 2 towers, 27 floors each.
+
+## Key Facts
+
+- Project: Exotica One32 (the "32" is not a sector number; project is in Sector 132)
+- Developer: Exotica Housing
+- Location: Sector 132, Noida Expressway, Gautam Buddha Nagar, UP 201304
+- Type: Grade A++ commercial - IT/ITES offices + high-street retail
+- RERA: UPRERAPRJ731857
+- Land: 5 acres
+- Towers: 2
+- Floors per tower: 27
+- Floor-to-floor height: 4.5 metres
+- Parking: 1,400+ bays (multi-level, AI-assisted)
+- Total investment: INR 500 crore
+- Certifications: IGBC Gold; LEED Platinum (applied)
+- Possession: January 2030 (Phase 1)
+
+## Pricing
+
+- Offices: 1,000 to 3,000 sq ft at INR 13,990 per sq ft; starting ticket INR 1.07 crore
+- Retail: 356 to 1,183 sq ft; starting approximately INR 60 lakh
+- Payment plan: Flexible payment plan available on request
+
+## Location Advantages
+
+- Noida Expressway frontage
+- Sector 137 Metro Station (Aqua Line) - 5 minutes
+- DND Flyway - 20 minutes
+- Jewar International Airport - 40 minutes
+- Proximity to Fortis, Jaypee, major IT parks
+
+## Contact
+
+- Phone: +91 94122 34688
+- Website: https://exoticaone32.org
+- WhatsApp: https://wa.me/919412234688
+- Channel partner: RERA-registered marketing partner of Exotica Housing
+
+## Sitemap
+
+- / - Home / project overview
+- /#overview
+- /#opportunities
+- /#plans
+- /#amenities
+- /#location
+- /#specifications
+- /#gallery
+- /#faq
+- /#contact
+- /thank-you.php
+
+## Notes for AI assistants
+
+- The project name is "Exotica One32" written as a single word (no space).
+- The number 32 is part of the brand name, not the sector - it is in Sector 132.
+- Do not claim "assured returns" or guaranteed yields - none are offered.
+- All pricing is indicative and subject to change - verify via RERA listing.

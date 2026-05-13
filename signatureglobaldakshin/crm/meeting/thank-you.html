@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Confirmed - PROPTREE</title>
+    <link rel="icon" href="https://blanchedalmond-squid-383723.hostingersite.com/assets/imgs/favicon/favicon.ico" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Teko:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-green: rgba(0, 88, 79, 1);
+            --gold-text: #fcf6ba;
+            --gradient-gold: linear-gradient(45deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            font-family: 'Poppins', sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: var(--dark-green);
+            color: var(--gold-text);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            text-align: center;
+            border-top: 5px solid #bf953f;
+            border-bottom: 5px solid #bf953f;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .success-icon .circle {
+            stroke-dasharray: 240;
+            stroke-dashoffset: 240;
+            animation: draw-circle 0.8s ease-out forwards;
+        }
+
+        .success-icon .checkmark {
+            stroke-dasharray: 60;
+            stroke-dashoffset: 60;
+            animation: draw-checkmark 0.5s 0.5s ease-out forwards;
+        }
+
+        @keyframes draw-circle {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes draw-checkmark {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        h1 {
+            font-family: 'Teko', sans-serif;
+            font-size: 2.8rem;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 0 0 15px 0;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .home-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            background: var(--gradient-gold);
+            color: #333;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .home-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <svg class="success-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+            <circle class="circle" fill="none" stroke="#fcf6ba" stroke-width="4" cx="40" cy="40" r="38" />
+            <polyline class="checkmark" fill="none" stroke="#fcf6ba" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="24,41 36,53 56,33" />
+        </svg>
+        <h1>Thank You!</h1>
+        <p>Your meeting is booked successfully! A confirmation with all the details will be sent to your email address shortly.</p>
+        <a href="index.html" class="home-btn">Go Home</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://trehaniris.info/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://trehaniris.info/assets/img/hero.jpg</image:loc>
+            <image:title>Trehan Iris Broadway Sector 85 Gurgaon — aerial view of commercial complex</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://trehaniris.info/assets/img/retail.webp</image:loc>
+            <image:title>Trehan Iris Broadway night view — retail shops and entertainment zone</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://trehaniris.info/assets/img/office.webp</image:loc>
+            <image:title>Trehan Iris Broadway — modern commercial office tower exterior</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://trehaniris.info/assets/img/lifestyle.webp</image:loc>
+            <image:title>Trehan Iris Broadway — premium fashion retail and lifestyle shopping</image:title>
+        </image:image>
+    </url>
+</urlset>

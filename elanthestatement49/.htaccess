@@ -1,0 +1,46 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Redirect bookings & bookings.html to booking.html
+RewriteRule ^bookings/?$ /bookings.html [L,R=301]
+RewriteRule ^bookings\.html$ /bookings.html [L,R=301]
+
+# Block common offline downloaders
+RewriteCond %{HTTP_USER_AGENT} ^.*(HTTrack|httrack|WebCopier|Wget|wget|Teleport|Website|WebZIP|SiteSnagger|SiteSucker|Offline|EmailSiphon|ChinaClaw|Nutch|WebStripper|WebCopy).* [NC]
+RewriteRule ^.* - [F,L]
+
+</IfModule>
+
+###############################################
+# BLOCK SENSITIVE FILES
+###############################################
+<FilesMatch "^\.env$|^env\.php$|\.log$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+###############################################
+# DISABLE DIRECTORY LISTING
+###############################################
+Options -Indexes
+
+###############################################
+# BLOCK RAPID SCRAPING (RATE LIMIT)
+###############################################
+<IfModule mod_evasive20.c>
+    DOSHashTableSize    3097
+    DOSPageCount        5
+    DOSSiteCount        50
+    DOSPageInterval     1
+    DOSSiteInterval     1
+    DOSBlockingPeriod   60
+</IfModule>
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW ERRORPAGEID:t7bQLb43CQ
+ErrorDocument 404 /404.html
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE t7bQLb43CQ:ERRORPAGEID

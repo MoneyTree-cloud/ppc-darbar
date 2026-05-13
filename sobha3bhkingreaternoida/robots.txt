@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /process-form.php
+Disallow: /thank-you.php
+Disallow: /env.php
+Disallow: /connection.php
+Disallow: /*.log$
+
+Sitemap: https://sobha3bhkingreaternoida.in/sitemap.xml

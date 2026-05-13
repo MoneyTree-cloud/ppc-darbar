@@ -1,0 +1,68 @@
+# robots.txt for 3bhkinnoida.in
+
+User-agent: *
+Allow: /
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /*.log$
+Disallow: /error/
+Disallow: /backup/
+Disallow: /config/
+Disallow: /include/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /vendor/
+
+# Allow CSS, JS, and images for SEO
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /*.mp4$
+Allow: /*.webm$
+
+
+
+# Sitemap location
+Sitemap: https://3bhkinnoida.in/sitemap.xml

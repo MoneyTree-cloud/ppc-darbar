@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cache/
+Disallow: /includes/
+Disallow: /config.php
+Disallow: /setup.sql
+Disallow: /leads.log
+Crawl-delay: 1
+
+Sitemap: https://trehaniris.info/sitemap.xml

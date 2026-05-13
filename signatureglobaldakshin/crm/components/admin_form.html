@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Lead Details</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <script type='module' src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
+    <script nomodule src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Change Admin Password</h2>
+        <form action="add_member.php" method="post" style="flex-direction: column;">
+            <div class="form-group">
+                <input type="text" id="o_password" name="old-password" placeholder="Old Password" required>
+                <label for="old-password">Old Password</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="n_password" name="new-password" placeholder="New password" required>
+                <label for="new-password">New Password</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="cn_password" name="c-new-password" placeholder="Confirm New Password" required>
+                <label for="EmployId">Confirm New Password</label>
+            </div>
+            <!-- <div class="form-group">
+                <select class="filter-select" id="domainSelect">
+                    <option value="Read/Write">Read/Write</option>
+                    <option value="Read">Read</option>
+                </select>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </div> -->
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+    
+    
+
+
+       
+</body>
+</html>

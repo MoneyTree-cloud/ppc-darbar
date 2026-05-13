@@ -1,0 +1,69 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Remove .php extension from URLs
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^([^\.]+)$ $1.php [NC,L]
+</IfModule>
+
+###############################################
+# BLOCK SENSITIVE FILES
+###############################################
+<FilesMatch "^\.env$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+<FilesMatch "^env\.php$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+<FilesMatch "\.log$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+###############################################
+# BLOCK WEBSITE COPIERS (HTTrack, Wget, etc.)
+###############################################
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Block common offline downloaders
+RewriteCond %{HTTP_USER_AGENT} ^.*(HTTrack|httrack|WebCopier|Wget|wget|Teleport|Website|WebZIP|SiteSnagger|SiteSucker|Offline|EmailSiphon|ChinaClaw|Nutch|WebStripper|WebCopy).* [NC]
+RewriteRule ^.* - [F,L]
+</IfModule>
+
+###############################################
+# DISABLE DIRECTORY LISTING
+###############################################
+Options -Indexes
+
+###############################################
+# BLOCK RAPID SCRAPING (RATE LIMIT)
+###############################################
+<IfModule mod_evasive20.c>
+    DOSHashTableSize    3097
+    DOSPageCount        5
+    DOSSiteCount        50
+    DOSPageInterval     1
+    DOSSiteInterval     1
+    DOSBlockingPeriod   60
+</IfModule>

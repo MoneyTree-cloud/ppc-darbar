@@ -1,0 +1,53 @@
+###############################################
+# EXOTICA ONE32 — SECURITY + PERFORMANCE
+###############################################
+
+# Block sensitive files (.env, logs, sql, loaders)
+<FilesMatch "^\.env|\.log$|^env\.php$|\.sql$">
+    Require all denied
+</FilesMatch>
+
+# Disable directory listing
+Options -Indexes
+
+# Block common offline downloaders / scrapers
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_USER_AGENT} ^.*(HTTrack|httrack|WebCopier|Wget|wget|Teleport|WebZIP|SiteSnagger|SiteSucker|Offline|EmailSiphon|ChinaClaw|Nutch|WebStripper|WebCopy).* [NC]
+    RewriteRule ^.* - [F,L]
+</IfModule>
+
+# Rate limit (if mod_evasive loaded)
+<IfModule mod_evasive20.c>
+    DOSHashTableSize    3097
+    DOSPageCount        5
+    DOSSiteCount        50
+    DOSPageInterval     1
+    DOSSiteInterval     1
+    DOSBlockingPeriod   60
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# Gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# Long cache for static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>

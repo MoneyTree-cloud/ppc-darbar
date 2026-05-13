@@ -1,0 +1,1698 @@
+/* ==========================================================================
+   MoneyTree Realty Chatbot — Production CSS
+   Version: 2.0
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CUSTOM PROPERTIES (DESIGN TOKENS)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand palette */
+  --re-color-primary: #005b52;
+  --re-color-secondary: #017e73;
+  --re-color-accent: #00a896;
+
+  /* Surfaces */
+  --re-color-bg: #ffffff;
+  --re-color-bg-elevated: #f9f9fb;
+  --re-color-bg-chat: #f0f2f5;
+  --re-color-bg-input: #ffffff;
+
+  /* Text */
+  --re-color-text: #1d1d1f;
+  --re-color-text-secondary: #636366;
+  --re-color-text-subtle: #86868b;
+  --re-color-text-inverse: #ffffff;
+
+  /* Borders & dividers */
+  --re-color-border: rgba(0, 0, 0, 0.06);
+  --re-color-border-strong: rgba(0, 0, 0, 0.12);
+
+  /* Shadows */
+  --re-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --re-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --re-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
+  --re-shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.16), 0 8px 20px rgba(0, 0, 0, 0.08);
+  --re-shadow-button: 0 4px 16px rgba(0, 91, 82, 0.3);
+  --re-shadow-button-hover: 0 8px 28px rgba(0, 91, 82, 0.4);
+
+  /* Focus */
+  --re-color-focus: rgba(0, 91, 82, 0.4);
+
+  /* Message bubbles */
+  --re-color-msg-bot: #f0f2f5;
+  --re-color-msg-user-start: #005b52;
+  --re-color-msg-user-end: #017e73;
+
+  /* Validation */
+  --re-color-error: #ff3b30;
+  --re-color-error-bg: #fff2f0;
+  --re-color-warning: #ff9500;
+  --re-color-warning-bg: #fff8e6;
+  --re-color-success: #34c759;
+
+  /* Spacing grid (4px base) */
+  --re-space-1: 4px;
+  --re-space-2: 8px;
+  --re-space-3: 12px;
+  --re-space-4: 16px;
+  --re-space-5: 20px;
+  --re-space-6: 24px;
+  --re-space-8: 32px;
+  --re-space-10: 40px;
+
+  /* Radii */
+  --re-radius-sm: 8px;
+  --re-radius-md: 12px;
+  --re-radius-lg: 20px;
+  --re-radius-xl: 24px;
+  --re-radius-full: 9999px;
+
+  /* Typography */
+  --re-font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display',
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --re-font-size-xs: 11px;
+  --re-font-size-sm: 13px;
+  --re-font-size-base: 15px;
+  --re-font-size-md: 16px;
+  --re-font-size-lg: 18px;
+  --re-font-weight-normal: 400;
+  --re-font-weight-medium: 500;
+  --re-font-weight-semibold: 600;
+  --re-line-height: 1.5;
+
+  /* Timing */
+  --re-timing-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --re-timing-ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --re-timing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --re-timing-decel: cubic-bezier(0, 0, 0.2, 1);
+  --re-duration-fast: 150ms;
+  --re-duration-normal: 250ms;
+  --re-duration-slow: 350ms;
+  --re-duration-enter: 400ms;
+
+  /* Layout */
+  --re-chat-width: 380px;
+  --re-chat-height: 520px;
+  --re-button-size: 60px;
+  --re-header-height: 56px;
+}
+
+/* --------------------------------------------------------------------------
+   2. DARK MODE
+   -------------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --re-color-bg: #1c1c1e;
+    --re-color-bg-elevated: #2c2c2e;
+    --re-color-bg-chat: #1c1c1e;
+    --re-color-bg-input: #2c2c2e;
+
+    --re-color-text: #f5f5f7;
+    --re-color-text-secondary: #aeaeb2;
+    --re-color-text-subtle: #86868b;
+
+    --re-color-border: rgba(255, 255, 255, 0.08);
+    --re-color-border-strong: rgba(255, 255, 255, 0.14);
+
+    --re-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --re-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --re-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.4);
+    --re-shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.5);
+
+    --re-color-msg-bot: #2a2a2e;
+
+    --re-color-error-bg: rgba(255, 59, 48, 0.12);
+    --re-color-warning-bg: rgba(255, 149, 0, 0.12);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. BASE / RESET
+   -------------------------------------------------------------------------- */
+.re-chatbot-container *,
+.re-chatbot-container *::before,
+.re-chatbot-container *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. CONTAINER
+   -------------------------------------------------------------------------- */
+.re-chatbot-container {
+  position: fixed;
+  bottom: var(--re-space-10);
+  right: var(--re-space-5);
+  z-index: 9999;
+  font-family: var(--re-font-family);
+  font-size: var(--re-font-size-base);
+  line-height: var(--re-line-height);
+  color: var(--re-color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.re-chatbot-container.left {
+  right: auto;
+  left: var(--re-space-5);
+}
+
+/* --------------------------------------------------------------------------
+   5. FLOATING ACTION BUTTON
+   -------------------------------------------------------------------------- */
+.re-chat-button {
+  width: var(--re-button-size);
+  height: var(--re-button-size);
+  border-radius: var(--re-radius-full);
+  background: linear-gradient(135deg, var(--re-color-primary), var(--re-color-secondary));
+  color: var(--re-color-text-inverse);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-shadow: var(--re-shadow-button);
+  transition:
+    transform var(--re-duration-normal) var(--re-timing-spring),
+    box-shadow var(--re-duration-normal) var(--re-timing-ease-out);
+  animation: re-pulse 3s ease-in-out infinite;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.re-chatbot-container.left .re-chat-button {
+  right: auto;
+  left: 0;
+}
+
+.re-chat-button:hover {
+  transform: scale(1.08);
+  box-shadow: var(--re-shadow-button-hover);
+}
+
+.re-chat-button:active {
+  transform: scale(0.95);
+  box-shadow: var(--re-shadow-md);
+}
+
+.re-chat-button:focus-visible {
+  outline: 3px solid var(--re-color-focus);
+  outline-offset: 3px;
+}
+
+.re-chat-button svg {
+  width: 26px;
+  height: 26px;
+  transition: transform var(--re-duration-normal) var(--re-timing-spring);
+}
+
+.re-chat-button:hover svg {
+  transform: scale(1.05);
+}
+
+.re-chat-button img {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--re-radius-full);
+  object-fit: cover;
+}
+
+@keyframes re-pulse {
+  0%, 100% {
+    box-shadow: var(--re-shadow-button), 0 0 0 0 rgba(0, 91, 82, 0.35);
+  }
+  50% {
+    box-shadow: var(--re-shadow-button), 0 0 0 12px rgba(0, 91, 82, 0);
+  }
+}
+
+/* Notification dot on FAB */
+.re-notif-dot {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 14px;
+  height: 14px;
+  background: #ff3b30;
+  border-radius: var(--re-radius-full);
+  border: 2.5px solid #fff;
+  animation: re-notif-pop 600ms var(--re-timing-spring) 3.2s both;
+  z-index: 2;
+}
+
+@keyframes re-notif-pop {
+  0% { transform: scale(0); }
+  60% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* --------------------------------------------------------------------------
+   5b. WELCOME NUDGE BUBBLE
+   -------------------------------------------------------------------------- */
+.re-welcome-nudge {
+  position: absolute;
+  bottom: calc(var(--re-button-size) + 12px);
+  right: 0;
+  opacity: 0;
+  transform: translateY(8px) scale(0.92);
+  pointer-events: none;
+  transition:
+    opacity 400ms var(--re-timing-ease-out),
+    transform 500ms var(--re-timing-spring);
+  z-index: 10;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.12));
+}
+
+.re-chatbot-container.left .re-welcome-nudge {
+  right: auto;
+  left: 0;
+}
+
+.re-welcome-nudge.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.re-welcome-nudge.dismissed {
+  opacity: 0;
+  transform: translateY(4px) scale(0.95);
+  pointer-events: none;
+  transition:
+    opacity 250ms var(--re-timing-ease-out),
+    transform 250ms var(--re-timing-ease-out);
+}
+
+.re-welcome-nudge-content {
+  display: flex;
+  align-items: center;
+  gap: var(--re-space-2);
+  padding: var(--re-space-3) var(--re-space-4);
+  background: var(--re-color-bg);
+  border: 1px solid var(--re-color-border-strong);
+  border-radius: var(--re-radius-md);
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Speech bubble tail */
+.re-welcome-nudge-content::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: var(--re-color-bg);
+  border-right: 1px solid var(--re-color-border-strong);
+  border-bottom: 1px solid var(--re-color-border-strong);
+  transform: rotate(45deg);
+}
+
+.re-chatbot-container.left .re-welcome-nudge-content::after {
+  right: auto;
+  left: 20px;
+}
+
+.re-welcome-nudge-text {
+  font-size: var(--re-font-size-sm);
+  font-weight: var(--re-font-weight-medium);
+  color: var(--re-color-text);
+  font-family: var(--re-font-family);
+}
+
+.re-welcome-nudge-close {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: var(--re-color-bg-elevated);
+  color: var(--re-color-text-subtle);
+  border-radius: var(--re-radius-full);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition:
+    background var(--re-duration-fast),
+    color var(--re-duration-fast);
+}
+
+.re-welcome-nudge-close:hover {
+  background: var(--re-color-border-strong);
+  color: var(--re-color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .re-notif-dot {
+    border-color: var(--re-color-bg);
+  }
+  .re-welcome-nudge-content::after {
+    background: var(--re-color-bg);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. CHAT WINDOW
+   -------------------------------------------------------------------------- */
+.re-chat-window {
+  position: absolute;
+  bottom: calc(var(--re-button-size) + var(--re-space-4));
+  right: 0;
+  width: var(--re-chat-width);
+  height: var(--re-chat-height);
+  background-color: var(--re-color-bg);
+  border-radius: var(--re-radius-xl);
+  box-shadow: var(--re-shadow-xl);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--re-color-border);
+
+  /* Closed state */
+  opacity: 0;
+  transform: translateY(16px) scale(0.96);
+  pointer-events: none;
+  visibility: hidden;
+
+  transition:
+    opacity var(--re-duration-slow) var(--re-timing-ease-out),
+    transform var(--re-duration-slow) var(--re-timing-ease-out),
+    visibility 0s linear var(--re-duration-slow);
+}
+
+.re-chatbot-container.left .re-chat-window {
+  right: auto;
+  left: 0;
+}
+
+.re-chat-window.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+  visibility: visible;
+  transition:
+    opacity var(--re-duration-enter) var(--re-timing-spring),
+    transform var(--re-duration-enter) var(--re-timing-spring),
+    visibility 0s linear 0s;
+}
+
+/* --------------------------------------------------------------------------
+   7. HEADER (Glassmorphism)
+   -------------------------------------------------------------------------- */
+.re-chat-header {
+  height: var(--re-header-height);
+  min-height: var(--re-header-height);
+  padding: 0 var(--re-space-4);
+  background:
+    linear-gradient(135deg, var(--re-color-primary), var(--re-color-secondary), var(--re-color-primary));
+  background-size: 200% 200%;
+  animation: re-header-shimmer 6s ease-in-out infinite;
+  color: var(--re-color-text-inverse);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  /* Glassmorphism underlay */
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+@keyframes re-header-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.re-chat-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.re-chat-title {
+  display: flex;
+  align-items: center;
+  gap: var(--re-space-3);
+  position: relative;
+  z-index: 1;
+}
+
+.re-chat-avatar {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.re-chat-avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--re-radius-full);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  object-fit: cover;
+}
+
+.re-online-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--re-color-success);
+  border: 2px solid var(--re-color-primary);
+  border-radius: var(--re-radius-full);
+  animation: re-online-pulse 2s ease-in-out infinite;
+}
+
+@keyframes re-online-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.4); }
+  50% { box-shadow: 0 0 0 4px rgba(52, 199, 89, 0); }
+}
+
+.re-chat-title-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.re-chat-name {
+  font-size: var(--re-font-size-base);
+  font-weight: var(--re-font-weight-semibold);
+  letter-spacing: -0.2px;
+  line-height: 1.2;
+}
+
+.re-chat-status {
+  font-size: var(--re-font-size-xs);
+  font-weight: var(--re-font-weight-normal);
+  opacity: 0.8;
+  line-height: 1.2;
+}
+
+.re-chat-close {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--re-radius-full);
+  cursor: pointer;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--re-color-text-inverse);
+  font-size: 18px;
+  transition:
+    background var(--re-duration-fast) var(--re-timing-ease-out),
+    transform var(--re-duration-fast) var(--re-timing-spring);
+  position: relative;
+  z-index: 1;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1;
+}
+
+.re-chat-close:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.re-chat-close:active {
+  transform: scale(0.9);
+}
+
+.re-chat-close:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   8. MESSAGES AREA
+   -------------------------------------------------------------------------- */
+.re-chat-messages {
+  flex: 1;
+  padding: var(--re-space-4);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--re-space-2);
+  background-color: var(--re-color-bg-chat);
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(0, 91, 82, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 168, 150, 0.03) 0%, transparent 50%);
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar */
+.re-chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.re-chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.re-chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: var(--re-radius-full);
+}
+
+.re-chat-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .re-chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .re-chat-messages::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Firefox scrollbar */
+.re-chat-messages {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.12) transparent;
+}
+
+/* --------------------------------------------------------------------------
+   9. MESSAGE BUBBLES
+   -------------------------------------------------------------------------- */
+.re-message {
+  max-width: 82%;
+  min-width: 0;
+  padding: var(--re-space-3) var(--re-space-4);
+  border-radius: var(--re-radius-lg);
+  line-height: var(--re-line-height);
+  font-size: var(--re-font-size-base);
+  position: relative;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
+  animation: re-message-in 450ms var(--re-timing-spring) both;
+}
+
+/* Stagger animation for multiple messages */
+.re-message:nth-last-child(-n+3) {
+  animation-duration: 500ms;
+}
+
+/* Bot message */
+.re-bot-message {
+  background-color: var(--re-color-msg-bot);
+  color: var(--re-color-text);
+  align-self: flex-start;
+  border-bottom-left-radius: var(--re-space-1);
+  animation-name: re-bot-message-in;
+}
+
+/* Rich text inside bot messages */
+.re-bot-message strong {
+  font-weight: var(--re-font-weight-semibold);
+  color: var(--re-color-text);
+}
+
+.re-bot-message em {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* Lists inside messages */
+.re-bot-message ul.re-list,
+.re-bot-message ol.re-list {
+  margin: var(--re-space-2) 0;
+  padding-left: var(--re-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--re-space-1);
+}
+
+.re-bot-message ul.re-list {
+  list-style: none;
+  padding-left: var(--re-space-3);
+}
+
+.re-bot-message ul.re-list li {
+  position: relative;
+  padding-left: var(--re-space-4);
+}
+
+.re-bot-message ul.re-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--re-radius-full);
+  background: var(--re-color-accent);
+}
+
+.re-bot-message ol.re-list {
+  list-style: none;
+  padding-left: var(--re-space-2);
+  counter-reset: re-ol-counter;
+}
+
+.re-bot-message ol.re-list li {
+  counter-increment: re-ol-counter;
+  position: relative;
+  padding-left: var(--re-space-6);
+}
+
+.re-bot-message ol.re-list li::before {
+  content: counter(re-ol-counter);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--re-radius-full);
+  background: var(--re-color-accent);
+  color: var(--re-color-text-inverse);
+  font-size: var(--re-font-size-xs);
+  font-weight: var(--re-font-weight-semibold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.re-bot-message li {
+  font-size: var(--re-font-size-sm);
+  line-height: 1.5;
+  animation: re-list-item-in 350ms var(--re-timing-decel) both;
+}
+
+.re-bot-message li:nth-child(1) { animation-delay: 50ms; }
+.re-bot-message li:nth-child(2) { animation-delay: 100ms; }
+.re-bot-message li:nth-child(3) { animation-delay: 150ms; }
+.re-bot-message li:nth-child(4) { animation-delay: 200ms; }
+.re-bot-message li:nth-child(5) { animation-delay: 250ms; }
+.re-bot-message li:nth-child(6) { animation-delay: 300ms; }
+
+@keyframes re-list-item-in {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.re-bot-message li strong {
+  color: var(--re-color-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  .re-bot-message li strong {
+    color: var(--re-color-accent);
+  }
+}
+
+/* User message */
+.re-user-message {
+  background: linear-gradient(
+    135deg,
+    var(--re-color-msg-user-start),
+    var(--re-color-msg-user-end)
+  );
+  color: var(--re-color-text-inverse);
+  align-self: flex-end;
+  border-bottom-right-radius: var(--re-space-1);
+  animation-name: re-user-message-in;
+}
+
+/* Links inside bot messages */
+.re-bot-message a {
+  color: var(--re-color-secondary);
+  text-decoration: underline;
+  text-decoration-color: rgba(1, 126, 115, 0.3);
+  text-underline-offset: 2px;
+  transition: text-decoration-color var(--re-duration-fast);
+}
+
+.re-bot-message a:hover {
+  text-decoration-color: var(--re-color-secondary);
+}
+
+/* Links inside user messages */
+.re-user-message a {
+  color: var(--re-color-text-inverse);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+  text-underline-offset: 2px;
+}
+
+@keyframes re-message-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bot slides in from left */
+@keyframes re-bot-message-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-12px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* User slides in from right */
+@keyframes re-user-message-in {
+  0% {
+    opacity: 0;
+    transform: translateX(12px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. MESSAGE TIMESTAMP
+   -------------------------------------------------------------------------- */
+.re-message-time {
+  display: block;
+  font-size: var(--re-font-size-xs);
+  color: var(--re-color-text-subtle);
+  margin-top: var(--re-space-1);
+  padding: 0 var(--re-space-1);
+  user-select: none;
+  animation: re-time-fade 600ms 200ms var(--re-timing-ease-out) both;
+}
+
+@keyframes re-time-fade {
+  from { opacity: 0; }
+  to { opacity: 0.6; }
+}
+
+.re-user-message + .re-message-time {
+  text-align: right;
+}
+
+.re-bot-message + .re-message-time {
+  text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+   11. MESSAGE ACTIONS (copy on hover)
+   -------------------------------------------------------------------------- */
+.re-message-actions {
+  position: absolute;
+  top: var(--re-space-2);
+  right: var(--re-space-2);
+  opacity: 0;
+  transform: scale(0.85);
+  transition:
+    opacity var(--re-duration-fast) var(--re-timing-ease-out),
+    transform var(--re-duration-fast) var(--re-timing-spring);
+  pointer-events: none;
+}
+
+.re-message:hover .re-message-actions {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.re-message-actions button {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--re-radius-sm);
+  border: none;
+  background: var(--re-color-bg);
+  color: var(--re-color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--re-shadow-sm);
+  transition:
+    background var(--re-duration-fast),
+    color var(--re-duration-fast);
+  font-size: 14px;
+}
+
+.re-message-actions button:hover {
+  background: var(--re-color-bg-elevated);
+  color: var(--re-color-text);
+}
+
+.re-message-actions button:active {
+  transform: scale(0.92);
+}
+
+/* --------------------------------------------------------------------------
+   12. TYPING INDICATOR
+   -------------------------------------------------------------------------- */
+.re-typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: var(--re-space-3) var(--re-space-4);
+  background-color: var(--re-color-msg-bot);
+  border-radius: var(--re-radius-lg);
+  border-bottom-left-radius: var(--re-space-1);
+  align-self: flex-start;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity var(--re-duration-normal) var(--re-timing-ease-out),
+    transform var(--re-duration-normal) var(--re-timing-ease-out);
+}
+
+.re-typing-indicator.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.re-typing-indicator span {
+  width: 7px;
+  height: 7px;
+  background-color: var(--re-color-text-subtle);
+  border-radius: var(--re-radius-full);
+  display: block;
+  animation: re-typing-bounce 1.4s ease-in-out infinite;
+}
+
+.re-typing-indicator span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.re-typing-indicator span:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.re-typing-indicator span:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+@keyframes re-typing-bounce {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   13. INPUT AREA
+   -------------------------------------------------------------------------- */
+.re-chat-input-container {
+  padding: var(--re-space-3) var(--re-space-4);
+  border-top: 1px solid var(--re-color-border);
+  display: flex;
+  align-items: flex-end;
+  gap: var(--re-space-2);
+  background-color: var(--re-color-bg);
+}
+
+.re-chat-input {
+  flex: 1;
+  min-height: 40px;
+  max-height: 120px;
+  padding: var(--re-space-2) var(--re-space-4);
+  border: 1.5px solid var(--re-color-border-strong);
+  border-radius: var(--re-radius-lg);
+  outline: none;
+  font-size: var(--re-font-size-base);
+  font-family: var(--re-font-family);
+  line-height: var(--re-line-height);
+  color: var(--re-color-text);
+  background-color: var(--re-color-bg-input);
+  resize: none;
+  transition:
+    border-color var(--re-duration-fast) var(--re-timing-ease-out),
+    box-shadow var(--re-duration-fast) var(--re-timing-ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.re-chat-input::placeholder {
+  color: var(--re-color-text-subtle);
+}
+
+.re-chat-input:focus {
+  border-color: var(--re-color-accent);
+  box-shadow: 0 0 0 3px var(--re-color-focus);
+}
+
+/* Send button */
+.re-chat-send {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: var(--re-radius-full);
+  background: linear-gradient(135deg, var(--re-color-primary), var(--re-color-secondary));
+  color: var(--re-color-text-inverse);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    transform var(--re-duration-fast) var(--re-timing-spring),
+    opacity var(--re-duration-fast),
+    box-shadow var(--re-duration-fast);
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: var(--re-shadow-sm);
+}
+
+.re-chat-send svg {
+  width: 18px;
+  height: 18px;
+}
+
+.re-chat-send:hover {
+  box-shadow: var(--re-shadow-md);
+  transform: scale(1.06);
+}
+
+.re-chat-send:active {
+  transform: scale(0.92);
+}
+
+.re-chat-send:focus-visible {
+  outline: 3px solid var(--re-color-focus);
+  outline-offset: 2px;
+}
+
+.re-chat-send:disabled,
+.re-chat-send[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Active glow when typing */
+.re-chat-send:not(:disabled) {
+  box-shadow: var(--re-shadow-sm), 0 0 12px rgba(0, 168, 150, 0.2);
+}
+
+.re-chat-send:not(:disabled):hover {
+  box-shadow: var(--re-shadow-md), 0 0 20px rgba(0, 168, 150, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   14. SUGGESTIONS (horizontal scroll pills)
+   -------------------------------------------------------------------------- */
+.re-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--re-space-2);
+  margin-top: var(--re-space-3);
+  padding-bottom: var(--re-space-1);
+}
+
+/* Horizontal scrollable variant */
+.re-suggestions--scroll {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: var(--re-space-2);
+}
+
+.re-suggestions--scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.re-suggestion {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--re-space-1);
+  padding: var(--re-space-2) var(--re-space-3);
+  background-color: var(--re-color-bg);
+  color: var(--re-color-primary);
+  font-size: var(--re-font-size-sm);
+  font-weight: var(--re-font-weight-medium);
+  font-family: var(--re-font-family);
+  border: 1.5px solid var(--re-color-border-strong);
+  border-radius: var(--re-radius-full);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color var(--re-duration-fast) var(--re-timing-ease-out),
+    border-color var(--re-duration-fast),
+    transform var(--re-duration-fast) var(--re-timing-spring),
+    box-shadow var(--re-duration-fast);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.re-suggestion:hover {
+  background-color: rgba(0, 91, 82, 0.06);
+  border-color: var(--re-color-accent);
+  box-shadow: var(--re-shadow-sm);
+  transform: translateY(-1px);
+}
+
+.re-suggestion:active {
+  transform: scale(0.96);
+  box-shadow: none;
+}
+
+.re-suggestion:focus-visible {
+  outline: 3px solid var(--re-color-focus);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   15. PROPERTY LINK BUTTON (inline)
+   -------------------------------------------------------------------------- */
+.re-property-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--re-space-1);
+  padding: 6px 14px;
+  margin: var(--re-space-1) 0;
+  background: linear-gradient(135deg, var(--re-color-primary), var(--re-color-accent));
+  color: var(--re-color-text-inverse) !important;
+  font-size: var(--re-font-size-sm);
+  font-weight: var(--re-font-weight-medium);
+  font-family: var(--re-font-family);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--re-radius-full);
+  cursor: pointer;
+  transition:
+    transform var(--re-duration-fast) var(--re-timing-spring),
+    box-shadow var(--re-duration-fast),
+    background var(--re-duration-fast);
+  box-shadow: var(--re-shadow-sm);
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.re-property-link:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--re-shadow-md);
+  text-decoration: none;
+  filter: brightness(1.1);
+}
+
+.re-property-link:active {
+  transform: scale(0.96);
+  box-shadow: none;
+}
+
+.re-property-link:focus-visible {
+  outline: 3px solid var(--re-color-focus);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   15b. PROPERTY CARD (rich listing card)
+   -------------------------------------------------------------------------- */
+.re-property-card {
+  display: flex;
+  align-items: center;
+  gap: var(--re-space-3);
+  padding: var(--re-space-3);
+  margin: var(--re-space-2) 0;
+  background: var(--re-color-bg);
+  border: 1.5px solid var(--re-color-border-strong);
+  border-radius: var(--re-radius-md);
+  text-decoration: none;
+  color: var(--re-color-text);
+  cursor: pointer;
+  max-width: 100%;
+  min-width: 0;
+  transition:
+    transform var(--re-duration-normal) var(--re-timing-spring),
+    box-shadow var(--re-duration-normal),
+    border-color var(--re-duration-normal);
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  animation: re-card-in 500ms var(--re-timing-spring) both;
+}
+
+/* Stagger card animations */
+.re-property-card:nth-child(2) { animation-delay: 80ms; }
+.re-property-card:nth-child(3) { animation-delay: 160ms; }
+.re-property-card:nth-child(4) { animation-delay: 240ms; }
+.re-property-card:nth-child(5) { animation-delay: 320ms; }
+
+@keyframes re-card-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.re-property-card:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: var(--re-shadow-md), 0 0 0 1px rgba(0, 168, 150, 0.1);
+  border-color: var(--re-color-accent);
+  text-decoration: none;
+  color: var(--re-color-text);
+}
+
+.re-property-card:active {
+  transform: scale(0.98);
+  box-shadow: var(--re-shadow-sm);
+}
+
+.re-property-card:focus-visible {
+  outline: 3px solid var(--re-color-focus);
+  outline-offset: 2px;
+}
+
+.re-property-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.re-property-card-name {
+  font-size: var(--re-font-size-base);
+  font-weight: var(--re-font-weight-semibold);
+  color: var(--re-color-primary);
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+
+.re-property-card-meta {
+  font-size: var(--re-font-size-xs);
+  color: var(--re-color-text-secondary);
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.re-property-card-location {
+  font-size: var(--re-font-size-xs);
+  color: var(--re-color-text-subtle);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.re-property-card-arrow {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--re-radius-full);
+  background: linear-gradient(135deg, var(--re-color-primary), var(--re-color-accent));
+  color: var(--re-color-text-inverse);
+  font-size: 14px;
+  font-weight: var(--re-font-weight-semibold);
+  transition: transform var(--re-duration-fast) var(--re-timing-spring);
+}
+
+.re-property-card:hover .re-property-card-arrow {
+  transform: translateX(2px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .re-property-card {
+    background: var(--re-color-bg-elevated);
+  }
+  .re-property-card-name {
+    color: var(--re-color-accent);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   16. LEAD FORM
+   -------------------------------------------------------------------------- */
+.re-lead-form {
+  padding: var(--re-space-5);
+  background: var(--re-color-bg);
+  border-radius: var(--re-radius-md);
+  border: 1.5px solid transparent;
+  background-clip: padding-box;
+  box-shadow: var(--re-shadow-md);
+  animation: re-form-in 600ms var(--re-timing-spring) both;
+  position: relative;
+}
+
+.re-lead-form::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: calc(var(--re-radius-md) + 1.5px);
+  background: linear-gradient(135deg, var(--re-color-primary), var(--re-color-accent), var(--re-color-secondary));
+  z-index: -1;
+  opacity: 0.5;
+}
+
+@keyframes re-form-in {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.re-lead-form h4 {
+  margin: 0 0 var(--re-space-4) 0;
+  font-size: var(--re-font-size-md);
+  font-weight: var(--re-font-weight-semibold);
+  color: var(--re-color-primary);
+  letter-spacing: -0.2px;
+}
+
+.re-form-group {
+  margin-bottom: var(--re-space-4);
+}
+
+.re-form-group label {
+  display: block;
+  margin-bottom: var(--re-space-1);
+  font-size: var(--re-font-size-sm);
+  font-weight: var(--re-font-weight-medium);
+  color: var(--re-color-text-secondary);
+}
+
+.re-form-control {
+  width: 100%;
+  padding: var(--re-space-2) var(--re-space-3);
+  border: 1.5px solid var(--re-color-border-strong);
+  border-radius: var(--re-radius-sm);
+  font-size: var(--re-font-size-base);
+  font-family: var(--re-font-family);
+  color: var(--re-color-text);
+  background-color: var(--re-color-bg-input);
+  transition:
+    border-color var(--re-duration-fast),
+    box-shadow var(--re-duration-fast),
+    background-color var(--re-duration-fast);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.re-form-control::placeholder {
+  color: var(--re-color-text-subtle);
+}
+
+.re-form-control:focus {
+  border-color: var(--re-color-accent);
+  box-shadow: 0 0 0 3px var(--re-color-focus);
+  background-color: var(--re-color-bg);
+}
+
+/* Validation states */
+.re-form-control.is-invalid,
+.re-form-control:invalid:not(:placeholder-shown) {
+  border-color: var(--re-color-error);
+}
+
+.re-form-control.is-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.2);
+}
+
+.re-form-control.is-valid {
+  border-color: var(--re-color-success);
+}
+
+.re-form-control.is-valid:focus {
+  box-shadow: 0 0 0 3px rgba(52, 199, 89, 0.2);
+}
+
+/* Submit button */
+.re-btn-submit {
+  width: 100%;
+  padding: var(--re-space-3) var(--re-space-4);
+  background: linear-gradient(135deg, var(--re-color-primary), var(--re-color-secondary));
+  color: var(--re-color-text-inverse);
+  border: none;
+  border-radius: var(--re-radius-sm);
+  font-size: var(--re-font-size-base);
+  font-weight: var(--re-font-weight-semibold);
+  font-family: var(--re-font-family);
+  cursor: pointer;
+  transition:
+    transform var(--re-duration-fast) var(--re-timing-spring),
+    box-shadow var(--re-duration-fast),
+    opacity var(--re-duration-fast);
+  box-shadow: var(--re-shadow-sm);
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.re-btn-submit:hover {
+  box-shadow: var(--re-shadow-md);
+  transform: translateY(-1px);
+}
+
+.re-btn-submit:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+.re-btn-submit:focus-visible {
+  outline: 3px solid var(--re-color-focus);
+  outline-offset: 2px;
+}
+
+.re-btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading spinner state */
+.re-btn-submit.is-loading {
+  color: transparent;
+  pointer-events: none;
+}
+
+.re-btn-submit.is-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--re-color-text-inverse);
+  border-radius: var(--re-radius-full);
+  animation: re-spin 0.6s linear infinite;
+}
+
+@keyframes re-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   17. VALIDATION MESSAGE
+   -------------------------------------------------------------------------- */
+.re-validation-message {
+  padding: var(--re-space-3) var(--re-space-4);
+  border-radius: var(--re-radius-sm);
+  font-size: var(--re-font-size-sm);
+  font-weight: var(--re-font-weight-medium);
+  margin-bottom: var(--re-space-3);
+  animation: re-validation-in var(--re-duration-normal) var(--re-timing-decel) both;
+  display: flex;
+  align-items: center;
+  gap: var(--re-space-2);
+}
+
+.re-validation-message--error {
+  background-color: var(--re-color-error-bg);
+  color: var(--re-color-error);
+  border: 1px solid rgba(255, 59, 48, 0.15);
+}
+
+.re-validation-message--warning {
+  background-color: var(--re-color-warning-bg);
+  color: var(--re-color-warning);
+  border: 1px solid rgba(255, 149, 0, 0.15);
+}
+
+/* Legacy fallback (no modifier class) */
+.re-validation-message:not([class*="--"]) {
+  background-color: var(--re-color-warning-bg);
+  color: #996100;
+  border: 1px solid rgba(255, 149, 0, 0.15);
+}
+
+@keyframes re-validation-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   18. SCROLL-TO-BOTTOM BUTTON
+   -------------------------------------------------------------------------- */
+.re-scroll-bottom {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--re-radius-full);
+  background: var(--re-color-bg);
+  border: 1px solid var(--re-color-border);
+  box-shadow: var(--re-shadow-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--re-color-text-secondary);
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity var(--re-duration-normal) var(--re-timing-ease-out),
+    transform var(--re-duration-normal) var(--re-timing-spring);
+  z-index: 5;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.re-scroll-bottom.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
+
+.re-scroll-bottom:hover {
+  box-shadow: var(--re-shadow-lg);
+  color: var(--re-color-text);
+}
+
+.re-scroll-bottom:active {
+  transform: translateX(-50%) scale(0.92);
+}
+
+/* --------------------------------------------------------------------------
+   19. ACCESSIBILITY
+   -------------------------------------------------------------------------- */
+
+/* Visible focus rings for keyboard navigation */
+.re-chatbot-container :focus-visible {
+  outline: 3px solid var(--re-color-focus);
+  outline-offset: 2px;
+}
+
+/* Remove focus outline for mouse/touch */
+.re-chatbot-container :focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* High contrast mode */
+@media (forced-colors: active) {
+  .re-chat-button,
+  .re-chat-send,
+  .re-btn-submit {
+    border: 2px solid ButtonText;
+  }
+
+  .re-message {
+    border: 1px solid CanvasText;
+  }
+
+  .re-chat-window {
+    border: 2px solid CanvasText;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20. REDUCED MOTION
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .re-chat-window {
+    transition: none;
+  }
+
+  .re-chat-window.active {
+    transition: none;
+  }
+
+  .re-chat-messages {
+    scroll-behavior: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   21. RESPONSIVE — TABLET (480–768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --re-chat-width: 360px;
+    --re-chat-height: 480px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   22. RESPONSIVE — MOBILE (<480px) — FULL SCREEN
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .re-chatbot-container {
+    bottom: var(--re-space-4);
+    right: var(--re-space-4);
+  }
+
+  .re-chatbot-container.left {
+    left: var(--re-space-4);
+  }
+
+  .re-chat-button {
+    width: 56px;
+    height: 56px;
+  }
+
+  .re-chat-button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Full-screen chat on mobile */
+  .re-chat-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh; /* dynamic viewport height for mobile browsers */
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    overflow: hidden;
+
+    /* Safe area insets for notched devices */
+    padding-top: env(safe-area-inset-top, 0);
+    padding-bottom: env(safe-area-inset-bottom, 0);
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
+  }
+
+  /* Active chat window covers everything */
+  .re-chat-window.active {
+    z-index: 10000;
+  }
+
+  .re-chatbot-container.left .re-chat-window {
+    left: 0;
+    right: 0;
+  }
+
+  /* Hide ALL chat buttons/notifications/nudges on page when any chat is open */
+  body:has(.re-chat-window.active) .re-chat-button,
+  body:has(.re-chat-window.active) .re-welcome-nudge,
+  body:has(.re-chat-window.active) .re-tooltip-bubble,
+  body:has(.re-chat-window.active) .re-chat-notification,
+  body:has(.re-chat-window.active) .re-scroll-bottom {
+    display: none !important;
+  }
+
+  /* Hide inactive chat windows completely on mobile */
+  .re-chat-window:not(.active) {
+    display: none !important;
+  }
+
+  /* Lock body scroll and reset position while chat is open */
+  body:has(.re-chat-window.active) {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+
+  .re-chat-header {
+    padding-top: env(safe-area-inset-top, 0);
+    height: calc(var(--re-header-height) + env(safe-area-inset-top, 0));
+  }
+
+  .re-chat-input-container {
+    padding-bottom: calc(var(--re-space-3) + env(safe-area-inset-bottom, 0));
+  }
+
+  .re-message {
+    max-width: 88%;
+  }
+
+  .re-suggestions {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: var(--re-space-2);
+  }
+
+  .re-suggestions::-webkit-scrollbar {
+    display: none;
+  }
+
+  .re-scroll-bottom {
+    bottom: 72px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   23. PRINT
+   -------------------------------------------------------------------------- */
+@media print {
+  .re-chatbot-container {
+    display: none !important;
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "id": "lead_680b3aeb780b4",
+    "name": "deepanshu",
+    "phone": "9599840723",
+    "requirements": "jhv",
+    "chat_history": [
+        {
+            "role": "user",
+            "content": "Show me luxury properties"
+        },
+        {
+            "role": "assistant",
+            "content": "Certainly! Here are some luxury residential properties:\n\n1. Property: Residential\nLocation: Sector 43, Gurugram-122022\nPrice: \u20b99.49 Cr+\nProperty Types: 3 BHK flats, 4 BHK flats\n\n2. Property: Residential\nLocation: Sector 44, Noida-201301\nPrice: \u20b97.30 Cr+\nProperty Types: 3 BHK flats, 4 BHK flats\n\n3. Property: Residential\nLocation: Shahpur Bamheta, Ghaziabad-201002\nPrice: \u20b93.72 Cr+\n\nFor more information or to schedule a viewing, please provide your contact details for our real estate agent to assist you further."
+        },
+        {
+            "role": "user",
+            "content": "Properties in Mumbai"
+        },
+        {
+            "role": "assistant",
+            "content": "Certainly! Here are some residential properties in Mumbai:\n\n1. Property: Residential\nLocation: Goregaon East, Mumbai-400063\nPrice: On Request\nProperty Types: 1 BHK flats, 2 BHK flats, 3 BHK flats\n\n2. Property: Residential\nLocation: Bandra East, Mumbai-400051\nPrice: On Request\nProperty Types: 2 BHK flats, 3 BHK flats\n\n3. Property: Residential\nLocation: Airoli, Mumbai-400708\nPrice: \u20b91.49 crore onwards\nProperty Types: 2 BHK flats, 3 BHK flats\n\n4. Property: Residential\nLocation: Mira Road, Mumbai-401107\nPrice: On Request\nProperty Types: 1 BHK flats, 2 BHK flats, 3 BHK flats\n\n5. Property: Residential\nLocation: Mira Road East, Mumbai-401107\nPrice: On Request\nProperty Types: 1 BHK flats, 2 BHK flats\n\n6. Property: Residential\nLocation: Powai, Mumbai-400076\nPrice: On Request\n\n7. Property: Residential\nLocation: Sane Guruji Road, Mumbai-201304\nPrice: On Request\n\nFor more details or to arrange a visit to any of these properties, please share your contact information so that our real estate agent can assist you further."
+        },
+        {
+            "role": "user",
+            "content": "I'm looking for a 2 BHK"
+        },
+        {
+            "role": "assistant",
+            "content": "Great choice! Here are some properties with 2 BHK flats:\n\n1. Property: Residential\nLocation: Sector 12, Greater Noida West-201318\nPrice: \u20b9 2.4 Cr\nProperty Types: 2 BHK flats, 3 BHK flats, 4 BHK flats\n\n2. Property: Residential\nLocation: Sushant Golf City, Lucknow-226030\nPrice: On Request\nProperty Types: 2 BHK flats, 3 BHK flats\n\n3. Property: Residential\nLocation: Bandra East, Mumbai-400051\nPrice: On Request\nProperty Types: 2 BHK flats, 3 BHK flats\n\n4. Property: Residential\nLocation: Airoli, Mumbai-400708\nPrice: \u20b91.49 crore onwards\nProperty Types: 2 BHK flats, 3 BHK flats\n\n5. Property: Residential\nLocation: Mira Road East, Mumbai-401107\nPrice: On Request\nProperty Types: 1 BHK flats, 2 BHK flats\n\n6. Property: Residential\nLocation: Kalyan, Rajnouli, Maharashtra-421302\nPrice: \u20b9 49.5 lac onwards\nProperty Types: 1 BHK flats, 2 BHK flats\n\nPlease provide your contact details if you would like more information or wish to schedule a viewing."
+        }
+    ],
+    "website_id": "default",
+    "created_at": "2025-04-25 07:34:03",
+    "status": "new"
+}

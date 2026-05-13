@@ -1,0 +1,200 @@
+# Deploying the Real Estate Chatbot to a Custom Domain
+
+This guide explains how to deploy the Real Estate Chatbot to your own custom domain, making it accessible to your users with your branded URL.
+
+## Prerequisites
+
+- A registered domain name (e.g., yourdomain.com)
+- Web hosting with PHP 7.4+ support
+- FTP access or cPanel access to your hosting
+- Basic knowledge of DNS settings
+
+## Deployment Options
+
+### Option 1: Traditional Web Hosting (cPanel, Plesk, etc.)
+
+#### Step 1: Prepare Your Files
+
+1. Download all files from this repository
+2. If you need to make any configuration changes, edit the necessary files locally:
+   - `config/config.php`: Update settings like OpenAI API key, database details, etc.
+   - Optional: customize appearance in `assets/css/chatbot.css`
+
+#### Step 2: Upload Files
+
+1. Connect to your web hosting using FTP or the file manager in your control panel
+2. Create a directory for the chatbot (e.g., `chatbot` or use the root directory)
+3. Upload all files to this directory, maintaining the folder structure
+
+#### Step 3: Set Up Database (If Using Database Storage)
+
+1. Create a new MySQL or PostgreSQL database through your hosting control panel
+2. Create a database user with appropriate permissions
+3. Update the database credentials in `config/config.php`:
+   ```php
+   define('DB_HOST', 'localhost'); // Usually 'localhost' for shared hosting
+   define('DB_NAME', 'your_database_name');
+   define('DB_USER', 'your_database_username');
+   define('DB_PASS', 'your_database_password');
+   ```
+
+#### Step 4: Run Installation
+
+1. Navigate to `https://yourdomain.com/path/to/chatbot/setup/install.php`
+2. Follow the installation wizard
+3. If you prefer file-based storage, use the "Skip Database Setup" option
+
+#### Step 5: Secure Your Installation
+
+1. After installation, remove or protect the `setup` directory:
+   ```
+   # Option 1: Remove the setup directory
+   rm -rf setup/
+   
+   # Option 2: Protect with .htaccess
+   echo "Deny from all" > setup/.htaccess
+   ```
+
+2. Secure configuration files:
+   ```
+   chmod 640 config/config.php
+   ```
+
+### Option 2: VPS or Dedicated Server
+
+#### Step 1: Set Up Your Server
+
+1. Install a web server (Apache, Nginx)
+2. Install PHP 7.4 or higher
+3. Install MySQL or PostgreSQL if using database storage
+4. Configure your server with appropriate security settings
+
+#### Step 2: Configure Web Server
+
+For Apache, create a virtual host configuration:
+
+```apache
+<VirtualHost *:80>
+    ServerName chatbot.yourdomain.com
+    DocumentRoot /var/www/chatbot
+    
+    <Directory /var/www/chatbot>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    
+    ErrorLog ${APACHE_LOG_DIR}/chatbot-error.log
+    CustomLog ${APACHE_LOG_DIR}/chatbot-access.log combined
+</VirtualHost>
+```
+
+For Nginx:
+
+```nginx
+server {
+    listen 80;
+    server_name chatbot.yourdomain.com;
+    root /var/www/chatbot;
+    
+    index index.php index.html;
+    
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+    }
+    
+    location ~ /\.ht {
+        deny all;
+    }
+}
+```
+
+#### Step 3: Deploy Your Files
+
+1. Clone or upload files to the server:
+   ```
+   git clone https://github.com/yourusername/realestate-chatbot.git /var/www/chatbot
+   ```
+   
+2. Set proper permissions:
+   ```
+   chown -R www-data:www-data /var/www/chatbot
+   chmod -R 755 /var/www/chatbot
+   chmod -R 777 /var/www/chatbot/data
+   ```
+
+#### Step 4: Complete the Installation
+
+Follow the same installation steps as in Option 1 (Steps 3-5)
+
+### Option 3: Using a Subdomain
+
+If you want to use a subdomain like `chatbot.yourdomain.com`:
+
+1. Add a new DNS record:
+   - Type: A or CNAME
+   - Name: chatbot (or your preferred subdomain)
+   - Value: Your server's IP address (for A record) or your domain (for CNAME)
+   
+2. Follow the deployment steps from Option 1 or 2
+
+## Embedding the Chatbot
+
+After deployment, you can embed the chatbot on any website by adding this code before the closing `</body>` tag:
+
+```html
+<script src="https://yourdomain.com/path/to/chatbot/assets/js/embed.js" 
+        id="realestate-chatbot-embed" 
+        data-website-id="default"
+        data-color="#005b52"></script>
+```
+
+Replace the URL with your actual domain and path.
+
+## SSL Configuration (Recommended)
+
+For security, it's highly recommended to use HTTPS:
+
+1. Obtain an SSL certificate:
+   - Use Let's Encrypt for a free certificate
+   - Use your hosting provider's SSL options
+
+2. Update your embed code to use HTTPS:
+   ```html
+   <script src="https://yourdomain.com/path/to/chatbot/assets/js/embed.js" ...></script>
+   ```
+
+## Updating the APP_URL Configuration
+
+After deployment, update the APP_URL setting in `config/config.php`:
+
+```php
+define('APP_URL', getenv('APP_URL') ?: 'https://yourdomain.com/path/to/chatbot');
+```
+
+This ensures all links generated by the chatbot will use your domain.
+
+## Testing Your Deployment
+
+1. Visit your domain in a browser
+2. Verify the chatbot appears and functions correctly
+3. Test lead capture by submitting the lead form
+4. Log in to the admin panel (`https://yourdomain.com/path/to/chatbot/admin/`) and verify you can see the captured leads
+
+## Troubleshooting
+
+If you encounter issues with your custom domain deployment:
+
+1. Check server error logs
+2. Verify file permissions
+3. Ensure PHP and database configurations are correct
+4. See the [TROUBLESHOOTING.md](TROUBLESHOOTING.md) file for more solutions
+
+---
+
+For additional help with custom domain deployment, feel free to contact us.

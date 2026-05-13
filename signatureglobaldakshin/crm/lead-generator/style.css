@@ -1,0 +1,615 @@
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+  :root {
+            /* Primary: teal/emerald */
+            --primary-color: #0b7ab7;      
+            --primary-color-light: #62b5e2; 
+            --primary-color-dark:  #01466b; 
+            /* Secondary: orange/coral */
+            --secondary-color: #1c4054;     
+            --secondary-color-light: #2f6e8f;  
+            --secondary-color-dark: #0e3043;  
+            
+            --third-color: #f4ab36; /* Accent: amber/gold */  
+            --third-color-light: #f7c163;
+            --third-color-dark: #c88719;
+
+            /* Backgrounds & text for DARK THEME */
+            --bg-color: #f9f8f4; 
+            --body-color: #ffff;         
+            --text-color: #0f0f0f;       
+            --dark-text-color: #0e3043;    
+            --light-text-color: #62b5e2;
+        }
+
+
+body{
+    font-family: 'Jura', sans-serif;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    color: var(--secondary-color);
+    /* height: 200vh; */
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+ 
+ 
+ 
+ /* Overlay Styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .overlay.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .popup {
+    background: var(--secondary-color);
+    backdrop-filter: blur(10px);
+    /* border: 2px solid var(--secondary-color); */
+    /* background: red; */
+    width: 100%;
+    max-width: 500px;
+    /* padding: 30px; */
+    /* border-radius: 8px; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    overflow-y: auto;
+    /* max-height: 90vh; */
+    /* margin: 10px; */
+  }
+  
+ 
+  
+  
+  
+  .popup .illustration{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 20px;
+    padding: 30px;
+    background: var(--secondary-color);
+  }
+  
+  .popup .illustration h2{
+    font-size: 24px;
+    /* text-align: left; */
+    color: var(--body-color);
+    /* margin-bottom: 10px; */
+  }
+  
+  .illustrate-item{
+    width: 100%;;
+    /* height: 60px; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .illustrate-item img{
+    width: 60px;
+    height: 100%;
+    object-fit: cover;
+    /* mix-blend-mode: color-burn; */
+    /* border-radius: 50%; */
+  }
+  .illustrate-item p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    width: 70px;
+    color: var(--body-color);
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--third-color);
+  }
+
+  .form_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--bg-color);
+    padding: 20px;
+  }
+  
+  .logo {
+    width: 180px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+  }
+  
+  .highlight {
+    color: var(--third-color);
+    font-weight: bold;
+  }
+  
+  form input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .form-group {
+    position: relative;
+    /* margin-bottom: 20px; */
+  }
+
+  /* New styles for select fields */
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--secondary-color);
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    -webkit-appearance: none; /* Removes default dropdown arrow in WebKit browsers */
+    -moz-appearance: none; /* Removes default dropdown arrow in Firefox */
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%230e3043%22%20d%3D%22M287%20197.6c-4.2%204.2-10.7%204.2-14.9%200L146.2%2071.2%2020.3%20197.6c-4.2%204.2-10.7%204.2-14.9%200-4.2-4.2-4.2-10.7%200-14.9L139%2050.5c4.2-4.2%2010.7-4.2%2014.9%200l126.3%20132.2c4.2%204.2%204.2%2010.7%200%2014.9z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 10px;
+}
+
+.form-group label[for="domainSelect"],
+.form-group label[for="projectSelect"] {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 12px;
+    padding: 5px;
+    color: var(--secondary-color-dark);
+    background: var(--bg-color);
+    border-radius: 10px;
+}
+
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--secondary-color);
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    /* box-shadow: 0 4px 20px var(--primary-color-light); */
+  }
+  
+  .form-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: var(--secondary-color);
+    background: transparent;
+    padding: 0 5px;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+    pointer-events: none;
+  }
+  
+  /* When input is focused or filled */
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown):valid + label {
+    top: 8px;
+    left: 10px;
+    font-size: 12px;
+    padding: 5px;
+    color: var(--secondary-color-dark);
+    background: var(--bg-color);
+    border-radius: 10px;
+  }
+  
+  .form-group input[type="datetime-local"] {
+    position: relative;
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--secondary-color);
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-group input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+.form-group input[type="datetime-local"]::-webkit-datetime-edit {
+  color: var(--secondary-color);
+}
+
+.form-group input[type="datetime-local"]:focus {
+  border-color: var(--primary-color-dark);
+}
+
+.form-group label[for="datetimeInput"] {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 12px;
+    padding: 5px;
+    color: var(--secondary-color-dark);
+    background: var(--bg-color);
+    padding: 0 5px;
+    /* transform: translateY(-50%); */
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+/* When input is focused or filled */
+.form-group input[type="datetime-local"]:valid + label,
+.form-group input[type="datetime-local"]:focus + label {
+    top: 8px;
+    left: 10px;
+    font-size: 12px;
+    padding: 5px;
+    color: var(--secondary-color-dark);
+    background: var(--bg-color);
+    border-radius: 10px;
+}
+  
+  
+  .phone-field {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .captcha-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row-reverse; */
+    margin-top: 10px;
+    text-align: left;
+    gap: 5px;
+  }
+
+  
+  
+  .refresh_captcha{
+    position: absolute;
+    right: -1px;
+    top: -4px;
+    height: 100%;
+    width: 40px;
+  }
+  
+  
+  .captcha_canvas{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    top: 2px;
+  }
+  
+  .captcha-box canvas {
+    /* background: #f0f0f0; */
+    margin-bottom: 5px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+  }
+  
+  .captcha-box button {
+    margin: 5px 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: var(--secondary-color);
+    color: var(--primary-color-dark);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 40px;
+    /* position: absolute;
+    right: -1px;
+    top: -4px; */
+    /* border: 2px solid var(--secondary-color); */
+  }
+  
+  .captcha-box input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    /* margin-top: 20px; */
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    text-decoration: none;
+    border: 2px solid var(--secondary-color-light);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .btn:hover{
+    background-color: var(--secondary-color-light);
+    background: transparent;
+    color: var(--secondary-color-light);
+    border: 2px solid var(--secondary-color-light);
+  }
+
+   .gradient-btn {
+    background: linear-gradient(to right, var(--primary-color), var(--primary-color-dark));
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: var(--bg-color);
+    /* display: flex; */
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .gradient-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .consent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+    font-size: 12px;
+    text-align: left;
+    margin: 10px 0;
+  }
+  
+  .consent p{
+    color: rgb(25, 38, 104);
+    font-size: 11px;
+  }
+  
+  .consent-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    
+  }
+  
+  .register-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .register-btn:hover{
+    background: var(--primary-color-dark);
+  }
+  
+  .bottom-call {
+    margin-top: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .bottom-call:hover{
+    background: var(--primary-color-dark);
+  }
+
+   /* Icon Animation */
+   .animated-download {
+    position: relative;
+    animation: downloadMove .5s infinite ease-in-out;
+  }
+  
+  @keyframes downloadMove {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 488px) {
+    
+    .popup {
+      /* width: 90%; */
+      /* padding: 20px; */
+      flex-direction: column;
+      border-radius: 8px;
+    }
+
+    .form_container{
+      padding: 20px;
+    }
+    
+    .popup .illustration{
+      display: none;
+      /* height: auto; */
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .illustrate-item{
+      width: 40px;
+      height: auto;
+    }
+  
+    .captcha-box {
+      flex-direction: column;
+    }
+    
+    .illustrate-item img{
+      width: 40px;
+      height: auto;
+    }
+    .illustrate-item p{
+      font-size: 12px;
+    }
+  }
+  
+
+
+  /* Notification styling*/
+  .notice_text{
+    margin: 20px 10px;
+    padding: 10px 20px;
+    background-color: #f4ab36;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  #notificationContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f4ab36;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .success{
+    background-color: #0dcb75;
+  }
+
+  .error{
+    background-color: #f43636;
+  }
+  
+  .notification .message {
+    font-size: 14px;
+    flex: 1;
+  }
+  
+  .notification .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .notification .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation: progress 5s linear;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes progress {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
