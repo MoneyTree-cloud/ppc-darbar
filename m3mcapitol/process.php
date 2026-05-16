@@ -1,6 +1,12 @@
 <?php
 require_once __DIR__ . '/../env.php';
 
+$sslVerify = env('SSL_VERIFY', 'true') === 'true';
+$sslOpts = [
+    CURLOPT_SSL_VERIFYPEER => $sslVerify,
+    CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+];
+
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -35,15 +41,20 @@ $payload   = json_encode([
     'source'       => 'M3M Capitol | https://m3mcapitol.in/'
 ]);
 $ch = curl_init($apiUrl);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    'Content-Type: application/json',
-    'Authorization: Bearer ' . $authToken
+curl_setopt_array($ch, $sslOpts + [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST           => true,
+    CURLOPT_POSTFIELDS     => $payload,
+    CURLOPT_HTTPHEADER     => [
+        'Content-Type: application/json',
+        "Authorization: Bearer {$authToken}"
+    ],
 ]);
 $apiResponse = curl_exec($ch);
 curl_close($ch);
+
+// PPC Lead API Call
+sendPpcLead($name, $email, $phone, 'https://m3mcapitol.in/', 'Gurugram', 'M3M Capitol');
 
 echo json_encode(['success' => true, 'message' => 'Thank you! Our team will contact you shortly.', 'redirect' => 'thankyou.php']);
 exit();

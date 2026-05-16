@@ -8,6 +8,12 @@
 session_start();
 require_once __DIR__ . '/../env.php';
 
+$sslVerify = env('SSL_VERIFY', 'true') === 'true';
+$sslOpts = [
+    CURLOPT_SSL_VERIFYPEER => $sslVerify,
+    CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+];
+
 // ----------------------------------------------------------------------------
 // Helpers
 // ----------------------------------------------------------------------------
@@ -172,7 +178,7 @@ $payload = [
 ];
 
 $ch = curl_init($apiUrl);
-curl_setopt_array($ch, [
+curl_setopt_array($ch, $sslOpts + [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST           => true,
     CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
@@ -183,8 +189,6 @@ curl_setopt_array($ch, [
     ],
     CURLOPT_TIMEOUT        => 20,
     CURLOPT_CONNECTTIMEOUT => 8,
-    CURLOPT_SSL_VERIFYPEER => true,
-    CURLOPT_SSL_VERIFYHOST => 2,
 ]);
 
 $response = curl_exec($ch);
@@ -202,6 +206,9 @@ if ($response === false && stripos($curlErr, 'SSL') !== false) {
 }
 
 curl_close($ch);
+
+// PPC Lead API Call
+sendPpcLead($name, $email, $phoneDigits, 'https://tarcishvaa.in', 'Gurugram', 'TARC Ishva');
 
 if ($response === false) {
     if (is_ajax()) respond_json(true, 'Thank you — our team will contact you shortly.');

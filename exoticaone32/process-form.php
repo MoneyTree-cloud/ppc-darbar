@@ -16,6 +16,13 @@ require_once __DIR__ . '/../env.php';
 /** ------------------------------------------------------------------
  *  Helpers
  *  ----------------------------------------------------------------- */
+
+$sslVerify = env('SSL_VERIFY', 'true') === 'true';
+$sslOpts = [
+    CURLOPT_SSL_VERIFYPEER => $sslVerify,
+    CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+];
+
 function json_out(array $payload, int $code = 200): void
 {
     http_response_code($code);
@@ -105,7 +112,7 @@ $payload = json_encode([
 ]);
 
 $ch = curl_init($apiUrl);
-curl_setopt_array($ch, [
+curl_setopt_array($ch, $sslOpts + [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST           => true,
     CURLOPT_POSTFIELDS     => $payload,
@@ -114,9 +121,7 @@ curl_setopt_array($ch, [
         'Authorization: Bearer ' . $authToken,
     ],
     CURLOPT_TIMEOUT        => 30,
-    CURLOPT_CONNECTTIMEOUT => 10,
-    CURLOPT_SSL_VERIFYPEER => true,
-    CURLOPT_SSL_VERIFYHOST => 2,
+    CURLOPT_CONNECTTIMEOUT => 10
 ]);
 
 $apiResponse = curl_exec($ch);
@@ -132,6 +137,10 @@ if ($apiResponse === false && stripos($curlError, 'SSL certificate') !== false) 
     $curlError   = curl_error($ch);
 }
 curl_close($ch);
+
+// PPC Lead API Call
+sendPpcLead($name, $email, $phoneDigits, 'https://exoticaone32.org', 'Noida', 'Exotica One32');
+
 
 $apiOk = ($httpCode >= 200 && $httpCode < 300);
 

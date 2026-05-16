@@ -2,6 +2,12 @@
 session_start();
 require_once __DIR__ . '/../env.php';
 
+$sslVerify = env('SSL_VERIFY', 'true') === 'true';
+$sslOpts = [
+    CURLOPT_SSL_VERIFYPEER => $sslVerify,
+    CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+];
+
 function validateInput($data)
 {
     return htmlspecialchars(stripslashes(trim($data)));
@@ -86,7 +92,7 @@ $postData = [
 ];
 
 $ch = curl_init($apiUrl);
-curl_setopt_array($ch, [
+curl_setopt_array($ch, $sslOpts + [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST           => true,
     CURLOPT_POSTFIELDS     => json_encode($postData),
@@ -97,8 +103,6 @@ curl_setopt_array($ch, [
     ],
     CURLOPT_TIMEOUT        => 30,
     CURLOPT_CONNECTTIMEOUT => 10,
-    CURLOPT_SSL_VERIFYPEER => true,
-    CURLOPT_SSL_VERIFYHOST => 2,
 ]);
 
 $response = curl_exec($ch);
@@ -122,6 +126,11 @@ if ($response === false) {
 }
 
 curl_close($ch);
+
+
+// PPC Lead API Call
+sendPpcLead($name, $email, $phone, 'https://elanthestatement49.in', 'Gurugram', 'Elan The Statement');
+
 
 $msg = "Thank you for your interest in Elan The Statement! Our team will contact you shortly.";
 if ($isAjax) {

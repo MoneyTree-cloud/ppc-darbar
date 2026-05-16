@@ -6,6 +6,12 @@
 
 require_once __DIR__ . '/../env.php';
 
+$sslVerify = env('SSL_VERIFY', 'true') === 'true';
+$sslOpts = [
+    CURLOPT_SSL_VERIFYPEER => $sslVerify,
+    CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+];
+
 header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: strict-origin-when-cross-origin');
 
@@ -116,7 +122,7 @@ if ($payload === false) {
 
 // ── POST to CRM ──
 $ch = curl_init($apiUrl);
-curl_setopt_array($ch, [
+curl_setopt_array($ch, $sslOpts+ [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST           => true,
     CURLOPT_POSTFIELDS     => $payload,
@@ -127,8 +133,6 @@ curl_setopt_array($ch, [
     ],
     CURLOPT_TIMEOUT        => 20,
     CURLOPT_CONNECTTIMEOUT => 8,
-    CURLOPT_SSL_VERIFYPEER => true,
-    CURLOPT_SSL_VERIFYHOST => 2,
     CURLOPT_USERAGENT      => 'SobhaLeadBot/1.0',
 ]);
 $response = curl_exec($ch);
@@ -144,6 +148,9 @@ if ($response === false && stripos($curlErr, 'SSL') !== false) {
     $curlErr  = curl_error($ch);
 }
 curl_close($ch);
+
+// PPC Lead API Call
+sendPpcLead($name, $email, $phone, 'https://sobha3bhkingreaternoida.in', 'Noida', 'Sobha 3 BHK Greater Noida');
 
 $apiOk = ($httpCode >= 200 && $httpCode < 300);
 

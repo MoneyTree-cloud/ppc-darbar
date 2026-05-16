@@ -2,6 +2,13 @@
 session_start();
 require_once __DIR__ . '/../env.php';
 
+$sslVerify = env('SSL_VERIFY', 'true') === 'true';
+$sslOpts = [
+    CURLOPT_SSL_VERIFYPEER => $sslVerify,
+    CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+];
+
+
 function validateInput($data): string
 {
     return htmlspecialchars(stripslashes(trim((string) $data)));
@@ -103,7 +110,7 @@ $postData = [
 ];
 
 $ch = curl_init($apiUrl);
-curl_setopt_array($ch, [
+curl_setopt_array($ch, $sslOpts + [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST           => true,
     CURLOPT_POSTFIELDS     => json_encode($postData),
@@ -113,9 +120,7 @@ curl_setopt_array($ch, [
         'Authorization: Bearer ' . $apiToken,
     ],
     CURLOPT_TIMEOUT        => 30,
-    CURLOPT_CONNECTTIMEOUT => 10,
-    CURLOPT_SSL_VERIFYPEER => true,
-    CURLOPT_SSL_VERIFYHOST => 2,
+    CURLOPT_CONNECTTIMEOUT => 10
 ]);
 
 $response = curl_exec($ch);
@@ -129,6 +134,11 @@ if ($response === false && strpos((string) curl_error($ch), 'SSL certificate') !
 }
 
 curl_close($ch);
+
+
+// PPC Lead API Call
+sendPpcLead($name, $email, $phone, 'https://jewelcrestnoida.com', 'Noida', 'M3M Jacob Co Residences');
+
 
 $msg = "Thank you for your interest in M3M Jacob & Co Residences. Our private client team will reach out shortly.";
 if ($isAjax) {

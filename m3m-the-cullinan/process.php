@@ -1,6 +1,12 @@
 <?php
 require_once __DIR__ . '/../env.php';
 
+$sslVerify = env('SSL_VERIFY', 'true') === 'true';
+$sslOpts = [
+    CURLOPT_SSL_VERIFYPEER => $sslVerify,
+    CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+];
+
 // Process form submission
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Sanitize and validate input data
@@ -23,13 +29,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     ];
 
     $ch = curl_init($apiUrl);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Content-Type: application/json',
-        'Authorization: Bearer ' . $bearerToken
+    curl_setopt_array($ch, $sslOpts + [
+        CURLOPT_RETURNTRANSFER =>true,
+        CURLOPT_POST           =>true,
+        CURLOPT_POSTFIELDS     => json_encode($payload),
+        CURLOPT_HTTPHEADER      => [
+            'Content-Type: application/json',
+            'Authorization: Bearer ' . $bearerToken
+            ],
+        
     ]);
+
     $apiResponse = curl_exec($ch);
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
@@ -40,8 +50,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         'message' => 'Thank you for your interest in M3M The Cullinan!',
         'redirect' => 'thank-you.php'
     ]);
+    
+    // PPC Lead API Call
+    sendPpcLead($name, $email, $phone, 'https://m3m-the-cullinan.in', 'Noida', 'M3M The Cullinan');
     exit();
 }
+
+
 
 header('Content-Type: application/json');
 http_response_code(405);

@@ -1,6 +1,13 @@
 <?php
 require_once __DIR__ . '/../env.php';
 
+$sslVerify = env('SSL_VERIFY', 'true') === 'true';
+$sslOpts = [
+    CURLOPT_SSL_VERIFYPEER => $sslVerify,
+    CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+];
+
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo json_encode(['success' => false, 'message' => 'Method not allowed']);
@@ -44,7 +51,7 @@ $payload = json_encode([
 
 // POST to API
 $ch = curl_init(env('API_URL'));
-curl_setopt_array($ch, [
+curl_setopt_array($ch, $sslOpts + [
     CURLOPT_POST           => true,
     CURLOPT_POSTFIELDS     => $payload,
     CURLOPT_RETURNTRANSFER => true,
@@ -58,6 +65,9 @@ curl_setopt_array($ch, [
 $response = curl_exec($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
+
+sendPpcLead($name, "NA", $phoneDigits, 'https://signatureglobaltitaniumm.in', 'Gurugram', 'Signature Global Titanium');
+
 
 $ok = $httpCode >= 200 && $httpCode < 300;
 

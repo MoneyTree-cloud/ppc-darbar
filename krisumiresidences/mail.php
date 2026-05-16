@@ -1,6 +1,13 @@
 <?php
 require_once __DIR__ . '/../env.php';
 
+$sslVerify = env('SSL_VERIFY', 'true') === 'true';
+$sslOpts = [
+    CURLOPT_SSL_VERIFYPEER => $sslVerify,
+    CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+];
+
+
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     http_response_code(405);
     if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
@@ -54,7 +61,7 @@ $apiUrl = env('API_URL');
 $token  = env('API_TOKEN');
 
 $ch = curl_init($apiUrl);
-curl_setopt_array($ch, [
+curl_setopt_array($ch, $sslOpts + [
     CURLOPT_POST           => true,
     CURLOPT_POSTFIELDS     => $payload,
     CURLOPT_HTTPHEADER     => [
@@ -91,6 +98,8 @@ if ($curlErr === 60 || $curlErr === 77) {
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
 }
+
+sendPpcLead($name, $email, $phoneDigits, 'https://krisumiresidences.in', 'Gurugram', 'Krisumi Residences');
 
 // Handle response
 $success = ($httpCode >= 200 && $httpCode < 300);

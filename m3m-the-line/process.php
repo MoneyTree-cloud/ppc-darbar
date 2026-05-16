@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../env.php';
 
+
 // Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
@@ -70,6 +71,9 @@ curl_setopt_array($ch, [
 $apiResponse = curl_exec($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
+
+// PPC Lead API Call
+sendPpcLead($name, $email, $phone, 'https://m3m-the-line.in', 'Noida', 'M3M The Line');
 
 header('Content-Type: application/json');
 echo json_encode([

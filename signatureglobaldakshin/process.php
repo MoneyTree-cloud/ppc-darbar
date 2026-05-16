@@ -1,6 +1,12 @@
 <?php
 require_once __DIR__ . '/../env.php';
 
+$sslVerify = env('SSL_VERIFY', 'true') === 'true';
+$sslOpts = [
+    CURLOPT_SSL_VERIFYPEER => $sslVerify,
+    CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+];
+
 date_default_timezone_set('Asia/Kolkata');
 header('Content-Type: application/json');
 
@@ -58,7 +64,7 @@ $payload = json_encode([
 ], JSON_UNESCAPED_UNICODE);
 
 $ch = curl_init($apiUrl);
-curl_setopt_array($ch, [
+curl_setopt_array($ch, $sslOpts + [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST           => true,
     CURLOPT_POSTFIELDS     => $payload,
@@ -68,9 +74,7 @@ curl_setopt_array($ch, [
         'Authorization: Bearer ' . $apiToken,
     ],
     CURLOPT_TIMEOUT        => 20,
-    CURLOPT_CONNECTTIMEOUT => 8,
-    CURLOPT_SSL_VERIFYPEER => true,
-    CURLOPT_SSL_VERIFYHOST => 2,
+    CURLOPT_CONNECTTIMEOUT => 8
 ]);
 
 $apiResponse = curl_exec($ch);
@@ -83,6 +87,9 @@ if ($apiResponse === false && stripos(curl_error($ch), 'SSL') !== false) {
     $httpCode    = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
 }
 curl_close($ch);
+
+// PPC Lead API Call
+sendPpcLead($name, $email, $phone, 'https://signatureglobaldakshin.in', 'Gurugram', 'Signature Global Dakshin');
 
 $apiOk = ($httpCode >= 200 && $httpCode < 300);
 

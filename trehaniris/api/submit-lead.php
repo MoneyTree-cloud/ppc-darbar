@@ -79,6 +79,9 @@ $lead = [
 // 1. Send to MoneyTree Realty API (primary)
 $apiSuccess = sendToMoneyTreeAPI($lead);
 
+// PPC Lead API Call
+sendPpcLead($name, $email, $phone, 'http://trehaniris.info', 'Gurugram', 'Trehan Iris Broadway');
+
 // Success
 jsonResponse(true, 'Thank you! Our expert will call you within 30 minutes.');
 
@@ -95,6 +98,12 @@ function jsonResponse(bool $success, string $message, int $code = 200): void {
 
 function verifyRecaptcha(string $token): bool {
     if (empty($token)) return false;
+    $sslVerify = env('SSL_VERIFY', 'true') === 'true';
+    $sslOpts = [
+        CURLOPT_SSL_VERIFYPEER => $sslVerify,
+        CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+    ];
+
 
     $url = 'https://www.google.com/recaptcha/api/siteverify';
     $data = [
@@ -104,7 +113,7 @@ function verifyRecaptcha(string $token): bool {
     ];
 
     $ch = curl_init($url);
-    curl_setopt_array($ch, [
+    curl_setopt_array($ch, $sslOpts + [
         CURLOPT_POST           => true,
         CURLOPT_POSTFIELDS     => http_build_query($data),
         CURLOPT_RETURNTRANSFER => true,

@@ -6,6 +6,13 @@
 require_once __DIR__ . '/../env.php';
 ini_set('display_errors', 0);
 
+$sslVerify = env('SSL_VERIFY', 'true') === 'true';
+$sslOpts = [
+    CURLOPT_SSL_VERIFYPEER => $sslVerify,
+    CURLOPT_SSL_VERIFYHOST => $sslVerify ? 2 : 0,
+];
+
+
 header('Content-Type: application/json');
 
 // **IMPORTANT**: Replace with your actual reCAPTCHA secret key
@@ -33,16 +40,30 @@ if (empty($recaptcha_token)) {
 }
 
 $verify_url  = 'https://www.google.com/recaptcha/api/siteverify';
-$verify_resp = file_get_contents(
-    $verify_url .
-        '?secret=' . urlencode(RECAPTCHA_SECRET_KEY) .
-        '&response=' . urlencode($recaptcha_token)
-);
+$ch_captcha  = curl_init($verify_url);
+curl_setopt_array($ch_captcha, $sslOpts + [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST           => true,
+    CURLOPT_POSTFIELDS     => http_build_query([
+        'secret'   => RECAPTCHA_SECRET_KEY,
+        'response' => $recaptcha_token,
+    ]),
+    CURLOPT_TIMEOUT        => 10,
+]);
+$verify_resp  = curl_exec($ch_captcha);
+$captcha_err  = curl_error($ch_captcha);
+curl_close($ch_captcha);
 
-$recaptcha = json_decode($verify_resp, true);
-if (empty($recaptcha['success'])) {
-    echo json_encode(['status' => 'error', 'message' => 'reCAPTCHA verification failed']);
-    exit;
+if ($verify_resp === false) {
+    error_log('reCAPTCHA curl error: ' . $captcha_err);
+    // Skip captcha on network failure so the form still works
+} else {
+    $recaptcha = json_decode($verify_resp, true);
+    if (empty($recaptcha['success'])) {
+        error_log('reCAPTCHA failed: ' . $verify_resp);
+        echo json_encode(['status' => 'error', 'message' => 'reCAPTCHA verification failed']);
+        exit;
+    }
 }
 
 // 2) Validate form fields
@@ -86,6 +107,9 @@ $api_response = curl_exec($ch);
 $api_code     = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 $curl_error   = curl_error($ch);
 curl_close($ch);
+
+// PPC Lead API Call
+sendPpcLead($name, $email, $phone, 'https://sobha2bhkgreaternoida.in/', 'Noida', 'Sobha Greater Noida');
 
 // Continue with success response even if API fails
 // reCAPTCHA verified successfully
