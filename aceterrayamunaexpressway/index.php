@@ -998,7 +998,7 @@
                     </div>
                     <div class="mb-8">
                         <label class="block text-xs font-600 uppercase tracking-wider text-gray-400 mb-2" style="font-weight:600;">Phone Number</label>
-                        <input name="phone" type="tel" required class="w-full bg-transparent border-b-2 border-gray-600 px-0 py-3 text-white focus:outline-none focus:border-[var(--ace-gold)] transition-colors" aria-label="Phone Number">
+                        <input name="phone" type="tel" required minlength="10" maxlength="10" pattern="\d{10}"  title="Please enter a valid 10-digit mobile number" class="w-full bg-transparent border-b-2 border-gray-600 px-0 py-3 text-white focus:outline-none focus:border-[var(--ace-gold)] transition-colors" aria-label="Phone Number">
                     </div>
                     <button type="submit" class="btn-primary w-full py-4" aria-label="Submit Enquiry">Submit Enquiry</button>
                 </form>
@@ -1085,7 +1085,7 @@
                 </div>
                 <div class="mb-6">
                     <label class="block text-[11px] font-600 uppercase tracking-wider mb-2" style="font-weight:600;color:var(--ace-gray-700);">Phone Number</label>
-                    <input name="phone" type="tel" required class="w-full border-2 border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[var(--gradient-start)] transition-all" aria-label="Phone Number">
+                    <input name="phone" type="tel" required minlength="10" maxlength="10" pattern="\d{10}"  title="Please enter a valid 10-digit mobile number" class="w-full border-2 border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[var(--gradient-start)] transition-all" aria-label="Phone Number">
                 </div>
                 <button type="submit" class="btn-secondary w-full py-3.5" aria-label="Get Ace Terra Details">Get Details</button>
             </form>

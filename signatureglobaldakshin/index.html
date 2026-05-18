@@ -205,7 +205,7 @@
       <form action="process.php" method="POST">
     <input type="text" name="name" placeholder="Name*" required>
     <input type="email" name="email" placeholder="Email*" required>
-    <input type="tel" name="phone" placeholder="Phone*" required>
+    <input type="tel" name="phone" placeholder="Phone*" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
     <button type="submit">Submit</button>
 </form>
     </div>
@@ -1199,7 +1199,7 @@
                    </div>
                    <div class="form-group col-lg-6 col-12">
                       <input type="text" class="form-control" placeholder="Enter Number*" name="number"
-                         id="qMobileNo1" required>
+                         id="qMobileNo1" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
                    </div>
                    <div class="form-group col-lg-6 col-12">
                       <input name="message" id="qMessage1" class="form-control"
@@ -1887,7 +1887,7 @@ $(function () {
       <input type="email" name="email" placeholder="Email Address*">
       <div class="error-msg" id="error-email">Please enter a valid email.</div>
 
-      <input type="tel" name="phone" placeholder="Mobile Number*">
+      <input type="tel" name="phone" placeholder="Mobile Number*" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
       <div class="error-msg" id="error-phone">Please enter a valid 10-digit mobile number.</div>
 
       <button type="submit" class="sdv-submit">Get Exclusive Price</button>

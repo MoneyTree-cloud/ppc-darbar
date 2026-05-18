@@ -21,7 +21,7 @@
 
             <input type="text" name="name" placeholder="Your name" required minlength="2" pattern="[a-zA-Z\s\p{L}.'\\-]*" title="Name can only contain letters, spaces, dots, hyphens and apostrophes">
             <input type="email" name="email" placeholder="Email address" required>
-            <input type="tel" name="phone" placeholder="Phone number (+91)" required minlength="10" maxlength="15" pattern="[0-9\+\-\s\(\)]{10,}" title="Please enter a valid phone number with at least 10 digits">
+            <input type="tel" name="phone" placeholder="Phone number (+91)" required minlength="10" maxlength="15" pattern="\d{10}" title="Please enter a valid phone number with at least 10 digits">
 
             <select name="interested_in" required>
                 <option value="" selected disabled>Residence of interest</option>

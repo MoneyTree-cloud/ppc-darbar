@@ -120,7 +120,7 @@ function test_input($data)
                 required
                 minlength="10"
                 maxlength="15"
-                pattern="[0-9\+\-\s\(\)]{10,}"
+                pattern="\d{10}"
                 title="Please enter a valid phone number with at least 10 digits">
             <?php if (!empty($phoneErr)): ?>
                 <p class="text-red-500 text-sm mt-1"><?php echo $phoneErr; ?></p>

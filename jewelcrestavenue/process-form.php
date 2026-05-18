@@ -63,7 +63,7 @@ if (isset($_POST['phone'])) {
     if (empty($phone)) {
         $errors[] = "Phone number is required";
     } elseif (strlen($phoneDigits) < 10 || strlen($phoneDigits) > 15) {
-        $errors[] = "Phone number must be 10–15 digits";
+        $errors[] = "Phone number must be 10 digits";
     }
 } else {
     $errors[] = "Phone field is missing";

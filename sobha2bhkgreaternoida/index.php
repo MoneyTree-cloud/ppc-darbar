@@ -253,7 +253,7 @@
     <div class="fixed-form hide-for-mobile">
         <form class="bottom-form glass" action="process.php" method="POST" id="bottomForm">
             <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-            <input type="tel" name="phone" placeholder="Phone Number" required aria-label="Phone Number" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+            <input type="tel" name="phone" placeholder="Phone Number" required aria-label="Phone Number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
             <input type="email" name="email" placeholder="Email Address" required aria-label="Email Address">
             <input type="hidden" name="recaptcha_token" class="recaptcha-token">
             <input type="hidden" name="form_type" value="bottom">
@@ -1486,7 +1486,7 @@ Whether you are a first-time buyer, an investor, or a family looking for a moder
                         </h3>
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Email Address" required>
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
                         <input type="hidden" name="recaptcha_token" class="recaptcha-token">
                         <input type="hidden" name="form_type" value="contact">
                         <button type="submit" class="cta-button gold">Request Callback</button>
@@ -1798,7 +1798,7 @@ Whether you are a first-time buyer, an investor, or a family looking for a moder
             <h3>Enquire Now</h3>
             <form id="popupEnquiryForm" action="process.php" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
-                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
                 <input type="email" name="email" placeholder="Email Address" required>
                 <input type="hidden" name="recaptcha_token" class="recaptcha-token">
                 <input type="hidden" name="form_type" value="popup">

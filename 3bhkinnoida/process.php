@@ -46,7 +46,7 @@ if (empty($phone)) {
     $cleanPhone = preg_replace('/\D/', '', $phone); // Remove all non-digits
 
     if (!preg_match('/^\d{10,11}$/', $cleanPhone)) {
-        $errors[] = "Please enter a valid 10-11 digit phone number";
+        $errors[] = "Please enter a valid 10 digit phone number";
     } elseif (strlen($cleanPhone) === 11 && !preg_match('/^91/', $cleanPhone)) {
         $errors[] = "For 11-digit numbers, please start with 91 (India country code)";
     }

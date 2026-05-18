@@ -217,7 +217,7 @@ $siteUrl  = env('SITE_URL', 'https://highlifenoida.in/');
           </div>
           <div class="form-field">
             <label for="hf-phone">Phone</label>
-            <input id="hf-phone" type="tel" name="phone" required pattern="[0-9+\-\s]{10,15}" autocomplete="tel">
+            <input id="hf-phone" type="tel" name="phone" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number" autocomplete="tel">
           </div>
           <div class="form-field">
             <label for="hf-int">Interested In</label>
@@ -707,7 +707,7 @@ $siteUrl  = env('SITE_URL', 'https://highlifenoida.in/');
         </div>
         <div class="form-field">
           <label for="ff-phone">Phone</label>
-          <input id="ff-phone" type="tel" name="phone" required pattern="[0-9+\-\s]{10,15}" autocomplete="tel">
+          <input id="ff-phone" type="tel" name="phone" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number" autocomplete="tel">
         </div>
         <div class="form-field">
           <label for="ff-int">Interested In</label>
@@ -751,7 +751,7 @@ $siteUrl  = env('SITE_URL', 'https://highlifenoida.in/');
       </div>
       <div class="form-field">
         <label for="mf-phone">Phone</label>
-        <input id="mf-phone" type="tel" name="phone" required pattern="[0-9+\-\s]{10,15}" autocomplete="tel">
+        <input id="mf-phone" type="tel" name="phone" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number" autocomplete="tel">
       </div>
       <div class="form-field">
         <label for="mf-int">Interested In</label>

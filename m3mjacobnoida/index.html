@@ -927,7 +927,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="col-md-3">
       <div class="form-group">
         <input type="tel" name="phone" class="form-control" placeholder="Mobile No."
-               required pattern="[0-9]{10,}" title="Enter a valid mobile number with at least 10 digits">
+               required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
       </div>
     </div>
 

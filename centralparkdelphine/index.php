@@ -271,7 +271,7 @@
       <div class="hero-form-body">
         <form class="lead-form" data-form-source="banner_form">
           <input type="text" name="name" placeholder="Your Name*" required>
-          <input type="tel" name="phone" placeholder="Your Phone No.*" required>
+          <input type="tel" name="phone" placeholder="Your Phone No.*" required minlength="10" maxlength="10" pattern="\d{10}"  title="Please enter a valid 10-digit mobile number">
           <input type="email" name="email" placeholder="Your Email Address*" required>
           <input type="hidden" name="form_source" value="banner_form">
           <button type="submit" class="form-submit">Submit</button>
@@ -716,7 +716,7 @@
       <form class="lead-form footer-form" data-form-source="footer_form">
         <input type="text" name="name" placeholder="Name*" required>
         <input type="email" name="email" placeholder="Email*" required>
-        <input type="tel" name="phone" placeholder="Phone*" required>
+        <input type="tel" name="phone" placeholder="Phone*" required minlength="10" maxlength="10" pattern="\d{10}"   title="Please enter a valid 10-digit mobile number">
         <input type="hidden" name="form_source" value="footer_form">
         <button type="submit" class="footer-form-submit">Submit Now</button>
       </form>
@@ -753,7 +753,7 @@
     <div class="modal-form-body">
       <form class="lead-form" data-form-source="modal_form">
         <input type="text" name="name" placeholder="Your Name*" required>
-        <input type="tel" name="phone" placeholder="Your Phone No.*" required>
+        <input type="tel" name="phone" placeholder="Your Phone No.*" required minlength="10" maxlength="10" pattern="\d{10}"   title="Please enter a valid 10-digit mobile number">
         <input type="email" name="email" placeholder="Your Email*" required>
         <input type="hidden" name="form_source" value="modal_form">
         <p class="form-consent"><input type="checkbox" checked onclick="return false"> I authorize representatives to Call, SMS, Email or WhatsApp me. This overrides DNC/NDNC.</p>

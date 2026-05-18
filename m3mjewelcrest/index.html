@@ -226,7 +226,7 @@
     <div class="input_wrap">
         <form action="banner2.php" method="POST">
             <input class="w-100" type="text" name="name" placeholder="Your Name*" required>
-            <input class="w-100" type="text" name="phone" placeholder="Your Phone No.*" required>
+            <input class="w-100" type="text" name="phone" placeholder="Your Phone No.*" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
             <input class="w-100" type="email" name="email" placeholder="Your Email Address*" required>
 
             <button type="submit" class="custombtn">Submit</button>
@@ -698,7 +698,7 @@ M3M’s vision is to “Shape Daydreams into Masterpieces” — creating integr
         <input class="w-100" type="email" placeholder="Email" id="qEmailIDfooter" name="email_contact">
     </div>
     <div class="col-lg-6 col-md-12 inputbox">
-        <input class="w-100" type="text" placeholder="Phone" id="qMobileNofooter" name="phone_contact">
+        <input class="w-100" type="text" placeholder="Phone" id="qMobileNofooter" name="phone_contact" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
     </div>
 
     <div class="col-lg-6 col-md-12 inputbox">
@@ -830,7 +830,7 @@ function validateFooterForm() {
         </div>
         <div class="col-12 coldiv">
             <div class="form-floating" style="position: relative;">
-                <input class="form-control" type="text" id="qMobileNomodal" name="phone_contact" placeholder="Your Mobile Number">
+                <input class="form-control" type="text" id="qMobileNomodal" name="phone_contact" placeholder="Your Mobile Number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
             </div>
         </div>
     </div>
@@ -911,7 +911,7 @@ function validateForm() {
                         </div>
                         <div class="col-12 coldiv">
                             <div class="form-floating" style="position: relative;">
-                                <input class="form-control" type="text" id="qMobileNomodal" name="phone_contact" placeholder="Your Mobile Number">
+                                <input class="form-control" type="text" id="qMobileNomodal" name="phone_contact" placeholder="Your Mobile Number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
                             </div>
                         </div>
                     </div>

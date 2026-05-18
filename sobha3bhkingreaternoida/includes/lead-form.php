@@ -30,7 +30,7 @@ $formId = 'leadForm_' . preg_replace('/[^a-z0-9_]/i', '', $formSource);
         <span class="field-error" aria-live="polite"></span>
     </div>
     <div class="form-group" data-field="phone">
-        <input type="tel" name="phone" placeholder="Mobile number" required autocomplete="tel" inputmode="numeric" maxlength="20" aria-label="Mobile number" aria-required="true">
+        <input type="tel" name="phone" placeholder="Mobile number" required autocomplete="tel" inputmode="numeric" aria-label="Mobile number" aria-required="true" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
         <span class="field-error" aria-live="polite"></span>
     </div>
     <div class="form-group" data-field="interested_in">

@@ -552,7 +552,7 @@ With world-class amenities and thoughtfully planned spaces, M3M The Line creates
                             </div>
                             <div class="mb-6">
                                 <label for="contact_phone" class="block text-gray-700 font-semibold mb-2">Phone Number</label>
-                                <input type="tel" id="contact_phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Enter your phone number" required>
+                                <input type="tel" id="contact_phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Enter your phone number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
                             </div>
                             <button type="submit" class="w-full bg-blue-900 text-white font-bold py-3 rounded-lg cta-button">
                                 Submit
@@ -636,7 +636,7 @@ With world-class amenities and thoughtfully planned spaces, M3M The Line creates
                 </div>
                 <div class="mb-6">
                     <label for="popup_phone" class="block text-gray-700 font-semibold mb-2">Phone Number</label>
-                    <input type="tel" id="popup_phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Enter your phone number" required>
+                    <input type="tel" id="popup_phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Enter your phone number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
                 </div>
                 <button type="submit" class="w-full bg-amber-600 text-white font-bold py-3 rounded-lg cta-button">Submit Enquiry</button>
             </form>

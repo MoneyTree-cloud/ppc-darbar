@@ -18,7 +18,7 @@
             <span class="field-error" data-for="email"></span>
         </div>
         <div class="field">
-            <input type="tel" name="phone" placeholder="Phone number (+91)" required minlength="10" maxlength="17" autocomplete="tel" inputmode="tel" aria-label="Phone number">
+            <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" inputmode="tel" aria-label="Phone number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
             <span class="field-error" data-for="phone"></span>
         </div>
 

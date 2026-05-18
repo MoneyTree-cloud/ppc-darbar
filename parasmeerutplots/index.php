@@ -322,7 +322,7 @@ session_start();
                                 <input type="text" name="name" placeholder="Your Name" required minlength="2" pattern="[a-zA-Z\s\p{L}.'\\-]*" title="Name can only contain letters, spaces, dots, hyphens and apostrophes" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent" />
                             </div>
                             <div class="md:w-full">
-                                <input type="tel" name="phone" placeholder="Phone Number" required minlength="10" maxlength="15" pattern="[0-9\+\-\s\(\)]{10,}" title="Please enter a valid phone number with at least 10 digits" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent" />
+                                <input type="tel" name="phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid phone number with at least 10 digits" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent" />
                             </div>
                         <!-- </div> -->
                         <div>
