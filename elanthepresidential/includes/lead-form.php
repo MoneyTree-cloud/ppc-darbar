@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['lead_form'])) {
     else {
         $phone = test_input($_POST["phone"]);
         $phone_digits = preg_replace('/[^0-9]/', '', $phone);
-        if (strlen($phone_digits) < 10 || strlen($phone_digits) > 15) $phoneErr = "Phone number must be between 10 and 15 digits";
+        if (strlen($phone_digits) < 10 || strlen($phone_digits) > 15) $phoneErr = "Phone number must be 10 digits";
     }
     if (!empty($_POST["message"])) $message = test_input($_POST["message"]);
 
@@ -66,7 +66,7 @@ if (!function_exists('test_input')) {
 
         <div class="form-control">
             <label for="lf-phone">Phone Number</label>
-            <input type="tel" id="lf-phone" name="phone" placeholder="+91" value="<?php echo htmlspecialchars($phone); ?>" required minlength="10" maxlength="15" pattern="\d{10}" title="Please enter a valid phone number with at least 10 digits">
+            <input type="tel" id="lf-phone" name="phone" placeholder="Phone Number" value="<?php echo htmlspecialchars($phone); ?>" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid phone number with at least 10 digits">
             <?php if (!empty($phoneErr)): ?><p class="error-message"><?php echo $phoneErr; ?></p><?php endif; ?>
         </div>
 

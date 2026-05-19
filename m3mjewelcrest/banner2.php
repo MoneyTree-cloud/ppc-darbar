@@ -92,6 +92,9 @@ if ($curlErr === 60 || $curlErr === 77) {
     curl_close($ch);
 }
 
+// PPC Lead API Call
+sendPpcLead($name, $email, $phoneDigits, 'https://m3mjewelcrest.info', 'Noida', 'M3M Jewel Crest');
+
 // Handle response
 $success = ($httpCode >= 200 && $httpCode < 300);
 
