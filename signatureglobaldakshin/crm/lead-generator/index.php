@@ -51,7 +51,7 @@ include('../php/config.php');
           </div>
           
           <div class="form-group">
-            <input type="tel" name="mobile" id="mobileInput" pattern="[0-9]{10}" maxlength="10" required />
+            <input type="tel" name="mobile" id="mobileInput" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" />
             <label for="mobileInput">Mobile No</label>
           </div>
           

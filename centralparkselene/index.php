@@ -187,7 +187,7 @@
                     <div class="hero-form-header">Book A Site Visit</div>
                     <div class="hero-form-body">
                         <input type="text" name="name" placeholder="Your Name*" required minlength="2">
-                        <input type="tel" name="phone" placeholder="Phone Number*" required minlength="10" maxlength="10" pattern="\d{10}"  title="Please enter a valid 10-digit mobile number">
+                        <input type="tel" name="phone" placeholder="Phone Number*" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}"  title="Please enter a valid 10-digit Indian mobile number">
                         <input type="email" name="email" placeholder="Email Address*" required>
                         <button class="btn-primary" type="submit">Submit Enquiry</button>
                         <p class="hero-form-rera">RERA: RC/REP/HARERA/GGM/964/696/2025/67</p>
@@ -645,7 +645,7 @@
                         <input type="hidden" name="form_source" value="footer_form">
                         <input type="text" name="name" placeholder="Name*" required minlength="2">
                         <input type="email" name="email" placeholder="Email*" required>
-                        <input type="tel" name="phone" placeholder="Phone*" required minlength="10" maxlength="10" pattern="\d{10}"  title="Please enter a valid 10-digit mobile number"> 
+                        <input type="tel" name="phone" placeholder="Phone*" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}"  title="Please enter a valid 10-digit Indian mobile number"> 
                         <button type="submit" class="btn-primary">Submit Enquiry</button>
                     </form>
                 </div>
@@ -691,7 +691,7 @@
                     <input type="hidden" name="form_source" value="popup_form">
                     <div class="modal-body">
                         <input type="text" name="name" placeholder="Your Name*" required minlength="2">
-                        <input type="tel" name="phone" placeholder="Phone Number*" required minlength="10" maxlength="10" pattern="\d{10}"  title="Please enter a valid 10-digit mobile number">
+                        <input type="tel" name="phone" placeholder="Phone Number*" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}"  title="Please enter a valid 10-digit Indian mobile number">
                         <input type="email" name="email" placeholder="Email Address*" required>
                         <button class="btn-primary" type="submit">Submit Enquiry</button>
                         <p class="modal-rera">RERA: RC/REP/HARERA/GGM/964/696/2025/67</p>

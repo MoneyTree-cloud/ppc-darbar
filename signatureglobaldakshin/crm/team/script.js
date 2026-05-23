@@ -39,7 +39,7 @@ document.getElementById('addSaleBtn').addEventListener('click', () => {
     <div class="details">
     <div class="input-group">
             <label>Mobile No.</label>
-            <input type="tel" name="mobile[]" pattern="[0-9]{10}" maxlength="10" minlength="10" required placeholder="Enter 10 digit mobile number">
+            <input type="tel" name="mobile[]" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" placeholder="Enter 10 digit mobile number">
       </div>
         <div class="input-group">
             <label>Project Name</label>

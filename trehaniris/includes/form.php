@@ -42,7 +42,7 @@ $show_whatsapp = $show_whatsapp ?? true;
 
         <!-- Phone FIRST — the only field that truly matters for callback -->
         <div class="form-group">
-            <input type="tel" name="phone" placeholder="Mobile Number *" required pattern="[6-9]\d{9}" maxlength="10" autocomplete="tel">
+            <input type="tel" name="phone" placeholder="Mobile Number *" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" autocomplete="tel">
         </div>
         <div class="form-group">
             <input type="text" name="name" placeholder="Your Name *" required autocomplete="name">

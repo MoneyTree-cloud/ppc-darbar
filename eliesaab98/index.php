@@ -271,7 +271,7 @@ $metaDesc     = 'Smartworld Elie Saab Branded Residences — 6.5-acre couture-in
         </div>
         <div class="form-field">
           <label for="heroPhone">Phone</label>
-          <input type="tel" id="heroPhone" name="phone" placeholder="10-digit mobile" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
+          <input type="tel" id="heroPhone" name="phone" placeholder="10-digit mobile" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
         </div>
         <div class="form-field">
           <label for="heroInterest">Interested In</label>
@@ -1017,7 +1017,7 @@ $metaDesc     = 'Smartworld Elie Saab Branded Residences — 6.5-acre couture-in
         </div>
         <div class="form-field">
           <label for="ctaPhone">Phone</label>
-          <input type="tel" id="ctaPhone" name="phone" placeholder="10-digit mobile" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
+          <input type="tel" id="ctaPhone" name="phone" placeholder="10-digit mobile" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
         </div>
       </div>
       <div class="form-row-2">

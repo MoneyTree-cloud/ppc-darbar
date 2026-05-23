@@ -1838,7 +1838,7 @@
                             style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 0.75rem; border-radius: 6px;">
                     </div>
                     <div class="mb-3">
-                        <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number"
+                        <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number"
                             style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 0.75rem; border-radius: 6px;">
                     </div>
                     <div class="mb-3">
@@ -3024,7 +3024,7 @@ The residences feature impressive city views, well-planned interiors, and spacio
                                         </div>
                                         <div class="col-12">
                                             <label for="contact-phone" class="form-label text-white mb-2">Mobile Number</label>
-                                            <input type="tel" class="form-control" name="phone" id="contact-phone" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number"
+                                            <input type="tel" class="form-control" name="phone" id="contact-phone" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number"
                                                 style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 0.75rem; border-radius: 6px;">
                                         </div>
                                         <div class="col-12">
@@ -3271,7 +3271,7 @@ The residences feature impressive city views, well-planned interiors, and spacio
                 </div>
 
                 <div class="form-group mb-2">
-                    <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number"
+                    <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number"
                         style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 0.75rem; border-radius: 6px; font-size: 0.9rem;">
                 </div>
 

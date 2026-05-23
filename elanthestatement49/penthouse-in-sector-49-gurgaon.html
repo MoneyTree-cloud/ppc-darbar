@@ -478,9 +478,8 @@ window.addEventListener("scroll", function() {
                         -5px -5px 12px #ffffff;
              font-size:15px; outline:none;">
 
-    <input type="tel" name="mobile" maxlength="10"
-      pattern="[6789][0-9]{9}" placeholder="Enter Mobile Number*"
-      required
+    <input type="tel" name="mobile" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" placeholder="Enter Mobile Number*"
+
       style="width:100%; padding:12px 15px; margin-bottom:15px;
              border-radius:12px; border:none;
              background:linear-gradient(145deg,#ffffff,#e6e6e6);
@@ -1445,7 +1444,7 @@ The project’s strategic location on <b>Sohna Road </b>places you in the heart 
 
       <div class="form-floating mb-4">
         <input type="tel" name="mobile" id="mobile1" class="form-control premium-input"
-          placeholder="Mobile No." pattern="[6789][0-9]{9}" maxlength="10" required>
+          placeholder="Mobile No." required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
         <label for="mobile1">Mobile No.</label>
         <span id="moBILeerrworeww" class="error-text"></span>
       </div>
@@ -1634,7 +1633,7 @@ function validationINIq1() {
   document.getElementById('naMEErrorww').innerHTML = "";
 
   if (!mobileCheck.test(mobile)) {
-    document.getElementById('moBILeerrworeww').innerHTML = "Please enter a valid 10-digit mobile number";
+    document.getElementById('moBILeerrworeww').innerHTML = "Please enter a valid 10-digit Indian mobile number";
     return false;
   }
 
@@ -1911,9 +1910,8 @@ function manualScrollTags(direction) {
       <input type="email" name="email" 
         placeholder="Enter Email ID*" required class="popup-input">
 
-      <input type="tel" name="mobile" maxlength="10" 
-        pattern="[6789][0-9]{9}" 
-        placeholder="Enter 10 Digit Number*" required class="popup-input">
+      <input type="tel" name="mobile" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number"
+        placeholder="Enter 10 Digit Number*" class="popup-input">
 
       <input type="hidden" name="propertyname" 
         value="Elan Statement at Sector 49, Gurgaon">

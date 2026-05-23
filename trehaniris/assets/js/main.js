@@ -27,7 +27,7 @@
                     return;
                 }
                 if (!/^[6-9]\d{9}$/.test(phone)) {
-                    showError(errorEl, 'Please enter a valid 10-digit mobile number.');
+                    showError(errorEl, 'Please enter a valid 10-digit Indian mobile number.');
                     return;
                 }
 

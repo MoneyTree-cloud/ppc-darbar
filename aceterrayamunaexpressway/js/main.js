@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var phone = form.querySelector('[name="phone"]').value.trim();
         if (!name) { showToast('Please enter your name.', true); return false; }
         if (!email || !/^\S+@\S+\.\S+$/.test(email)) { showToast('Please enter a valid email address.', true); return false; }
-        if (!phone || !/^\d{10,15}$/.test(phone.replace(/\D/g, ''))) { showToast('Please enter a valid phone number.', true); return false; }
+        if (!phone || !/^[6-9][0-9]{9}$/.test(phone.replace(/\D/g, ''))) { showToast('Please enter a valid 10-digit Indian mobile number.', true); return false; }
         return true;
     }
 

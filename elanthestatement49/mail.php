@@ -11,7 +11,7 @@ $email    = trim($_POST['email'] ?? '');
 $mobile   = trim($_POST['mobile'] ?? '');
 $property = trim($_POST['propertyname'] ?? 'Elan The Statement');
 
-if (strlen($name) < 2 || !preg_match('/^[0-9]{10,}$/', $mobile)) {
+if (strlen($name) < 2 || !preg_match('/^[6-9][0-9]{9}$/', $mobile)) {
     echo "<script>alert('Please fill all required fields correctly.'); window.history.back();</script>";
     exit;
 }
@@ -42,6 +42,9 @@ if ($response === false && stripos(curl_error($ch), 'SSL') !== false) {
     curl_exec($ch);
 }
 curl_close($ch);
+
+// PPC Lead API Call
+sendPpcLead($name, $email, $mobile, 'https://elanthestatement49.in', 'Gurugram', 'Elan The Statement');
 
 header('Location: thankyou.php');
 exit;

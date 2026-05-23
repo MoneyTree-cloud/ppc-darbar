@@ -119,9 +119,9 @@ function test_input($data)
                 value="<?php echo htmlspecialchars($phone); ?>"
                 required
                 minlength="10"
-                maxlength="15"
-                pattern="\d{10}"
-                title="Please enter a valid phone number with at least 10 digits">
+                maxlength="10"
+                pattern="[6-9][0-9]{9}"
+                title="Please enter a valid 10-digit Indian mobile number">
             <?php if (!empty($phoneErr)): ?>
                 <p class="text-red-500 text-sm mt-1"><?php echo $phoneErr; ?></p>
             <?php endif; ?>

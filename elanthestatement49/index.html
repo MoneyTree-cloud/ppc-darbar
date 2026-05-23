@@ -258,7 +258,7 @@
           <input type="hidden" name="form_source" value="hero_form">
           <input type="text" name="name" id="heroName" maxlength="50" pattern="[A-Za-z ]{2,50}" placeholder="Your Name *" required>
           <input type="email" name="email" placeholder="Email Address *" required>
-          <input type="tel" name="mobile" id="heroMobile" maxlength="10" pattern="[6789][0-9]{9}" placeholder="Mobile Number *" required>
+          <input type="tel" name="mobile" id="heroMobile" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" placeholder="Mobile Number *">
           <button type="submit" class="btn-primary-cta">Send Enquiry</button>
           <p class="form-note">We respect your privacy. No spam, ever.</p>
         </form>
@@ -787,7 +787,7 @@
           <input type="hidden" name="form_source" value="contact_form">
           <input type="text" name="name" id="contactName" maxlength="50" pattern="[A-Za-z ]{2,50}" placeholder="Full Name *" required>
           <input type="email" name="email" placeholder="Email Address *" required>
-          <input type="tel" name="mobile" id="contactMobile" maxlength="10" pattern="[6789][0-9]{9}" placeholder="Mobile Number *" required>
+          <input type="tel" name="mobile" id="contactMobile" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" placeholder="Mobile Number *">
           <button type="submit">Submit Enquiry</button>
         </form>
       </div>
@@ -870,7 +870,7 @@
       <input type="hidden" name="form_source" value="popup_form">
       <input type="text" name="name" maxlength="50" pattern="[A-Za-z ]{2,50}" placeholder="Your Name *" required>
       <input type="email" name="email" placeholder="Email Address *" required>
-      <input type="tel" name="mobile" maxlength="10" pattern="[6789][0-9]{9}" placeholder="10-Digit Mobile Number *" required>
+      <input type="tel" name="mobile" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" placeholder="10-Digit Mobile Number *">
       <button type="submit" class="btn-primary-cta">Submit</button>
     </form>
   </div>
@@ -938,7 +938,7 @@ function validateForm(nameId, mobileId) {
     return false;
   }
   if (!mobileRegex.test(mobile)) {
-    alert('Please enter a valid 10-digit mobile number.');
+    alert('Please enter a valid 10-digit Indian mobile number.');
     return false;
   }
   return true;

@@ -48,8 +48,7 @@
         if (fieldName === 'phone') {
             if (!value) return 'Please enter your phone number';
             var digits = value.replace(/\D+/g, '');
-            if (digits.length < 10) return 'Phone must be at least 10 digits';
-            if (digits.length > 15) return 'Phone is too long';
+            if (!/^[6-9][0-9]{9}$/.test(digits)) return 'Please enter a valid 10-digit Indian mobile number';
             return '';
         }
         if (fieldName === 'interested_in') {

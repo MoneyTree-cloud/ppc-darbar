@@ -268,7 +268,7 @@
             <form action="process-form.php" method="POST">
                 <input type="hidden" name="form_source" value="hero_form">
                 <input type="text" name="name" placeholder="Your name" required minlength="2" pattern="[a-zA-Z\s\p{L}.'\-]*">
-                <input type="tel" name="phone" placeholder="Phone number" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
+                <input type="tel" name="phone" placeholder="Phone number" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
                 <input type="email" name="email" placeholder="Email address" required>
                 <select name="interested_in" required>
                     <option value="" selected disabled>Residence of interest</option>

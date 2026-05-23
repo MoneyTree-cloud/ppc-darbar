@@ -75,7 +75,7 @@
                 <label for="email">Email</label>
               </div>
               <div class="form-group">
-                <input type="number" id="phone" name="phone" placeholder="Phone no." required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone no." required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
                 <label for="phone">Phone no.</label>
               </div>
             </div>

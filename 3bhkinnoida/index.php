@@ -700,7 +700,7 @@
                 </div>
                 <form id="inquiryForm" class="space-y-5" action="process.php" method="POST" novalidate>
                     <div>
-                        <input type="text" name="name" id="inquiry-name" placeholder="Full Name" required minlength="10" maxlength="10" pattern="\d{10}"  title="Please enter a valid 10-digit mobile number" class="form-input" data-validation="name">
+                        <input type="text" name="name" id="inquiry-name" placeholder="Full Name" required minlength="2"  class="form-input" data-validation="name">
                         <div class="error-message text-red-500 text-sm mt-1 hidden" id="inquiry-name-error"></div>
                     </div>
                     <div>
@@ -708,7 +708,7 @@
                         <div class="error-message text-red-500 text-sm mt-1 hidden" id="inquiry-email-error"></div>
                     </div>
                     <div>
-                        <input type="tel" name="phone" id="inquiry-phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="\d{10}"  title="Please enter a valid 10-digit mobile number" class="form-input" data-validation="phone">
+                        <input type="tel" name="phone" id="inquiry-phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}"  title="Please enter a valid 10-digit Indian mobile number" class="form-input" data-validation="phone">
                         <div class="error-message text-red-500 text-sm mt-1 hidden" id="inquiry-phone-error"></div>
                     </div>
                     <input type="hidden" name="recaptcha_response" id="inquiry-recaptcha">
@@ -1331,7 +1331,7 @@
                                         <div class="error-message text-red-500 text-sm mt-1 hidden" id="contact-email-error"></div>
                                     </div>
                                     <div>
-                                        <input type="tel" name="phone" id="contact-phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="\d{10}"  title="Please enter a valid 10-digit mobile number" class="form-input" data-validation="phone">
+                                        <input type="tel" name="phone" id="contact-phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}"  title="Please enter a valid 10-digit Indian mobile number" class="form-input" data-validation="phone">
                                         <div class="error-message text-red-500 text-sm mt-1 hidden" id="contact-phone-error"></div>
                                     </div>
                                     <input type="hidden" name="recaptcha_response" id="contact-recaptcha">

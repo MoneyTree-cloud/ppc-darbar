@@ -1039,7 +1039,7 @@
                             </div>
                             <div class="mb-6">
                                 <label for="phone-main" class="sr-only">Phone Number</label>
-                                <input type="tel" id="phone-main" name="phone" placeholder="Phone Number" class="w-full p-4 bg-white border border-gray-300 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
+                                <input type="tel" id="phone-main" name="phone" placeholder="Phone Number" class="w-full p-4 bg-white border border-gray-300 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
                             </div>
                             <button type="submit" class="w-full btn-premium text-lg py-4 px-6 rounded-lg">Unlock My Offer</button>
                         </form>
@@ -1081,7 +1081,7 @@
                     </div>
                     <div class="mb-6">
                         <label for="phone-modal" class="sr-only">Phone Number</label>
-                        <input type="tel" id="phone-modal" name="phone" placeholder="Phone Number" class="w-full p-4 bg-gray-100 border border-gray-300 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
+                        <input type="tel" id="phone-modal" name="phone" placeholder="Phone Number" class="w-full p-4 bg-gray-100 border border-gray-300 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
                     </div>
                     <button type="submit" class="w-full btn-premium text-lg py-3 px-6 rounded-lg">Submit</button>
                 </form>

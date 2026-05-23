@@ -22,8 +22,8 @@
             </div>
 
             <div>
-                <input type="tel" name="phone" placeholder="Phone Number*" required minlength="10" maxlength="15"
-                    pattern="\d{10}" title="Please enter a valid phone number with at least 10 digits"
+                <input type="tel" name="phone" placeholder="Phone Number*" required minlength="10" maxlength="10"
+                    pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number"
                     class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
             </div>
 

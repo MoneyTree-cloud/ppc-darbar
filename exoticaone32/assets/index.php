@@ -1413,7 +1413,7 @@
                     <form class="contact-form formSelectorClass" id="contactForm">
                         <input type="text" name="name" placeholder="Your Name" required />
                         <input type="email" name="email" placeholder="Your Email" required />
-                        <input type="tel" name="phone" placeholder="Phone Number" required />
+                        <input type="tel" name="phone" placeholder="Phone Number" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" />
                         <input type="hidden" name="form_type" value="contact" />
                         <button type="submit" class="cta-button">Send Message</button>
                     </form>
@@ -1481,7 +1481,7 @@
                 </div>
                 <div class="form-group">
                     <label for="popup_phone">Phone Number</label>
-                    <input type="tel" id="popup_phone" name="phone" required />
+                    <input type="tel" id="popup_phone" name="phone" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" />
                 </div>
                 <input type="hidden" name="form_type" value="enquiry" />
                 <button type="submit" class="cta-button form-submit">Submit</button>

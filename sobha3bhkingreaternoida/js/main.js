@@ -139,9 +139,9 @@
         }
         if (name === 'phone') {
             const digits = digitsOnly(input.value);
-            if (digits.length < 10 || digits.length > 15)
-                return { ok: false, msg: 'Enter a valid 10–15 digit mobile number.' };
-            if (/^(\d)\1{9,}$/.test(digits))
+            if (!/^[6-9][0-9]{9}$/.test(digits))
+                return { ok: false, msg: 'Please enter a valid 10-digit Indian mobile number.' };
+            if (/^(\d)\1{9}$/.test(digits))
                 return { ok: false, msg: 'Please enter a real mobile number.' };
             return { ok: true, value: digits };
         }

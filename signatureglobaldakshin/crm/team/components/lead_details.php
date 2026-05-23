@@ -29,7 +29,7 @@
                 <label for="emailInput">E-Mail Address</label>
               </div>
               <div class="form-group">
-                <input type="number" name="mobile" id="phoneInput" required disabled/>
+                <input type="tel" name="mobile" id="phoneInput" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" disabled/>
                 <label for="emailInput">Contact Number</label>
               </div>
               <div class="form-group">

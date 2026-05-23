@@ -66,7 +66,7 @@ if (!function_exists('test_input')) {
 
         <div class="form-control">
             <label for="lf-phone">Phone Number</label>
-            <input type="tel" id="lf-phone" name="phone" placeholder="Phone Number" value="<?php echo htmlspecialchars($phone); ?>" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid phone number with at least 10 digits">
+            <input type="tel" id="lf-phone" name="phone" placeholder="Phone Number" value="<?php echo htmlspecialchars($phone); ?>" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
             <?php if (!empty($phoneErr)): ?><p class="error-message"><?php echo $phoneErr; ?></p><?php endif; ?>
         </div>
 

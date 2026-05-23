@@ -42,7 +42,7 @@ if (empty($name) || strlen($name) < 2) {
     $errors[] = 'Please enter your name.';
 }
 if (!preg_match('/^[6-9]\d{9}$/', $phone)) {
-    $errors[] = 'Please enter a valid 10-digit mobile number.';
+    $errors[] = 'Please enter a valid 10-digit Indian mobile number.';
 }
 if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors[] = 'Please enter a valid email address.';

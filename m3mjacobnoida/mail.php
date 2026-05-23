@@ -21,10 +21,10 @@ if (strlen($name) < 2) {
     die($err);
 }
 
-// Validate phone (10+ digits)
+// Validate phone
 $phoneDigits = preg_replace('/\D/', '', $phone);
-if (strlen($phoneDigits) < 10) {
-    $err = 'Phone number must have at least 10 digits.';
+if (!preg_match('/^[6-9][0-9]{9}$/', $phoneDigits)) {
+    $err = 'Please enter a valid 10-digit Indian mobile number.';
     if ($isAjax) { echo json_encode(['success' => false, 'message' => $err]); exit; }
     die($err);
 }
@@ -60,6 +60,9 @@ curl_setopt_array($ch, [
 $response = curl_exec($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
+
+// PPC Lead API Call
+sendPpcLead($name, $email, $phoneDigits, 'https://m3mjacobnoida.in', 'Noida', 'M3M Jacob & Co');
 
 $ok = $httpCode >= 200 && $httpCode < 300;
 

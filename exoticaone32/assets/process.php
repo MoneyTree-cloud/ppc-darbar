@@ -2,6 +2,8 @@
 // Start session (for future use if needed)
 session_start();
 
+require_once __DIR__ . '/../../env.php';
+
 // Always return JSON
 header('Content-Type: application/json');
 
@@ -12,8 +14,8 @@ function sanitize($value)
 
 function valid_phone($phone)
 {
-    $digits = ltrim($phone, '0');
-    return preg_match('/^[0-9]{10}$/', $digits);
+    $digits = preg_replace('/\D/', '', $phone);
+    return preg_match('/^[6-9][0-9]{9}$/', $digits);
 }
 
 // Only handle POST
@@ -44,8 +46,8 @@ if (! valid_phone($phone)) {
 }
 
 // Send external API call
-$apiUrl = 'https://moneytreerealty.in/api/ppc-organic';
-$authToken = '5|piMqzEcvaQxxj3M78A7SxgZVx0w4LAmY6dIBTuKJ82d1d6cc';
+$apiUrl    = env('API_URL', 'https://moneytreerealty.com/api/ppc-organic');
+$authToken = env('API_TOKEN');
 $payload = json_encode([
     'name'         => $name,
     'email'        => $email,
@@ -70,7 +72,8 @@ $response = curl_exec($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
-// Optionally, you could log $httpCode and $response to a file here
+// PPC Lead API Call
+sendPpcLead($name, $email, $phone, 'https://exoticaone32.org', 'Noida', 'Exotica One32');
 
 // All done: tell the front-end to redirect
 echo json_encode([

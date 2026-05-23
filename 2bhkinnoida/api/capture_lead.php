@@ -6,6 +6,7 @@
 
 // Include configuration
 require_once '../config/config.php';
+require_once __DIR__ . '/../../env.php';
 
 // Apply security headers
 applySecurityHeaders();
@@ -73,14 +74,41 @@ $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
 $phone = htmlspecialchars($phone, ENT_QUOTES, 'UTF-8');
 $requirements = htmlspecialchars($requirements, ENT_QUOTES, 'UTF-8');
 
-// Validate phone number format (must be exactly 10 digits)
-if (!preg_match('/^[0-9]{10}$/', $phone)) {
+// Validate phone number format (10 digits, starting with 6-9)
+if (!preg_match('/^[6-9][0-9]{9}$/', $phone)) {
     http_response_code(400);
     echo json_encode(['error' => 'Phone number must be exactly 10 digits']);
     exit;
 }
 
 try {
+    // PPC Organic API Call
+    $apiPayload = json_encode([
+        'name'         => $name,
+        'email'        => '',
+        'phone_number' => $phone,
+        'source'       => '2BHK in Noida | https://2bhkinnoida.in',
+    ]);
+    $apiCh = curl_init(env('API_URL', 'https://moneytreerealty.com/api/ppc-organic'));
+    curl_setopt_array($apiCh, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST           => true,
+        CURLOPT_POSTFIELDS     => $apiPayload,
+        CURLOPT_HTTPHEADER     => [
+            'Content-Type: application/json',
+            'Accept: application/json',
+            'Authorization: Bearer ' . env('API_TOKEN'),
+        ],
+        CURLOPT_TIMEOUT        => 15,
+        CURLOPT_SSL_VERIFYPEER => env('SSL_VERIFY', 'true') === 'true',
+        CURLOPT_SSL_VERIFYHOST => env('SSL_VERIFY', 'true') === 'true' ? 2 : 0,
+    ]);
+    curl_exec($apiCh);
+    curl_close($apiCh);
+
+    // PPC Lead API Call
+    sendPpcLead($name, '', $phone, 'https://2bhkinnoida.in', 'Noida', '2BHK in Noida');
+
     // Cookie to mark as submitted lead
     setcookie('lead_submitted', '1', time() + 86400 * 30, '/');
 

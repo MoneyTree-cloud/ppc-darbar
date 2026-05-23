@@ -199,7 +199,7 @@ $siteUrl = 'https://jewelcrestavenue.com/';
         </div>
         <div class="form-group">
           <label for="hero_phone">Phone</label>
-          <input type="tel" id="hero_phone" name="phone" placeholder="10-digit mobile" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
+          <input type="tel" id="hero_phone" name="phone" placeholder="10-digit mobile" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
         </div>
         <div class="form-group">
           <label for="hero_interest">Interested In</label>
@@ -787,7 +787,7 @@ $siteUrl = 'https://jewelcrestavenue.com/';
         </div>
         <div class="form-group">
           <label for="c_phone">Phone</label>
-          <input type="tel" id="c_phone" name="phone" placeholder="10-digit mobile" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
+          <input type="tel" id="c_phone" name="phone" placeholder="10-digit mobile" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
         </div>
         <div class="form-group">
           <label for="c_interest">Interested In</label>

@@ -927,7 +927,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="col-md-3">
       <div class="form-group">
         <input type="tel" name="phone" class="form-control" placeholder="Mobile No."
-               required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number">
+               required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
       </div>
     </div>
 
@@ -1014,8 +1014,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <input type="text" name="email" placeholder="Email" class="form-control" required>
     </div>
     <div class="form-group">
-        <input type="text" name="phone" class="form-control" placeholder="Mobile No."
-            required pattern="[0-9]{10,}" title="Enter a valid mobile number with at least 10 digits">
+        <input type="tel" name="phone" class="form-control" placeholder="Mobile No."
+            required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
     </div>
     <button name="submit" class="btn extra-brochure" type="submit">Submit &gt;&gt;&gt;</button>
 </form>

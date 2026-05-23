@@ -202,7 +202,7 @@ $siteUrl   = env('SITE_URL',  'https://exoticaone32.org/');
                     </div>
                     <div class="form-field">
                         <label for="hero-phone">Phone</label>
-                        <input id="hero-phone" type="tel" name="phone" placeholder="10-digit mobile" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number" autocomplete="tel">
+                        <input id="hero-phone" type="tel" name="phone" placeholder="10-digit mobile" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" autocomplete="tel">
                     </div>
                 </div>
                 <div class="form-field">
@@ -804,7 +804,7 @@ $siteUrl   = env('SITE_URL',  'https://exoticaone32.org/');
                         </div>
                         <div class="form-field">
                             <label for="cta-phone">Phone</label>
-                            <input id="cta-phone" type="tel" name="phone" required minlength="10" maxlength="10" pattern="\d{10}" title="Please enter a valid 10-digit mobile number" autocomplete="tel" placeholder="10-digit mobile">
+                            <input id="cta-phone" type="tel" name="phone" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" autocomplete="tel" placeholder="10-digit mobile">
                         </div>
                     </div>
                     <div class="form-field">

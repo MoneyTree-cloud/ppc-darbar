@@ -589,9 +589,9 @@ class RealEstateChatbot {
         <div class="re-form-group">
           <label for="re-phone">Phone Number</label>
           <input type="tel" id="re-phone" class="re-form-control"
-                 maxlength="10" pattern="[0-9]{10}"
+                 required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number"
                  placeholder="10-digit mobile number" autocomplete="tel"
-                 inputmode="numeric" required>
+                 inputmode="numeric">
         </div>
         <div class="re-form-group">
           <label for="re-requirements">Property Requirements</label>
@@ -631,8 +631,8 @@ class RealEstateChatbot {
       return;
     }
 
-    if (!/^[0-9]{10}$/.test(phone)) {
-      this._showValidation(form, 'Please enter a valid 10-digit mobile number.');
+    if (!/^[6-9][0-9]{9}$/.test(phone)) {
+      this._showValidation(form, 'Please enter a valid 10-digit Indian mobile number.');
       return;
     }
 
