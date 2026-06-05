@@ -141,7 +141,7 @@ if ($response === false) {
 curl_close($ch);
 
 // PPC Lead API Call
-sendPpcLead($name, $email, $phone, 'https://elanthepresidential.com', 'Noida', 'Elan The Presidential');
+sendPpcLead($name, $email, $phone, 'https://elanthepresidential.com', 'Gurugram', 'Elan The Presidential');
 
 
 $msg = "Thank you for your interest in Elan The Presidential! Our team will contact you shortly.";

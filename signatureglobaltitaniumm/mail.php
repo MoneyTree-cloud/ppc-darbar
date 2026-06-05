@@ -16,10 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $isAjax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
           strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
 
-$name    = trim($_POST['name'] ?? '');
-$email   = trim($_POST['email'] ?? '');
-$country = trim($_POST['country'] ?? '');
-$mobile  = trim($_POST['mobile'] ?? '');
+$name        = trim($_POST['name'] ?? '');
+$email       = trim($_POST['email'] ?? '');
+$mobile      = trim($_POST['mobile'] ?? '');
+$phoneDigits = preg_replace('/\D/', '', $mobile);
 
 // Validate name
 if (strlen($name) < 2) {
@@ -28,14 +28,9 @@ if (strlen($name) < 2) {
     die($err);
 }
 
-// Combine country code + mobile, strip non-digits
-$countryDigits = preg_replace('/\D/', '', $country);
-$mobileDigits  = preg_replace('/\D/', '', $mobile);
-$phoneDigits   = $countryDigits . $mobileDigits;
-
-// Validate phone (10+ digits)
-if (strlen($phoneDigits) < 10) {
-    $err = 'Phone number must have at least 10 digits.';
+// Validate phone (10-digit Indian mobile)
+if (!preg_match('/^[6-9][0-9]{9}$/', $phoneDigits)) {
+    $err = 'Please enter a valid 10-digit Indian mobile number.';
     if ($isAjax) { echo json_encode(['success' => false, 'message' => $err]); exit; }
     die($err);
 }
