@@ -58,7 +58,7 @@
       "description": "Joyville Vyomora is a luxury residential project by Shapoorji Pallonji Group at Hinjewadi, Pune. It offers 2 BHK and 3 BHK apartments with resort-style amenities including an Infinity Edge Pool, Riverfront Clubhouse, 1.8 km walking boulevard, and 5D-Miniplex. Starting at ₹84.99 Lakhs.",
       "url": "https://vyomorajoyville.com/",
       "image": "https://vyomorajoyville.com/assets/hero.jpg",
-      "telephone": "+919100000000",
+      "telephone": "+919412234688",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Hinjewadi",
@@ -618,11 +618,11 @@
             <p>Schedule a guided walkthrough with our relationship manager. Receive floor plans, the current price list, and a personalised walkthrough of Joyville Vyomora's model apartments and amenities.</p>
 
             <div class="final-cta__channels">
-                <a href="tel:+919100000000" class="channel">
+                <a href="tel:+919412234688" class="channel">
                     <i class="fas fa-phone-alt"></i>
                     <div><div class="channel-label">Call Us</div><div class="channel-value">+91 94122 34688</div></div>
                 </a>
-                <a href="https://wa.me/919100000000?text=Hi%2C%20I'm%20interested%20in%20Joyville%20Vyomora%20Hinjewadi%20Pune" class="channel">
+                <a href="https://wa.me/919412234688?text=Hi%2C%20I'm%20interested%20in%20Joyville%20Vyomora%20Hinjewadi%20Pune" class="channel">
                     <i class="fab fa-whatsapp"></i>
                     <div><div class="channel-label">WhatsApp</div><div class="channel-value">Chat Instantly</div></div>
                 </a>

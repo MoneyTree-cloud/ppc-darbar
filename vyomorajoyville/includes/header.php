@@ -14,7 +14,7 @@
         </nav>
 
         <div class="lux-header__cta">
-            <a href="tel:+919100000000" class="lux-header__phone">
+            <a href="tel:+919412234688" class="lux-header__phone">
                 <i class="fas fa-phone-alt"></i>+91 94122 34688
             </a>
             <button class="mobile-menu-toggle" aria-label="Open menu">
@@ -38,7 +38,7 @@
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
     </nav>
-    <a href="tel:+919100000000" class="btn btn--green btn--full" style="margin-top:32px;">
+    <a href="tel:+919412234688" class="btn btn--green btn--full" style="margin-top:32px;">
         <i class="fas fa-phone-alt"></i> +91 94122 34688
     </a>
 </div>
