@@ -33,8 +33,8 @@
                     <li style="color:rgba(255,255,255,0.6);">
                         Hinjewadi, Pune,<br>Maharashtra
                     </li>
-                    <li><a href="tel:+919100000000"><i class="fas fa-phone-alt" style="color:var(--gold-soft); margin-right:8px;"></i>+91 94122 34688</a></li>
-                    <li><a href="https://wa.me/919100000000"><i class="fab fa-whatsapp" style="color:var(--gold-soft); margin-right:8px;"></i>WhatsApp Enquiry</a></li>
+                    <li><a href="tel:+919412234688"><i class="fas fa-phone-alt" style="color:var(--gold-soft); margin-right:8px;"></i>+91 94122 34688</a></li>
+                    <li><a href="https://wa.me/919412234688"><i class="fab fa-whatsapp" style="color:var(--gold-soft); margin-right:8px;"></i>WhatsApp Enquiry</a></li>
                 </ul>
             </div>
         </div>
@@ -53,10 +53,10 @@
 </footer>
 
 <div class="floating-cta">
-    <a href="https://wa.me/919100000000?text=Hi%2C%20I'm%20interested%20in%20Joyville%20Vyomora%20Hinjewadi" class="float-btn float-btn--whatsapp" aria-label="WhatsApp">
+    <a href="https://wa.me/919412234688?text=Hi%2C%20I'm%20interested%20in%20Joyville%20Vyomora%20Hinjewadi" class="float-btn float-btn--whatsapp" aria-label="WhatsApp">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
-    <a href="tel:+919100000000" class="float-btn float-btn--call" aria-label="Call">
+    <a href="tel:+919412234688" class="float-btn float-btn--call" aria-label="Call">
         <i class="fas fa-phone-alt" aria-hidden="true"></i>
     </a>
 </div>
