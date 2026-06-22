@@ -267,6 +267,7 @@
             <p class="form-sub">Receive the complete brochure, floor plans &amp; price list.</p>
             <form action="process-form.php" method="POST">
                 <input type="hidden" name="form_source" value="hero_form">
+                <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                 <input type="text" name="name" placeholder="Your name" required minlength="2" pattern="[a-zA-Z\s\p{L}.'\-]*">
                 <input type="tel" name="phone" placeholder="Phone number" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
                 <input type="email" name="email" placeholder="Email address" required>

@@ -390,6 +390,13 @@ h3 { font-size: clamp(1.1rem, 2.2vw, 1.35rem); }
   letter-spacing: 0.02em;
 }
 
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 /* ---------- Trust Bar ---------- */
 .trust-bar {
   background: #1a1a1a;

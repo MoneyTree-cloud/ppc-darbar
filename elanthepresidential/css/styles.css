@@ -986,6 +986,13 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-
 #close-popup { transition: transform var(--dur) var(--ease), color var(--dur) var(--ease); }
 #close-popup:hover { transform: rotate(90deg); color: var(--gold-500); }
 
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 /* ---------- 20. Responsive ---------- */
 @media (max-width: 768px) {
   .section { padding: 72px 0; }

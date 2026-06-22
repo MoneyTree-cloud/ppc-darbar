@@ -18,6 +18,7 @@
         <form action="process-form.php" method="POST">
             <input type="hidden" name="form_source" value="popup_form">
             <input type="hidden" name="form_type" id="popup-form-type" value="general">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
 
             <input type="text" name="name" placeholder="Your name" required minlength="2" pattern="[a-zA-Z\s\p{L}.'\\-]*" title="Name can only contain letters, spaces, dots, hyphens and apostrophes">
             <input type="email" name="email" placeholder="Email address" required>
