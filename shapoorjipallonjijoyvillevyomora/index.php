@@ -9,17 +9,17 @@
     <meta name="theme-color" content="#1F1B19">
 
     <!-- ============== SEO ============== -->
-    <title>Joyville Vyomora | Hinjewadi, Pune | 2, 3 &amp; 4 BHK Homes by Shapoorji Pallonji</title>
-    <meta name="description" content="Joyville Vyomora by Shapoorji Pallonji Group at Hinjewadi, Pune. 2 BHK, 3 BHK &amp; 3 BHK Duplex homes from &#8377;84.99 Lakh. Infinity Edge Pool, Riverfront Clubhouse, 1.8 km boulevard. MahaRERA coming soon.">
-    <meta name="keywords" content="Joyville Vyomora, Joyville Vyomora Hinjewadi, Shapoorji Pallonji Hinjewadi, Joyville Hinjewadi Pune, Joyville Vyomora price, Joyville Vyomora 2 BHK, Joyville Vyomora 3 BHK, Joyville Vyomora floor plan, Shapoorji Pallonji Pune, Hinjewadi new project">
+    <title>Joyville Vyomora, Hinjewadi Pune | Official Site | Shapoorji Pallonji</title>
+    <meta name="description" content="The official Joyville Vyomora site. 2 BHK, 3 BHK &amp; 3 BHK Duplex homes at Hinjewadi, Pune from &#8377;84.99 Lakh, with an Infinity Edge Pool, Riverfront Clubhouse &amp; 1.8 km boulevard. MahaRERA coming soon.">
+    <meta name="keywords" content="Joyville Vyomora, Joyville Vyomora Hinjewadi, Shapoorji Pallonji Hinjewadi, Joyville Hinjewadi Pune, Joyville Vyomora official site, Joyville Vyomora 2 BHK, Joyville Vyomora 3 BHK, Joyville Vyomora floor plan, Shapoorji Pallonji Pune, Hinjewadi new project">
     <meta name="author" content="Shapoorji Pallonji Group">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://shapoorjipallonjijoyvillevyomora.com/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Joyville Vyomora Hinjewadi Pune | 2 &amp; 3 BHK by Shapoorji Pallonji">
-    <meta property="og:description" content="Premium 2 BHK, 3 BHK &amp; 3 BHK Duplex homes in Hinjewadi, Pune by Shapoorji Pallonji. Starting &#8377;84.99 Lakh. Infinity Edge Pool &amp; Riverfront Clubhouse.">
+    <meta property="og:title" content="Joyville Vyomora — Official Project Site | Shapoorji Pallonji, Hinjewadi">
+    <meta property="og:description" content="The official Joyville Vyomora site. 2 BHK, 3 BHK &amp; 3 BHK Duplex homes at Hinjewadi, Pune from &#8377;84.99 Lakh by Shapoorji Pallonji.">
     <meta property="og:url" content="https://shapoorjipallonjijoyvillevyomora.com/">
     <meta property="og:image" content="https://shapoorjipallonjijoyvillevyomora.com/assets/hero.jpg">
     <meta property="og:site_name" content="Joyville Vyomora">
@@ -27,8 +27,8 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Joyville Vyomora Hinjewadi | Shapoorji Pallonji Pune">
-    <meta name="twitter:description" content="2 &amp; 3 BHK luxury apartments at Hinjewadi, Pune by Shapoorji Pallonji. Starting &#8377;84.99 Lakh.">
+    <meta name="twitter:title" content="Joyville Vyomora — Official Site | Shapoorji Pallonji">
+    <meta name="twitter:description" content="2 &amp; 3 BHK homes at Hinjewadi, Pune from &#8377;84.99 Lakh. The official Joyville Vyomora project site by Shapoorji Pallonji.">
 
     <!-- Favicon -->
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">

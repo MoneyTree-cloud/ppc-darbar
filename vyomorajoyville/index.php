@@ -8,17 +8,17 @@
     <meta name="theme-color" content="#0A1E38">
 
     <!-- ============== SEO ============== -->
-    <title>Joyville Vyomora Hinjewadi Pune | 2 &amp; 3 BHK by Shapoorji Pallonji | &#8377;84.99 L*</title>
-    <meta name="description" content="Joyville Vyomora by Shapoorji Pallonji Group at Hinjewadi, Pune. 2 &amp; 3 BHK luxury apartments with Infinity Edge Pool, Riverfront Clubhouse and 1.8 km walking boulevard. Starting ₹84.99 L*. First private undertaking in Hinjewadi by SP Group. MahaRERA coming soon.">
-    <meta name="keywords" content="Joyville Vyomora, Joyville Vyomora Hinjewadi, Shapoorji Pallonji Hinjewadi, Joyville Hinjewadi Pune, Joyville Vyomora price, Joyville Vyomora 2 BHK, Joyville Vyomora 3 BHK, Joyville Vyomora floor plan, Shapoorji Pallonji Pune, Hinjewadi new project, Joyville Vyomora possession">
+    <title>Joyville Vyomora Hinjewadi Phase II | Location &amp; Investment Guide</title>
+    <meta name="description" content="Complete guide to Joyville Vyomora at Hinjewadi Phase II, Pune — location advantages, connectivity, pricing from &#8377;84.99 L* &amp; investment outlook. By Shapoorji Pallonji.">
+    <meta name="keywords" content="Joyville Vyomora Hinjewadi Phase 2, Joyville Vyomora location, Shapoorji Pallonji Hinjewadi, Joyville Vyomora investment, Joyville Vyomora connectivity, Joyville Vyomora 2 BHK, Joyville Vyomora 3 BHK, Shapoorji Pallonji Pune, Hinjewadi new project, Joyville Vyomora possession">
     <meta name="author" content="Shapoorji Pallonji Group">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://vyomorajoyville.com/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Joyville Vyomora Hinjewadi Pune | 2 &amp; 3 BHK by Shapoorji Pallonji">
-    <meta property="og:description" content="First private undertaking in Hinjawadi by Shapoorji Pallonji. 2 &amp; 3 BHK luxury homes with Infinity Edge Pool &amp; Riverfront Clubhouse. Starting ₹84.99 L*.">
+    <meta property="og:title" content="Joyville Vyomora — Hinjewadi Phase II Location &amp; Investment Guide">
+    <meta property="og:description" content="Why Hinjewadi Phase II is Pune's best investment address — Joyville Vyomora by Shapoorji Pallonji, homes from &#8377;84.99 L*.">
     <meta property="og:url" content="https://vyomorajoyville.com/">
     <meta property="og:site_name" content="Joyville Vyomora">
     <meta property="og:image" content="https://vyomorajoyville.com/assets/hero.jpg">
@@ -26,8 +26,8 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Joyville Vyomora Hinjewadi | Shapoorji Pallonji Pune">
-    <meta name="twitter:description" content="2 &amp; 3 BHK luxury apartments at Hinjewadi, Pune by Shapoorji Pallonji. Starting ₹84.99 L*. Infinity Edge Pool, Riverfront Clubhouse.">
+    <meta name="twitter:title" content="Joyville Vyomora — Location &amp; Investment Guide">
+    <meta name="twitter:description" content="Location, connectivity &amp; investment case for Joyville Vyomora at Hinjewadi Phase II, Pune. From &#8377;84.99 L*.">
     <meta name="twitter:image" content="https://vyomorajoyville.com/assets/hero.jpg">
 
     <!-- Favicon -->
@@ -450,7 +450,7 @@
 <section class="section" id="location">
     <div class="container">
         <div class="section__head reveal">
-            <span class="eyebrow">Location &amp; Connectivity</span>
+            <span class="eyebrow">Getting Around Hinjewadi</span>
             <h2 class="display-md">Hinjewadi Phase II, Pune</h2>
         </div>
 
@@ -505,7 +505,7 @@
                 <span class="eyebrow">The Developer</span>
                 <h2 class="display-md">Shapoorji Pallonji Group — A 150-Year Legacy of Trust.</h2>
                 <p>
-                    <strong>Shapoorji Pallonji Group</strong> (SP Group) is one of India's oldest and most iconic construction and real estate conglomerates, with a heritage spanning over 150 years. The group has built some of India's most iconic structures — the Taj Mahal Palace Hotel, the Reserve Bank of India building, and the Tata headquarters — and is a major shareholder in the Tata Group. SP Group's real estate arm delivers homes that combine design excellence, superior construction quality, and customer trust.
+                    <strong>Shapoorji Pallonji Group</strong> (SP Group) traces its construction legacy back more than 150 years — long enough to have built landmarks as varied as the Taj Mahal Palace, the Reserve Bank of India's headquarters, and the offices of the Tata Group, in which SP Group still holds a significant stake. That same engineering discipline now runs through SP Group's residential arm, where design, build quality, and after-sales trust are treated as inseparable.
                 </p>
                 <details class="read-more" style="margin-top:24px;">
                     <summary>More about Shapoorji Pallonji</summary>

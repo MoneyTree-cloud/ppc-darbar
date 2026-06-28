@@ -7,25 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- ============== SEO ============== -->
-    <title>Joyville Vyomora | Hinjewadi, Pune | 2, 3 &amp; 4 BHK Homes | Joyville Vyomora</title>
-    <meta name="description" content="Joyville Vyomora by Shapoorji Pallonji in Hinjewadi Phase 1, Pune. Premium 2 BHK, 3 BHK &amp; 3 BHK Duplex homes from &#8377;85 Lakh. RERA approved. Contact Joyville Vyomora.">
-    <meta name="keywords" content="Joyville Vyomora, Joyville Vyomora Hinjewadi, Shapoorji Pallonji Hinjewadi, Joyville Hinjewadi Pune, Joyville Vyomora price, Joyville Vyomora 2 BHK, Joyville Vyomora 3 BHK, Joyville Vyomora floor plan, Shapoorji Pallonji Pune, Hinjewadi new project">
+    <title>Joyville Vyomora Hinjewadi | 24-Acre Township by Shapoorji Pallonji</title>
+    <meta name="description" content="A 24-acre gated township at Hinjewadi Phase 1, Pune. Joyville Vyomora by Shapoorji Pallonji offers 2, 3 BHK &amp; Duplex homes from &#8377;85 Lakh with a 2,230 sq.m clubhouse. RERA registered.">
+    <meta name="keywords" content="Joyville Vyomora, Joyville Vyomora Hinjewadi, Shapoorji Pallonji Hinjewadi, Joyville Hinjewadi Pune, Joyville Vyomora township, Joyville Vyomora 2 BHK, Joyville Vyomora 3 BHK, Joyville Vyomora clubhouse, Shapoorji Pallonji Pune, Hinjewadi new project">
     <meta name="author" content="Shapoorji Pallonji Group">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://joyvillevyomora.net/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Joyville Vyomora Hinjewadi Pune | 2 &amp; 3 BHK by Shapoorji Pallonji">
-    <meta property="og:description" content="Premium 2 BHK, 3 BHK &amp; 3 BHK Duplex homes in Hinjewadi Phase 1, Pune by Shapoorji Pallonji. Starting &#8377;85 Lakh. RERA approved.">
+    <meta property="og:title" content="Joyville Vyomora — 24-Acre Township at Hinjewadi Phase 1">
+    <meta property="og:description" content="24 acres, a 2,230 sq.m clubhouse, and 2/3 BHK homes from &#8377;85 Lakh by Shapoorji Pallonji at Hinjewadi Phase 1, Pune. RERA registered.">
     <meta property="og:url" content="https://joyvillevyomora.net/">
     <meta property="og:site_name" content="Joyville Vyomora">
     <meta property="og:locale" content="en_IN">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Joyville Vyomora Hinjewadi | Shapoorji Pallonji Pune">
-    <meta name="twitter:description" content="2 &amp; 3 BHK luxury apartments at Hinjewadi, Pune by Shapoorji Pallonji. Starting &#8377;85 Lakh. RERA approved.">
+    <meta name="twitter:title" content="Joyville Vyomora — 24-Acre Township, Hinjewadi">
+    <meta name="twitter:description" content="24-acre township by Shapoorji Pallonji at Hinjewadi Phase 1, Pune. Homes from &#8377;85 Lakh. RERA registered.">
 
     <!-- Favicon -->
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
@@ -67,10 +67,10 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type": "Question", "name": "Where exactly is Joyville Vyomora located?", "acceptedAnswer": {"@type": "Answer", "text": "In Hinjewadi Phase 1, Pune — near the Sensorium IT Park. Phase 1 is the most established part of Hinjewadi, with direct access to major IT campuses and mature social infrastructure."}},
-        {"@type": "Question", "name": "What configurations are available and what do they cost?", "acceptedAnswer": {"@type": "Answer", "text": "2 BHK from ₹85L, 3 BHK from ₹1.32 Cr, and 3 BHK Duplex from ₹1.50 Cr. Sizes range from 685 sq. ft. to 1,434 sq. ft."}},
-        {"@type": "Question", "name": "Is this project RERA approved?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Joyville Vyomora is RERA registered under Maharashtra RERA. You can verify the RERA number on the MahaRERA portal directly."}},
-        {"@type": "Question", "name": "Are there flexible payment plans?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — construction-linked plans and other payment structures are available. Early buyers also have access to new-launch pricing."}}
+        {"@type": "Question", "name": "Which part of Hinjewadi is Joyville Vyomora in?", "acceptedAnswer": {"@type": "Answer", "text": "In Hinjewadi Phase 1, Pune — near the Sensorium IT Park. Phase 1 is the most established part of Hinjewadi, with direct access to major IT campuses and mature social infrastructure."}},
+        {"@type": "Question", "name": "What unit sizes and prices does Joyville Vyomora offer?", "acceptedAnswer": {"@type": "Answer", "text": "2 BHK from ₹85L, 3 BHK from ₹1.32 Cr, and 3 BHK Duplex from ₹1.50 Cr. Sizes range from 685 sq. ft. to 1,434 sq. ft."}},
+        {"@type": "Question", "name": "Has Joyville Vyomora received RERA approval?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Joyville Vyomora is RERA registered under Maharashtra RERA. You can verify the RERA number on the MahaRERA portal directly."}},
+        {"@type": "Question", "name": "What payment plans can buyers choose from?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — construction-linked plans and other payment structures are available. Early buyers also have access to new-launch pricing."}}
       ]
     }
     </script>
@@ -199,12 +199,13 @@
     <div class="container">
         <div class="location-grid">
             <div>
-                <span class="section-eyebrow">Location Advantage</span>
-                <h2 class="section-title">Right where<br><em>Pune works</em></h2>
+                <span class="section-eyebrow">Why Hinjewadi Phase 1</span>
+                <h2 class="section-title">Closer to work,<br><em>closer to life</em></h2>
                 <p class="section-body" style="margin-bottom:40px;">
-                    Hinjewadi Phase 1 is not a peripheral suburb anymore. It&rsquo;s the centre
-                    of Pune&rsquo;s professional economy. Living here means your commute to Wipro,
-                    Infosys, or Cognizant is 10 minutes &mdash; not 45.
+                    Phase 1 is the original, most built-out pocket of Hinjewadi &mdash; schools,
+                    hospitals, and retail are already mature here, not still under construction.
+                    For residents working at Wipro, Infosys, or Cognizant, that means a 10-minute
+                    commute instead of a 45-minute one.
                 </p>
                 <div class="location-points">
                     <div class="location-point">
@@ -361,8 +362,8 @@
                 </div>
             </div>
             <div class="developer-quote">
-                <p>&ldquo;Quality, transparency, and timely delivery are not differentiators in our world &mdash; they are the minimum standard we hold ourselves to on every project we build.&rdquo;</p>
-                <cite>Shapoorji Pallonji Real Estate &nbsp;&middot;&nbsp; Brand Philosophy</cite>
+                <p>&ldquo;We don&rsquo;t build to a minimum. Every layout, every fitting, every common space at Joyville carries the same engineering rigour as our largest commercial landmarks.&rdquo;</p>
+                <cite>Shapoorji Pallonji Real Estate &nbsp;&middot;&nbsp; On the Joyville Standard</cite>
             </div>
         </div>
     </div>
@@ -420,28 +421,28 @@
             <div>
                 <div class="faq-item open">
                     <div class="faq-q">
-                        <span class="faq-q-text">Where exactly is Joyville Vyomora located?</span>
+                        <span class="faq-q-text">Which part of Hinjewadi is Joyville Vyomora in?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-a">In Hinjewadi Phase 1, Pune &mdash; near the Sensorium IT Park. Phase 1 is the most established part of Hinjewadi, with direct access to major IT campuses and mature social infrastructure.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span class="faq-q-text">What configurations are available and what do they cost?</span>
+                        <span class="faq-q-text">What unit sizes and prices does Joyville Vyomora offer?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-a">2 BHK from &#8377;85L, 3 BHK from &#8377;1.32 Cr, and 3 BHK Duplex from &#8377;1.50 Cr. Sizes range from 685 sq. ft. to 1,434 sq. ft. Prices vary by floor and orientation. Contact us for the current availability sheet.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span class="faq-q-text">Is this project RERA approved?</span>
+                        <span class="faq-q-text">Has Joyville Vyomora received RERA approval?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-a">Yes. Joyville Vyomora is RERA registered under Maharashtra RERA. You can verify the RERA number and full project disclosures on the MahaRERA portal directly.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span class="faq-q-text">Are there flexible payment plans?</span>
+                        <span class="faq-q-text">What payment plans can buyers choose from?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-a">Yes &mdash; construction-linked plans and other payment structures are available. Early buyers also have access to new-launch pricing. Speak to our team for the current options.</div>
@@ -450,21 +451,21 @@
             <div>
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span class="faq-q-text">Is this a good project for rental income?</span>
+                        <span class="faq-q-text">Does Joyville Vyomora work well as a rental property?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-a">Yes. Hinjewadi has structural rental demand from IT professionals. Well-maintained 2 and 3 BHK units in quality developments here rent quickly and hold value. Current gross yields run at approximately 3&ndash;4% per annum.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span class="faq-q-text">Can NRIs purchase in this project?</span>
+                        <span class="faq-q-text">Can NRI buyers invest in Joyville Vyomora?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-a">Yes. Shapoorji Pallonji projects accommodate NRI purchases with proper legal compliance. Our team can walk you through the NRI documentation and payment process step by step.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-q">
-                        <span class="faq-q-text">What makes Joyville Vyomora different from other Hinjewadi projects?</span>
+                        <span class="faq-q-text">How does Joyville Vyomora compare to other Hinjewadi projects?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-a">The combination of Shapoorji Pallonji&rsquo;s delivery credibility, 24-acre township scale, the 2,230 sq. m clubhouse quality, and smart home features standard across all units. Most comparable projects in this price range offer one or two &mdash; not all of them together.</div>

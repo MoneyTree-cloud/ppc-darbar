@@ -8,17 +8,17 @@
     <meta name="theme-color" content="#12102A">
 
     <!-- ============== SEO ============== -->
-    <title>Joyville Vyomora Hinjewadi Pune | 2 &amp; 3 BHK by Shapoorji Pallonji | &#8377;84.99 L*</title>
-    <meta name="description" content="Joyville Vyomora by Shapoorji Pallonji Group at Hinjewadi, Pune. 2 &amp; 3 BHK luxury apartments with Infinity Edge Pool, Riverfront Clubhouse and 1.8 km walking boulevard. Starting ₹84.99 L*. MahaRERA coming soon.">
-    <meta name="keywords" content="Joyville Vyomora, Joyville Vyomora Hinjewadi, Shapoorji Pallonji Hinjewadi, Joyville Hinjewadi Pune, Joyville Vyomora price, Joyville Vyomora 2 BHK, Joyville Vyomora 3 BHK, Joyville Vyomora floor plan, Shapoorji Pallonji Pune, Hinjewadi new project">
+    <title>Joyville Vyomora Price List | 2 &amp; 3 BHK from &#8377;84.99 L*</title>
+    <meta name="description" content="Joyville Vyomora residences &amp; pricing at Hinjewadi, Pune. 2 BHK from &#8377;84.99L*, 3 BHK from &#8377;1.32 Cr*, Duplex from &#8377;1.50 Cr*. Infinity Edge Pool &amp; Riverfront Clubhouse by Shapoorji Pallonji.">
+    <meta name="keywords" content="Joyville Vyomora price, Joyville Vyomora Hinjewadi, Shapoorji Pallonji Hinjewadi, Joyville Hinjewadi Pune, Joyville Vyomora price list, Joyville Vyomora 2 BHK price, Joyville Vyomora 3 BHK price, Joyville Vyomora floor plan, Shapoorji Pallonji Pune, Hinjewadi new project">
     <meta name="author" content="Shapoorji Pallonji Group">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://shapoorjipallonjijoyvyomora.com/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Joyville Vyomora Hinjewadi Pune | 2 &amp; 3 BHK by Shapoorji Pallonji">
-    <meta property="og:description" content="2 &amp; 3 BHK luxury homes at Hinjewadi, Pune with Infinity Edge Pool &amp; Riverfront Clubhouse. Starting ₹84.99 L*.">
+    <meta property="og:title" content="Joyville Vyomora — Price List &amp; Floor Plans">
+    <meta property="og:description" content="2 BHK from &#8377;84.99L*, 3 BHK from &#8377;1.32 Cr*. Full price list &amp; floor plans for Joyville Vyomora, Hinjewadi, Pune.">
     <meta property="og:url" content="https://shapoorjipallonjijoyvyomora.com/">
     <meta property="og:image" content="https://shapoorjipallonjijoyvyomora.com/assets/hero.jpg">
     <meta property="og:site_name" content="Joyville Vyomora">
@@ -26,8 +26,8 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Joyville Vyomora Hinjewadi | Shapoorji Pallonji Pune">
-    <meta name="twitter:description" content="2 &amp; 3 BHK luxury apartments at Hinjewadi, Pune by Shapoorji Pallonji. Starting ₹84.99 L*.">
+    <meta name="twitter:title" content="Joyville Vyomora — Price List &amp; Floor Plans">
+    <meta name="twitter:description" content="2 &amp; 3 BHK homes at Hinjewadi, Pune. Starting &#8377;84.99 L*. See the full price list.">
     <meta name="twitter:image" content="https://shapoorjipallonjijoyvyomora.com/assets/hero.jpg">
 
     <!-- Favicon -->
@@ -102,12 +102,12 @@
 <!-- ============== HERO — full-viewport, centered, form below the fold ============== -->
 <section class="hero" id="hero">
     <div class="hero-inner">
-        <span class="hero-eyebrow">Shapoorji Pallonji Presents</span>
+        <span class="hero-eyebrow">By Shapoorji Pallonji Group</span>
         <h1 class="hero-h1">Joyville Vyomora<br><span class="accent">Hinjewadi, Pune</span></h1>
         <p class="hero-desc">
-            An Infinity Edge Pool. A Riverfront Clubhouse. A 1.8 km walking boulevard.
-            2 &amp; 3 BHK luxury residences starting &#8377; 84.99 Lakh* &mdash; the first
-            private undertaking in Hinjewadi by Shapoorji Pallonji.
+            Resort-style amenities &mdash; an Infinity Edge Pool, a Riverfront Clubhouse, and a
+            1.8 km walking boulevard &mdash; wrapped around 2 &amp; 3 BHK luxury residences from
+            &#8377; 84.99 Lakh*. The first private undertaking in Hinjewadi by Shapoorji Pallonji.
         </p>
         <div class="hero-actions">
             <a href="#contact" class="btn-glow">Get Price &amp; Floor Plans</a>
@@ -150,14 +150,14 @@
 <section class="sect" id="overview">
     <div class="container">
         <div class="intro-center reveal">
-            <span class="eyebrow">The Residence</span>
-            <h2 class="section-title">Where Luxury Meets<br>the <em>Future of Pune</em></h2>
+            <span class="eyebrow">Project Snapshot</span>
+            <h2 class="section-title">Three Homes,<br>One <em>Price Promise</em></h2>
             <p class="section-body" style="margin:0 auto;">
-                Nestled in Hinjewadi, Pune, Joyville Vyomora offers 2 BHK, 3 BHK and 3 BHK Duplex
-                apartments from 685 to 1,434 sq.ft., priced from &#8377; 84.99 Lakhs*. It blends
-                resort-style living with world-class amenities &mdash; an Infinity Edge Pool, a
-                Riverfront Clubhouse, and a 1.8 km walking boulevard. Over 500 families have already
-                made Joyville Hinjewadi their home.
+                Joyville Vyomora puts three configurations on the table at Hinjewadi, Pune &mdash;
+                2 BHK, 3 BHK, and 3 BHK Duplex, sized between 685 and 1,434 sq.ft., tagged from
+                &#8377; 84.99 Lakhs*. Each comes wrapped in the same resort-style package: Infinity
+                Edge Pool, Riverfront Clubhouse, and a 1.8 km walking boulevard. More than 500
+                families are already living the Joyville Hinjewadi experience.
             </p>
         </div>
     </div>
@@ -343,10 +343,10 @@
                 <span class="eyebrow">The Developer</span>
                 <h2 class="section-title">Shapoorji Pallonji Group<br>A <em>150-Year Legacy</em> of Trust</h2>
                 <p class="section-body">
-                    Shapoorji Pallonji Group is one of India&rsquo;s oldest and most iconic construction
-                    conglomerates, with a heritage spanning over 150 years. The group has built the Taj
-                    Mahal Palace Hotel, the Reserve Bank of India building, and the Tata Group headquarters,
-                    and is a major shareholder in the Tata Group.
+                    For more than 150 years, Shapoorji Pallonji has been one of the names behind India&rsquo;s
+                    most recognisable buildings &mdash; the Taj Mahal Palace, the Reserve Bank of India&rsquo;s
+                    headquarters, and the Tata Group&rsquo;s own offices among them. The group remains a
+                    significant shareholder in Tata Sons to this day.
                 </p>
                 <div class="about-marks">
                     <div>
