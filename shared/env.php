@@ -1,4 +1,7 @@
 <?php
+// UNUSED — no file in this repo requires this. Superseded by the root-level
+// env.php (which every migrated site's process-form.php/process.php uses,
+// and which also defines sendPpcLead() — missing here). Slated for removal.
 function loadEnv(string $path = null): void
 {
     $sharedEnv = dirname(__DIR__) . "/shared/.env";
