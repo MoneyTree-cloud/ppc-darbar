@@ -90,12 +90,21 @@ function lead_form_rate_limited(string $key, int $maxRequests, int $windowSecond
  * digit check), phoneError, requiredFields (map of extra POST field name =>
  * error message shown when that field is empty, e.g. ['interested_in' =>
  * 'Please select what you are interested in']), honeypotField (defaults to
- * "website"), rateLimitMax (default 5), rateLimitWindowSeconds (default
- * 345600 = 96h).
+ * "website"), nameMaxLength (default 80), requireEmail (default true; set
+ * false to make email optional while still validating its format if
+ * provided), rateLimitMax (default 5),
+ * rateLimitWindowSeconds (default 345600 = 96h), apiUrl (defaults to
+ * env('API_URL')), phoneField (the outgoing payload key for the phone
+ * number, default "phone_number"), extraPayload (array merged into the
+ * outgoing CRM JSON payload, applied after the base name/email/phoneField/
+ * source keys so it can override them), sourceOverride (defaults to the
+ * existing env('API_SOURCE', "{project} | {website}") behavior).
  */
 function handleLeadForm(array $config): void
 {
-    session_start();
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
 
     $project         = $config['project'];
     $city            = $config['city'];
@@ -104,6 +113,8 @@ function handleLeadForm(array $config): void
     $errorRedirect   = $config['errorRedirect'] ?? $redirect;
     $message         = $config['message'] ?? "Thank you for your interest in {$project}! Our team will contact you shortly.";
     $honeypotField   = $config['honeypotField'] ?? 'website';
+    $nameMaxLength   = $config['nameMaxLength'] ?? 80;
+    $requireEmail    = $config['requireEmail'] ?? true;
     $rateLimitMax    = $config['rateLimitMax'] ?? 5;
     $rateLimitWindow = $config['rateLimitWindowSeconds'] ?? 345600;
 
@@ -139,15 +150,15 @@ function handleLeadForm(array $config): void
         $errors[] = 'Name is required';
     } elseif (mb_strlen($name) < 2) {
         $errors[] = 'Name must be at least 2 characters';
-    } elseif (mb_strlen($name) > 80) {
+    } elseif (mb_strlen($name) > $nameMaxLength) {
         $errors[] = 'Name is too long';
     } elseif (!preg_match("/^[\p{L}\s.'\\-]+$/u", $name)) {
         $errors[] = 'Name contains invalid characters';
     }
 
-    if ($email === '') {
+    if ($email === '' && $requireEmail) {
         $errors[] = 'Email is required';
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } elseif ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Invalid email format';
     } elseif (mb_strlen($email) > 120) {
         $errors[] = 'Email is too long';
@@ -175,17 +186,19 @@ function handleLeadForm(array $config): void
     }
 
     // --- Send to CRM API ---
-    $apiUrl    = env('API_URL');
+    $apiUrl    = $config['apiUrl'] ?? env('API_URL');
     $apiToken  = env('API_TOKEN');
-    $source    = env('API_SOURCE', "{$project} | {$website}");
+    $source    = $config['sourceOverride'] ?? env('API_SOURCE', "{$project} | {$website}");
     $sslVerify = env('SSL_VERIFY', 'true') === 'true';
 
-    $payload = [
-        'name'         => $name,
-        'email'        => $email,
-        'phone_number' => $phone,
+    $phoneField = $config['phoneField'] ?? 'phone_number';
+
+    $payload = array_merge([
+        'name'        => $name,
+        'email'       => $email,
+        $phoneField   => $phone,
         'source'       => $source,
-    ];
+    ], $config['extraPayload'] ?? []);
 
     $ch = curl_init($apiUrl);
     curl_setopt_array($ch, [

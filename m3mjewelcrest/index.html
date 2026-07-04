@@ -225,6 +225,7 @@
     <div class="heading MontserratFont">Book a Site Visit!</div>
     <div class="input_wrap">
         <form action="banner2.php" method="POST">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
             <input class="w-100" type="text" name="name" placeholder="Your Name*" required>
             <input class="w-100" type="text" name="phone" placeholder="Your Phone No.*" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number">
             <input class="w-100" type="email" name="email" placeholder="Your Email Address*" required>
@@ -691,7 +692,8 @@ M3M’s vision is to “Shape Daydreams into Masterpieces” — creating integr
                     
                    <div class="col-lg-7 col-md-12 row footerfomrdiv">
     <div class="col-lg-6 col-md-12 inputbox">
-        <form action="footer-form.php" method="POST" onsubmit="return validateFooterForm()"> 
+        <form action="footer-form.php" method="POST" onsubmit="return validateFooterForm()">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
         <input class="w-100" type="text" placeholder="Name" id="qSenderNamefooter" name="name_contact">
     </div>
     <div class="col-lg-6 col-md-12 inputbox">
@@ -822,6 +824,7 @@ function validateFooterForm() {
                     </div>
                     <div class="banner-form-section" autocomplete="off">
                        <form action="form.php" method="POST" onsubmit="return validateForm()"> <!-- Added onsubmit event -->
+    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
     <div class="row">
         <div class="col-12 coldiv">
             <div class="form-floating" style="position: relative;">
@@ -902,6 +905,7 @@ function validateForm() {
                 </div>
             </div>
             <form id="contactForm" action="form.php" method="POST">
+                <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                 <div class="banner-form-section" autocomplete="off">
                     <div class="row">
                         <div class="col-12 coldiv">
@@ -1064,8 +1068,8 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .then(function (res) { return res.json(); })
       .then(function (data) {
-        if (data.success && data.redirect) {
-          window.location.href = data.redirect;
+        if (data.success) {
+          window.location.href = data.redirect || 'thankyou.php';
         } else {
           alert(data.message || 'Something went wrong. Please try again.');
           if (submitBtn) submitBtn.disabled = false;

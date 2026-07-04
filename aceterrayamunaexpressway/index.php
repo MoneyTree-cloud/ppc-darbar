@@ -383,6 +383,13 @@
     @media (max-width: 768px) {
         .ace-display { letter-spacing: 1px; }
     }
+
+    .hp-field {
+        position: absolute !important;
+        left: -9999px !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
 </style>
 </head>
 
@@ -988,6 +995,7 @@
                 <span class="ace-gold-line mb-8 block"></span>
                 <form id="contact-form" action="process-form.php" method="POST" novalidate>
                     <input type="hidden" name="form_source" value="contact_form">
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                     <div class="mb-5">
                         <label class="block text-xs font-600 uppercase tracking-wider text-gray-400 mb-2" style="font-weight:600;">Full Name</label>
                         <input name="name" type="text" required class="w-full bg-transparent border-b-2 border-gray-600 px-0 py-3 text-white focus:outline-none focus:border-[var(--ace-gold)] transition-colors" aria-label="Full Name">
@@ -1075,6 +1083,7 @@
         <div class="p-8">
             <form id="popup-contact-form" action="process-form.php" method="POST" novalidate>
                 <input type="hidden" name="form_source" value="popup_form">
+                <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                 <div class="mb-5">
                     <label class="block text-[11px] font-600 uppercase tracking-wider mb-2" style="font-weight:600;color:var(--ace-gray-700);">Full Name</label>
                     <input name="name" type="text" required class="w-full border-2 border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[var(--gradient-start)] transition-all" aria-label="Full Name">

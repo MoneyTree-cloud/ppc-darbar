@@ -325,7 +325,7 @@ footer { background: #eae6ff; color: var(--text-mid); padding: 64px 0 100px; }
 /* ===== Toast ===== */
 .toast {
   position: fixed; bottom: 28px; left: 50%; transform: translate(-50%, 20px);
-  background: var(--surface); color: var(--offwhite); padding: 14px 26px; border-radius: 30px;
+  background: var(--surface); color: var(--violet); padding: 14px 26px; border-radius: 30px;
   border: 1px solid var(--hairline);
   font-size: 0.88rem; opacity: 0; transition: opacity 0.4s ease, transform 0.4s ease; z-index: 999;
   max-width: 90%; text-align: center;
