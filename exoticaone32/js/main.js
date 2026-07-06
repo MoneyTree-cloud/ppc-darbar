@@ -130,12 +130,19 @@
                 });
                 const data = await res.json().catch(() => ({}));
 
-                if (data.csrf) {
-                    const tokenField = form.querySelector('input[name="csrf_token"]');
-                    if (tokenField) tokenField.value = data.csrf;
-                }
+                // Fetch a fresh CSRF token for the next submission (server no
+                // longer rotates it inline in the lead-submission response).
+                fetch('process-form.php?csrf=1', { headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+                    .then((r) => r.json())
+                    .then((d) => {
+                        if (d && d.token) {
+                            const tokenField = form.querySelector('input[name="csrf_token"]');
+                            if (tokenField) tokenField.value = d.token;
+                        }
+                    })
+                    .catch(() => {});
 
-                if (data.status === 'success') {
+                if (data.success) {
                     if (msgBox) {
                         msgBox.textContent = data.message || 'Thank you. We will reach out shortly.';
                         msgBox.className = 'form-msg success';

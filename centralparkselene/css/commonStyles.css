@@ -1206,3 +1206,13 @@ details[open] summary { margin-bottom: 12px; }
     .section { padding: 24px 0; }
     body { background: #fff; }
 }
+
+/* ============================================================
+   HONEYPOT FIELD (bot trap, hidden from real users)
+   ============================================================ */
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

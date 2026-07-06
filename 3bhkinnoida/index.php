@@ -170,6 +170,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
+        .hp-field {
+            position: absolute !important;
+            left: -9999px !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
         :root {
             --gold-primary: #B99769;
             --gold-secondary: #D8C6B1;
@@ -699,6 +706,7 @@
                     <p class="text-gray-600">Enter your details to schedule a private viewing.</p>
                 </div>
                 <form id="inquiryForm" class="space-y-5" action="process.php" method="POST" novalidate>
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                     <div>
                         <input type="text" name="name" id="inquiry-name" placeholder="Full Name" required minlength="2"  class="form-input" data-validation="name">
                         <div class="error-message text-red-500 text-sm mt-1 hidden" id="inquiry-name-error"></div>
@@ -1322,6 +1330,7 @@
                             <div class="bg-cream-bg p-4 sm:p-8 rounded-lg h-full">
                                 <h3 class="heading-serif text-2xl font-bold text-charcoal-dark mb-6">Schedule a Private Tour</h3>
                                 <form id="contactForm" class="space-y-5" action="process.php" method="POST" novalidate>
+                                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                                     <div>
                                         <input type="text" name="name" id="contact-name" placeholder="Full Name" required class="form-input" data-validation="name">
                                         <div class="error-message text-red-500 text-sm mt-1 hidden" id="contact-name-error"></div>
@@ -1563,7 +1572,8 @@
                                 const formData = new FormData(form);
                                 fetch('process.php', {
                                     method: 'POST',
-                                    body: formData
+                                    body: formData,
+                                    headers: { 'X-Requested-With': 'XMLHttpRequest' }
                                 })
                                 .then(r => r.json())
                                 .then(data => {

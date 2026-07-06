@@ -274,6 +274,7 @@
           <input type="tel" name="phone" placeholder="Your Phone No.*" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}"  title="Please enter a valid 10-digit Indian mobile number">
           <input type="email" name="email" placeholder="Your Email Address*" required>
           <input type="hidden" name="form_source" value="banner_form">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
           <button type="submit" class="form-submit">Submit</button>
           <p class="form-consent"><input type="checkbox" checked onclick="return false"> I authorize representatives to Call, SMS, Email or WhatsApp me about products and offers. This overrides DNC/NDNC.</p>
         </form>
@@ -718,6 +719,7 @@
         <input type="email" name="email" placeholder="Email*" required>
         <input type="tel" name="phone" placeholder="Phone*" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}"   title="Please enter a valid 10-digit Indian mobile number">
         <input type="hidden" name="form_source" value="footer_form">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
         <button type="submit" class="footer-form-submit">Submit Now</button>
       </form>
     </div>
@@ -756,6 +758,7 @@
         <input type="tel" name="phone" placeholder="Your Phone No.*" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}"   title="Please enter a valid 10-digit Indian mobile number">
         <input type="email" name="email" placeholder="Your Email*" required>
         <input type="hidden" name="form_source" value="modal_form">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
         <p class="form-consent"><input type="checkbox" checked onclick="return false"> I authorize representatives to Call, SMS, Email or WhatsApp me. This overrides DNC/NDNC.</p>
         <button type="submit" class="btn-filled" style="width: 100%; text-align: center; justify-content: center; display: flex;">Submit Now</button>
       </form>

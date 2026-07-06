@@ -864,3 +864,10 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); font-weight: 700; letter-s
   .amenities-grid { grid-template-columns: 1fr; }
   .amenity-card img { height: 200px; }
 }
+
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

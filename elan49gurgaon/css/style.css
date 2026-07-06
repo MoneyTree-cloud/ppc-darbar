@@ -2638,3 +2638,10 @@ section#amenities .section-title span {
 img.m-block.w-100 {
   display: none;
 }
+
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

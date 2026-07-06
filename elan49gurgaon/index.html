@@ -215,6 +215,7 @@
 
     
     <form action="mail2.php" method="post">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
       <div class="form-row">
         <div class="form-holder">
           <input
@@ -845,6 +846,7 @@ Elan New Launch is a RERA-registered housing society, which means all projects d
 
         <!-- Start the form -->
         <form action="mail2.php" method="post">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
 
           <div class="form-row">
             <div class="form-holder">
@@ -1090,7 +1092,8 @@ Elan New Launch is a RERA-registered housing society, which means all projects d
       <!-- RIGHT SIDE (FORM) -->
       <div class="right_col">
         <form class="animated_form" action="mail2.php" method="post">
-          
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
+
           <div class="form-group">
             <input
               class="form-input"
@@ -1376,8 +1379,8 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .then(function (res) { return res.json(); })
       .then(function (data) {
-        if (data.success && data.redirect) {
-          window.location.href = data.redirect;
+        if (data.success) {
+          window.location.href = data.redirect || 'thankyou.php';
         } else {
           alert(data.message || 'Something went wrong. Please try again.');
           if (submitBtn) submitBtn.disabled = false;

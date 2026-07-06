@@ -190,6 +190,7 @@ $siteUrl   = env('SITE_URL',  'https://exoticaone32.org/');
             <form class="lead-form" method="POST" action="process-form.php" novalidate>
                 <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($csrfToken); ?>">
                 <input type="hidden" name="form_source" value="hero_form">
+                <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
 
                 <div class="form-field">
                     <label for="hero-name">Full Name</label>
@@ -792,6 +793,7 @@ $siteUrl   = env('SITE_URL',  'https://exoticaone32.org/');
                 <form class="lead-form" method="POST" action="process-form.php" novalidate>
                     <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($csrfToken); ?>">
                     <input type="hidden" name="form_source" value="final_cta_form">
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
 
                     <div class="form-field">
                         <label for="cta-name">Full Name</label>
