@@ -2174,7 +2174,7 @@ $faqs = [
                         <p class="price-value">Price details awaited<small>Official unit-wise pricing has not yet been supplied.</small></p>
                         <div class="price-row"><span>Carpet area</span><span>To be confirmed</span></div>
                         <div class="price-row"><span>AI specifications</span><span>To be confirmed</span></div>
-                        <div class="price-row"><span>Availability</span><span>To be confirmed</span></div><a class="button outline" href="#enquire" data-home="1 BHK">Request 1 BHK Price & Details <span aria-hidden="true">↗</span></a>
+                        <div class="price-row"><span>Availability</span><span>To be confirmed</span></div><a class="button outline" href="#enquire">Request 1 BHK Price & Details <span aria-hidden="true">↗</span></a>
                     </article>
                     <article class="price-card reveal">
                         <div class="price-top">
@@ -2184,7 +2184,7 @@ $faqs = [
                         <p class="price-value">Price details awaited<small>Official unit-wise pricing has not yet been supplied.</small></p>
                         <div class="price-row"><span>Carpet area</span><span>To be confirmed</span></div>
                         <div class="price-row"><span>AI specifications</span><span>To be confirmed</span></div>
-                        <div class="price-row"><span>Availability</span><span>To be confirmed</span></div><a class="button outline" href="#enquire" data-home="2 BHK">Request 2 BHK Price & Details <span aria-hidden="true">↗</span></a>
+                        <div class="price-row"><span>Availability</span><span>To be confirmed</span></div><a class="button outline" href="#enquire">Request 2 BHK Price & Details <span aria-hidden="true">↗</span></a>
                     </article>
                 </div>
                 <p class="cost-note">Your final cost sheet should itemise the base price, applicable taxes, registration, maintenance, deposits and any additional charges. No price, discount or investment return is claimed on this page.</p>
@@ -2214,7 +2214,7 @@ $faqs = [
                         <li>Confirm the carpet area and room dimensions.</li>
                         <li>Check orientation, ventilation and access.</li>
                         <li>Match the furniture inventory to the final layout.</li>
-                    </ul><a class="button outline" href="#enquire" data-home="1 BHK">Request the official plan ↗</a>
+                    </ul><a class="button outline" href="#enquire">Request the official plan ↗</a>
                 </div>
             </div>
             <div class="plan-panel" id="plan-two" role="tabpanel" aria-labelledby="tab-two" tabindex="0">
@@ -2233,7 +2233,7 @@ $faqs = [
                         <li>Confirm the carpet area and room dimensions.</li>
                         <li>Check orientation, ventilation and access.</li>
                         <li>Match the furniture inventory to the final layout.</li>
-                    </ul><a class="button outline" href="#enquire" data-home="2 BHK">Request the official plan ↗</a>
+                    </ul><a class="button outline" href="#enquire">Request the official plan ↗</a>
                 </div>
             </div>
         </section>
@@ -2390,7 +2390,7 @@ $faqs = [
                         </div><?php endif; ?>
                     <input type="hidden" name="form_source" value="enquire_section">
                     <div class="hp" aria-hidden="true"><label>Leave empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
-                    <div class="form-grid"><label class="field">Your name<input name="name" autocomplete="name" required minlength="2" maxlength="100"></label><label class="field">Email address<input name="email" type="email" autocomplete="email" required maxlength="200"></label><label class="field">Phone<input name="phone" type="tel" autocomplete="tel" required minlength="10" maxlength="15"></label><label class="field">Home preference<select name="home" id="home-preference"><?php foreach (['1 BHK', '2 BHK', 'Help me choose'] as $option): ?><option<?= $option === '1 BHK' ? ' selected' : '' ?>><?= esc($option) ?></option><?php endforeach; ?></select></label></div><label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I agree to be contacted about this enquiry and have read the <a href="#privacy">privacy information</a>.</span></label><button class="button light" type="submit">Request project details <span aria-hidden="true">↗</span></button>
+                    <div class="form-grid"><label class="field">Your name<input name="name" autocomplete="name" required minlength="2" maxlength="100"></label><label class="field">Mobile number<input name="phone" type="tel" autocomplete="tel" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}"></label><label class="field">Email address<input name="email" type="email" autocomplete="email" required maxlength="200"></label></div><button class="button light" type="submit">Request project details <span aria-hidden="true">↗</span></button>
                     <p class="privacy">Enquiry only. This is not a booking or a payment request.</p>
                 </form>
             </div>
@@ -2400,7 +2400,7 @@ $faqs = [
             <p>This page introduces Synq Highlife using the currently supplied description: fully furnished, AI-enabled 1 and 2 BHK apartments. Concept imagery is illustrative and does not represent a confirmed layout, view or furnishing commitment. Location, developer, approvals, RERA applicability, availability, areas, inclusions, prices and possession must be verified against official documents.</p>
             <details id="privacy">
                 <summary>Privacy information</summary>
-                <p>The enquiry form requests your name, email, phone number and residence preference to respond to your request. Submissions are sent to our CRM so the sales team can follow up. A necessary session cookie protects the form and supports submission feedback. No advertising, analytics or third-party font scripts are included. Contact information for the responsible operator, retention period and privacy requests must be published before enquiries are enabled.</p>
+                <p>The enquiry form requests your name, email and phone number to respond to your request. Submissions are sent to our CRM so the sales team can follow up. A necessary session cookie protects the form and supports submission feedback. No advertising, analytics or third-party font scripts are included. Contact information for the responsible operator, retention period and privacy requests must be published before enquiries are enabled.</p>
             </details>
         </section>
 

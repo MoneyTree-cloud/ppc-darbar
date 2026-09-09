@@ -10,7 +10,7 @@ $project = [
   'green' => 'Adjacent to a 100 m fully developed green belt',
   'basicPrice' => '₹11,600/sq.ft.',
   'limitedPrice' => '₹10,600/sq.ft.',
-  'price' => '₹9,600/sq.ft.',
+  'price' => '₹10,600/sq.ft.',
   'whatsapp' => '919412234688',
 ];
 

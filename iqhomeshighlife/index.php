@@ -3572,9 +3572,9 @@ function jsonForScript(array $data): string
                     <input type="hidden" name="form_source" value="enquire_section">
                     <div class="hp" aria-hidden="true"><label>Leave empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
                     <label class="field">Full name<input name="name" autocomplete="name" required minlength="2" maxlength="80"></label>
-                    <label class="field">Mobile number<input name="phone" type="tel" autocomplete="tel" required minlength="10" maxlength="15"></label>
+                    <label class="field">Mobile number<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}"></label>
                     <label class="field">Email address<input name="email" type="email" autocomplete="email" required maxlength="120"></label>
-                    <button class="button green" type="submit">Request price &amp; floor plan <span>↗</span></button>
+                    <button class="button green" type="submit">Send Enquiry <span>↗</span></button>
                     <p class="privacy-note">Enquiry only. Not a booking or payment request.</p>
                 </form>
             </div>

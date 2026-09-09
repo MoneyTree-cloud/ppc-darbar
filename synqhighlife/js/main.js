@@ -21,12 +21,6 @@
             menu.focus()
         }
     });
-    all('[data-home]').forEach(a => a.addEventListener('click', () => {
-        $('#home-preference').value = a.dataset.home
-    }));
-    all('a[href="#privacy"]').forEach(a => a.addEventListener('click', () => {
-        $('#privacy').open = true
-    }));
     // Honest visual simulation; no smart-home API or microphone access.
     const scene = $('#ai-scene'),
         modes = all('[data-mode]'),
