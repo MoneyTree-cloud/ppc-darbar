@@ -205,6 +205,7 @@ $faqs = [
             align-items: center;
             gap: 32px;
             padding: 15px 23px;
+            margin-top: 16px;
             min-height: 53px;
             border: 1px solid var(--green);
             border-radius: 5px;
@@ -1237,8 +1238,12 @@ $faqs = [
 
         .form-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 20px
+        }
+
+        .enquiry-layout form .button {
+            width: 100%
         }
 
         .field {
@@ -1992,10 +1997,6 @@ $faqs = [
             }
 
             .amenities-grid {
-                grid-template-columns: 1fr
-            }
-
-            .form-grid {
                 grid-template-columns: 1fr
             }
 
