@@ -1,0 +1,10 @@
+DirectoryIndex index.php
+Options -Indexes
+<FilesMatch "\.(md|log|env|zip)$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_expires.c>
+ ExpiresActive On
+ ExpiresByType image/webp "access plus 1 month"
+ ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
