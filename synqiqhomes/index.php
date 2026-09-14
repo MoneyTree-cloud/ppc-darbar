@@ -70,6 +70,8 @@ function wa($message)
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>SYNQ IQ Homes Greater Noida West | AI Smart Homes</title>
   <meta name="description" content="SYNQ IQ Homes in Greater Noida West with fully furnished 1 & 2 BHK studios, smart automation, premium interiors and modern living.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://synqiqhomes.com/">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {

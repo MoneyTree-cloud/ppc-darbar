@@ -5,7 +5,7 @@ declare(strict_types=1);
 $config = [
     'brand' => 'Synq Highlife',
     'url' => 'https://synqhighlife.com/',
-    'indexable' => false,
+    'indexable' => true,
 ];
 header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: strict-origin-when-cross-origin');

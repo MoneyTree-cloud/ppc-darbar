@@ -13,7 +13,8 @@ header('Content-Type: text/html; charset=UTF-8');
 $config = [
     'title' => 'IQ Homes Highlife | AI Homes in Greater Noida West',
     'description' => 'IQ Homes Highlife in Greater Noida West, offering fully furnished 1 & 2 BHK smart homes with AI automation, premium interiors and modern living.',
-    'robots' => 'noindex,nofollow',
+    'url' => 'https://iqhomeshighlife.com/',
+    'robots' => 'index,follow',
     'whatsapp' => '919412234688',
     'phone_display' => '+91 94122 34688',
 ];
@@ -855,6 +856,7 @@ function jsonForScript(array $data): string
     <title><?= e($config['title']) ?></title>
     <meta content="<?= e($config['description']) ?>" name="description" />
     <meta content="<?= e($config['robots']) ?>" name="robots" />
+    <link rel="canonical" href="<?= e($config['url']) ?>" />
 
 
     <style>
